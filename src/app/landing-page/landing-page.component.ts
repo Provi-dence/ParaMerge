@@ -2,6 +2,7 @@ import { Component, OnInit, Renderer2 } from '@angular/core';
 import { AccountService, CampaignService } from '@app/_services'; // Make sure the path is correct
 import { Router } from '@angular/router';
 import { Campaign } from '@app/_models';
+import * as $ from 'jquery';  // Import jQuery
 
 @Component({
   selector: 'app-landing-page',
@@ -28,6 +29,9 @@ export class LandingPageComponent implements OnInit {
     this.loadApprovedCampaigns(); // Only check the login status, no redirection
   }
   
+  ngAfterViewInit(): void {
+    //this.applyBackgroundImages();
+  }
 
   // Method to update the progress bar based on donations
   updateProgressBar(): void {
@@ -50,11 +54,14 @@ export class LandingPageComponent implements OnInit {
   }
 
   onDonate() {
-    if (!this.account) {
+    const account = this.accountService.accountValue;
+    
+    // Check if the user is logged in
+    if (!account) {
       this.router.navigate(['/account/login-register'], { queryParams: { returnUrl: '/donate' } });
     } else {
       // Navigate to the donate page or show donate modal
-      this.router.navigate(['/donate']);
+      this.router.navigate(['/campaign']);
     }
   }
 

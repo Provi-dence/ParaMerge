@@ -1,13 +1,14 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { CampaignService } from '../_services/campaign.service';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal,  NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Campaign } from '../_models';
 import { AccountService } from '../_services/account.service';
 import Swal from 'sweetalert2'; // Import SweetAlert
-import { DonationService } from '../_services';
-import { Donation } from '../_models';
+import { DonationService, CategoryService } from '../_services';
+import { Donation, Category } from '../_models';
+
 
 @Component({
   selector: 'app-create-campaign',
@@ -33,6 +34,8 @@ export class CreateCampaignComponent implements OnInit {
   donor: Donation[] = [];
   showDonorsModal: boolean = false;
   campaignId: number;
+  categories: Category[] = [];
+  selectedProofFiles: File[] = [];
 
   // Arrays to store campaigns by their status
   approvedCampaigns: any[] = [];
@@ -45,7 +48,8 @@ export class CreateCampaignComponent implements OnInit {
     private modalService: NgbModal,
     private router: Router,
     private accountService: AccountService,
-    private donationService: DonationService
+    private donationService: DonationService,
+    private categoryService: CategoryService
   ) {
     this.createCampaignForm = this.formBuilder.group({
       Campaign_Name: ['', Validators.required],
@@ -53,8 +57,10 @@ export class CreateCampaignComponent implements OnInit {
       Campaign_TargetFund: ['', Validators.required],
       Campaign_Start: ['', Validators.required],
       Campaign_End: ['', Validators.required],
-      Campaign_Category: ['', Validators.required],
-      Campaign_Image: [null]
+      Category_ID: ['', Validators.required],
+      Campaign_Image: [null],
+      Proof_Files: [null],
+      Campaign_Notes: ['']
     });
 
     this.editCampaignForm = this.formBuilder.group({
@@ -63,13 +69,16 @@ export class CreateCampaignComponent implements OnInit {
       Campaign_TargetFund: ['', Validators.required],
       Campaign_Start: ['', Validators.required],
       Campaign_End: ['', Validators.required],
-      Campaign_Category: ['', Validators.required],
-      Campaign_Image: [null]
+      Category_ID: ['', Validators.required],
+      Campaign_Image: [null],
+      Proof_Files: [null],
+      Campaign_Notes: ['']
     });
   }
 
   ngOnInit() {
     this.loadCampaigns();
+    this.loadCategories();
   }
 
   loadCampaigns() {
@@ -88,6 +97,26 @@ export class CreateCampaignComponent implements OnInit {
         this.errorMessage = 'Error fetching campaigns: ' + error.message;
       }
     );
+  }
+
+  loadCategories() {
+    this.categoryService.getAllCategories().subscribe(
+      (data: Category[]) => {
+        this.categories = data; // Assign the fetched categories to the variable
+      },
+      (error) => {
+        console.error('Error fetching categories', error);
+      }
+    );
+  }
+
+  onProofFilesSelected(event: any): void {
+    const files = event.target.files;
+    if (files) {
+      // Convert the file list to an array and store it in selectedProofFiles
+      this.selectedProofFiles = Array.from(files);
+      console.log(this.selectedProofFiles); // Optional: to log the selected files
+    }
   }
 
   checkCampaignStatus() {
@@ -131,13 +160,17 @@ export class CreateCampaignComponent implements OnInit {
     sessionStorage.setItem('alertsShown', 'true');
   }
 
-  openCreateCampaignModal(content: TemplateRef<any>) {
-    this.modalRef = this.modalService.open(content, { size: 'lg' });
-  }
+  openCreateCampaignModal(content: any): void {
+    this.modalRef = this.modalService.open(content, { size: 'lg', centered: true });
+}
+
+  
 
   closeCreateCampaignModal() {
+    if (this.modalRef) {
+      this.modalRef.close();
+    }
     this.resetCreateForm();
-    this.closeModal();
   }
 
   resetCreateForm() {
@@ -171,6 +204,10 @@ export class CreateCampaignComponent implements OnInit {
 
     formData.append('Acc_ID', Number(account.id).toString());
     formData.append('Campaign_Status', (0).toString());  // Explicitly convert the number to a string
+
+    this.selectedProofFiles.forEach((file, index) => {
+      formData.append('Proof_Files', file, file.name); // Proof_Files[] will hold all files
+    });
 
     if (this.selectedFile) {
       formData.append('Campaign_Image', this.selectedFile, this.selectedFile.name);
@@ -207,7 +244,7 @@ export class CreateCampaignComponent implements OnInit {
   }
 
   getImagePath(image: string): string {
-    return image ? `http://localhost:4000/${image}` : 'assets/'; 
+    return image = `http://localhost:4000/${image}` || 'assets/'; 
   }
 
   viewCampaignDetails(campaignId: number): void {
@@ -227,7 +264,7 @@ export class CreateCampaignComponent implements OnInit {
       Campaign_Name: campaign.Campaign_Name,
       Campaign_Description: campaign.Campaign_Description,
       Campaign_TargetFund: campaign.Campaign_TargetFund,
-      Campaign_Category: campaign.Campaign_Category,
+      Category_ID: campaign.Category_ID,
       Campaign_Start: campaign.Campaign_Start,
       Campaign_End: campaign.Campaign_End
     });
@@ -304,6 +341,7 @@ export class CreateCampaignComponent implements OnInit {
       (donors: Donation[]) => {
         this.donor = donors; // Store donors in the component
         this.modalService.open(this.donorsModal);
+        console.log(this.donor);
       },
       (error) => {
         console.error('Error fetching donors', error);
@@ -379,14 +417,5 @@ export class CreateCampaignComponent implements OnInit {
     const reader = new FileReader();
     reader.onload = (e: any) => this.receiptPreview = e.target.result;
     reader.readAsDataURL(file);
-  }
-
-  formatCategory(category: number): string {
-    switch (category) {
-      case 1: return 'category-financial';
-      case 2: return 'category-education';
-      case 3: return 'category-hospital';
-      default: return 'category-other';
-    }
   }
 }

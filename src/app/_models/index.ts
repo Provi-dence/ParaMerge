@@ -9,3 +9,4 @@ export * from './withdraw';
 export * from './participant';
 export * from './comment';
 export * from './like';
+export * from './category';

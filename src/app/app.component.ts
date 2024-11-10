@@ -7,7 +7,8 @@ import { Account, Role } from './_models';
 @Component({
   selector: 'app',
   templateUrl: 'app.component.html',
-  // styleUrls: ['app.component.css'] // Uncomment if using external CSS
+  // styleUrls: ['app.component.css'], // Uncomment if using external CSS
+  
 })
 export class AppComponent implements OnInit, OnDestroy {
   Role = Role;
@@ -25,8 +26,10 @@ export class AppComponent implements OnInit, OnDestroy {
       this.account = account;
       this.updateNavbarVisibility(this.router.url); // Update navbar visibility on login/logout
       this.isSidebarOpen = false;
+
     });
 
+    
     // Initial visibility check
     this.updateNavbarVisibility(this.router.url);
 
@@ -36,6 +39,8 @@ export class AppComponent implements OnInit, OnDestroy {
         this.updateNavbarVisibility(event.url);
       }
     });
+
+    
   }
 
   toggleSidebar() {

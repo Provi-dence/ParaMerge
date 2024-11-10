@@ -24,7 +24,6 @@ const routes: Routes = [
             { path: 'withdraw', loadChildren: withdrawModule }, 
             { path: 'reports', loadChildren: reportModule }, 
             {path: 'donations', loadChildren: donationModule}
-
         ]
     }
 ];

@@ -18,7 +18,7 @@ import { FullCalendarModule } from '@fullcalendar/angular';
         AdminRoutingModule,
         RouterModule, 
         IonicModule.forRoot(),
-        FullCalendarModule
+        FullCalendarModule,
     ],
     declarations: [
         LayoutComponent,

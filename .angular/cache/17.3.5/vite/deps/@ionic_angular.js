@@ -1,5 +1,5 @@
-import "./chunk-ZIOPFT3C.js";
-import "./chunk-WVHHQ2AY.js";
+import "./chunk-DNC5XA5R.js";
+import "./chunk-XWBZKPA5.js";
 import {
   LIFECYCLE_DID_ENTER,
   LIFECYCLE_DID_LEAVE,
@@ -13,7 +13,7 @@ import {
   getPlatforms,
   isPlatform,
   printIonWarning
-} from "./chunk-2J7VHZNX.js";
+} from "./chunk-H6V65Q5Z.js";
 import {
   iosTransitionAnimation
 } from "./chunk-2QWRM6MR.js";
@@ -44,16 +44,16 @@ import {
   Router,
   RouterLink,
   UrlSerializer
-} from "./chunk-T2TDYA6W.js";
-import "./chunk-E5STV6AS.js";
-import "./chunk-3ET75EXS.js";
+} from "./chunk-HYE3WXJY.js";
 import {
   MaxValidator,
   MinValidator,
   NG_VALIDATORS,
   NG_VALUE_ACCESSOR,
   NgControl
-} from "./chunk-RMLFRR66.js";
+} from "./chunk-5EEH2XAP.js";
+import "./chunk-GSCRJPAT.js";
+import "./chunk-J4PWH5AR.js";
 import {
   CommonModule,
   DOCUMENT,
@@ -61,7 +61,7 @@ import {
   LocationStrategy,
   NgIf,
   NgTemplateOutlet
-} from "./chunk-XRA3J72K.js";
+} from "./chunk-LEHTHJVC.js";
 import {
   APP_INITIALIZER,
   ApplicationRef,
@@ -126,7 +126,7 @@ import {
   ɵɵrestoreView,
   ɵɵtemplate,
   ɵɵviewQuery
-} from "./chunk-2WR6TMOB.js";
+} from "./chunk-FM33LJBA.js";
 import {
   fromEvent
 } from "./chunk-UMOB4LYC.js";
@@ -144,9 +144,10 @@ import {
 import {
   __async,
   __objRest,
+  __publicField,
   __spreadProps,
   __spreadValues
-} from "./chunk-BYTETG5J.js";
+} from "./chunk-K5VS565Y.js";
 
 // node_modules/@ionic/core/components/gesture-controller.js
 var GestureController = class {
@@ -160,8 +161,8 @@ var GestureController = class {
    * Creates a gesture delegate based on the GestureConfig passed
    */
   createGesture(config3) {
-    var _a;
-    return new GestureDelegate(this, this.newID(), config3.name, (_a = config3.priority) !== null && _a !== void 0 ? _a : 0, !!config3.disableScroll);
+    var _a87;
+    return new GestureDelegate(this, this.newID(), config3.name, (_a87 = config3.priority) !== null && _a87 !== void 0 ? _a87 : 0, !!config3.disableScroll);
   }
   /**
    * Creates a blocker that will block any other gesture events from firing. Set in the ion-gesture component.
@@ -630,8 +631,8 @@ var getAppRoot = (doc3) => {
 // node_modules/@ionic/angular/fesm2022/ionic-angular-common.mjs
 var _c0 = ["tabsInner"];
 var MenuController = class {
-  menuController;
   constructor(menuController3) {
+    __publicField(this, "menuController");
     this.menuController = menuController3;
   }
   /**
@@ -742,7 +743,7 @@ var MenuController = class {
     return this.menuController._setOpen(menu, shouldOpen, animated);
   }
 };
-var DomController = class _DomController {
+var _DomController = class _DomController {
   /**
    * Schedules a task to run during the READ phase of the next frame.
    * This task should only read the DOM, but never modify it.
@@ -757,17 +758,18 @@ var DomController = class _DomController {
   write(cb) {
     getQueue().write(cb);
   }
-  /** @nocollapse */
-  static ɵfac = function DomController_Factory(t) {
-    return new (t || _DomController)();
-  };
-  /** @nocollapse */
-  static ɵprov = ɵɵdefineInjectable({
-    token: _DomController,
-    factory: _DomController.ɵfac,
-    providedIn: "root"
-  });
 };
+/** @nocollapse */
+__publicField(_DomController, "ɵfac", function DomController_Factory(t) {
+  return new (t || _DomController)();
+});
+/** @nocollapse */
+__publicField(_DomController, "ɵprov", ɵɵdefineInjectable({
+  token: _DomController,
+  factory: _DomController.ɵfac,
+  providedIn: "root"
+}));
+var DomController = _DomController;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(DomController, [{
     type: Injectable,
@@ -793,44 +795,44 @@ var getQueue = () => {
     write: (cb) => cb()
   };
 };
-var Platform = class _Platform {
-  doc;
-  _readyPromise;
-  win;
-  /**
-   * @hidden
-   */
-  backButton = new Subject();
-  /**
-   * The keyboardDidShow event emits when the
-   * on-screen keyboard is presented.
-   */
-  keyboardDidShow = new Subject();
-  /**
-   * The keyboardDidHide event emits when the
-   * on-screen keyboard is hidden.
-   */
-  keyboardDidHide = new Subject();
-  /**
-   * The pause event emits when the native platform puts the application
-   * into the background, typically when the user switches to a different
-   * application. This event would emit when a Cordova app is put into
-   * the background, however, it would not fire on a standard web browser.
-   */
-  pause = new Subject();
-  /**
-   * The resume event emits when the native platform pulls the application
-   * out from the background. This event would emit when a Cordova app comes
-   * out from the background, however, it would not fire on a standard web browser.
-   */
-  resume = new Subject();
-  /**
-   * The resize event emits when the browser window has changed dimensions. This
-   * could be from a browser window being physically resized, or from a device
-   * changing orientation.
-   */
-  resize = new Subject();
+var _Platform = class _Platform {
   constructor(doc3, zone) {
+    __publicField(this, "doc");
+    __publicField(this, "_readyPromise");
+    __publicField(this, "win");
+    /**
+     * @hidden
+     */
+    __publicField(this, "backButton", new Subject());
+    /**
+     * The keyboardDidShow event emits when the
+     * on-screen keyboard is presented.
+     */
+    __publicField(this, "keyboardDidShow", new Subject());
+    /**
+     * The keyboardDidHide event emits when the
+     * on-screen keyboard is hidden.
+     */
+    __publicField(this, "keyboardDidHide", new Subject());
+    /**
+     * The pause event emits when the native platform puts the application
+     * into the background, typically when the user switches to a different
+     * application. This event would emit when a Cordova app is put into
+     * the background, however, it would not fire on a standard web browser.
+     */
+    __publicField(this, "pause", new Subject());
+    /**
+     * The resume event emits when the native platform pulls the application
+     * out from the background. This event would emit when a Cordova app comes
+     * out from the background, however, it would not fire on a standard web browser.
+     */
+    __publicField(this, "resume", new Subject());
+    /**
+     * The resize event emits when the browser window has changed dimensions. This
+     * could be from a browser window being physically resized, or from a device
+     * changing orientation.
+     */
+    __publicField(this, "resize", new Subject());
     this.doc = doc3;
     zone.run(() => {
       this.win = doc3.defaultView;
@@ -1009,17 +1011,18 @@ var Platform = class _Platform {
   height() {
     return this.win.innerHeight;
   }
-  /** @nocollapse */
-  static ɵfac = function Platform_Factory(t) {
-    return new (t || _Platform)(ɵɵinject(DOCUMENT), ɵɵinject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵprov = ɵɵdefineInjectable({
-    token: _Platform,
-    factory: _Platform.ɵfac,
-    providedIn: "root"
-  });
 };
+/** @nocollapse */
+__publicField(_Platform, "ɵfac", function Platform_Factory(t) {
+  return new (t || _Platform)(ɵɵinject(DOCUMENT), ɵɵinject(NgZone));
+});
+/** @nocollapse */
+__publicField(_Platform, "ɵprov", ɵɵdefineInjectable({
+  token: _Platform,
+  factory: _Platform.ɵfac,
+  providedIn: "root"
+}));
+var Platform = _Platform;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(Platform, [{
     type: Injectable,
@@ -1054,18 +1057,18 @@ var proxyEvent = (emitter, el, eventName, zone) => {
     });
   }
 };
-var NavController = class _NavController {
-  location;
-  serializer;
-  router;
-  topOutlet;
-  direction = DEFAULT_DIRECTION;
-  animated = DEFAULT_ANIMATED;
-  animationBuilder;
-  guessDirection = "forward";
-  guessAnimation;
-  lastNavId = -1;
+var _NavController = class _NavController {
   constructor(platform, location, serializer, router) {
+    __publicField(this, "location");
+    __publicField(this, "serializer");
+    __publicField(this, "router");
+    __publicField(this, "topOutlet");
+    __publicField(this, "direction", DEFAULT_DIRECTION);
+    __publicField(this, "animated", DEFAULT_ANIMATED);
+    __publicField(this, "animationBuilder");
+    __publicField(this, "guessDirection", "forward");
+    __publicField(this, "guessAnimation");
+    __publicField(this, "lastNavId", -1);
     this.location = location;
     this.serializer = serializer;
     this.router = router;
@@ -1232,17 +1235,18 @@ var NavController = class _NavController {
       return this.router.navigateByUrl(urlTree, options);
     }
   }
-  /** @nocollapse */
-  static ɵfac = function NavController_Factory(t) {
-    return new (t || _NavController)(ɵɵinject(Platform), ɵɵinject(Location), ɵɵinject(UrlSerializer), ɵɵinject(Router, 8));
-  };
-  /** @nocollapse */
-  static ɵprov = ɵɵdefineInjectable({
-    token: _NavController,
-    factory: _NavController.ɵfac,
-    providedIn: "root"
-  });
 };
+/** @nocollapse */
+__publicField(_NavController, "ɵfac", function NavController_Factory(t) {
+  return new (t || _NavController)(ɵɵinject(Platform), ɵɵinject(Location), ɵɵinject(UrlSerializer), ɵɵinject(Router, 8));
+});
+/** @nocollapse */
+__publicField(_NavController, "ɵprov", ɵɵdefineInjectable({
+  token: _NavController,
+  factory: _NavController.ɵfac,
+  providedIn: "root"
+}));
+var NavController = _NavController;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(NavController, [{
     type: Injectable,
@@ -1280,7 +1284,7 @@ var getAnimation = (direction, animated, animationDirection) => {
 };
 var DEFAULT_DIRECTION = "auto";
 var DEFAULT_ANIMATED = void 0;
-var Config = class _Config {
+var _Config = class _Config {
   get(key, fallback) {
     const c = getConfig();
     if (c) {
@@ -1302,17 +1306,18 @@ var Config = class _Config {
     }
     return 0;
   }
-  /** @nocollapse */
-  static ɵfac = function Config_Factory(t) {
-    return new (t || _Config)();
-  };
-  /** @nocollapse */
-  static ɵprov = ɵɵdefineInjectable({
-    token: _Config,
-    factory: _Config.ɵfac,
-    providedIn: "root"
-  });
 };
+/** @nocollapse */
+__publicField(_Config, "ɵfac", function Config_Factory(t) {
+  return new (t || _Config)();
+});
+/** @nocollapse */
+__publicField(_Config, "ɵprov", ɵɵdefineInjectable({
+  token: _Config,
+  factory: _Config.ɵfac,
+  providedIn: "root"
+}));
+var Config = _Config;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(Config, [{
     type: Injectable,
@@ -1332,8 +1337,8 @@ var getConfig = () => {
   return null;
 };
 var NavParams = class {
-  data;
   constructor(data = {}) {
+    __publicField(this, "data");
     this.data = data;
     console.warn(`[Ionic Warning]: NavParams has been deprecated in favor of using Angular's input API. Developers should migrate to either the @Input decorator or the Signals-based input API.`);
   }
@@ -1357,38 +1362,41 @@ var NavParams = class {
     return this.data[param];
   }
 };
-var AngularDelegate = class _AngularDelegate {
-  zone = inject(NgZone);
-  applicationRef = inject(ApplicationRef);
-  config = inject(ConfigToken);
+var _AngularDelegate = class _AngularDelegate {
+  constructor() {
+    __publicField(this, "zone", inject(NgZone));
+    __publicField(this, "applicationRef", inject(ApplicationRef));
+    __publicField(this, "config", inject(ConfigToken));
+  }
   create(environmentInjector, injector, elementReferenceKey) {
     return new AngularFrameworkDelegate(environmentInjector, injector, this.applicationRef, this.zone, elementReferenceKey, this.config.useSetInputAPI ?? false);
   }
-  /** @nocollapse */
-  static ɵfac = function AngularDelegate_Factory(t) {
-    return new (t || _AngularDelegate)();
-  };
-  /** @nocollapse */
-  static ɵprov = ɵɵdefineInjectable({
-    token: _AngularDelegate,
-    factory: _AngularDelegate.ɵfac
-  });
 };
+/** @nocollapse */
+__publicField(_AngularDelegate, "ɵfac", function AngularDelegate_Factory(t) {
+  return new (t || _AngularDelegate)();
+});
+/** @nocollapse */
+__publicField(_AngularDelegate, "ɵprov", ɵɵdefineInjectable({
+  token: _AngularDelegate,
+  factory: _AngularDelegate.ɵfac
+}));
+var AngularDelegate = _AngularDelegate;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(AngularDelegate, [{
     type: Injectable
   }], null, null);
 })();
 var AngularFrameworkDelegate = class {
-  environmentInjector;
-  injector;
-  applicationRef;
-  zone;
-  elementReferenceKey;
-  enableSignalsSupport;
-  elRefMap = /* @__PURE__ */ new WeakMap();
-  elEventsMap = /* @__PURE__ */ new WeakMap();
   constructor(environmentInjector, injector, applicationRef, zone, elementReferenceKey, enableSignalsSupport) {
+    __publicField(this, "environmentInjector");
+    __publicField(this, "injector");
+    __publicField(this, "applicationRef");
+    __publicField(this, "zone");
+    __publicField(this, "elementReferenceKey");
+    __publicField(this, "enableSignalsSupport");
+    __publicField(this, "elRefMap", /* @__PURE__ */ new WeakMap());
+    __publicField(this, "elEventsMap", /* @__PURE__ */ new WeakMap());
     this.environmentInjector = environmentInjector;
     this.injector = injector;
     this.applicationRef = applicationRef;
@@ -1442,10 +1450,10 @@ var attachView = (zone, environmentInjector, injector, applicationRef, elRefMap,
       console.error(`[Ionic Error]: ${elementReferenceKey} is a reserved property when using ${container.tagName.toLowerCase()}. Rename or remove the "${elementReferenceKey}" property from ${component.name}.`);
     }
     if (enableSignalsSupport === true && componentRef.setInput !== void 0) {
-      const _a = params, {
+      const _a87 = params, {
         modal,
         popover
-      } = _a, otherParams = __objRest(_a, [
+      } = _a87, otherParams = __objRest(_a87, [
         "modal",
         "popover"
       ]);
@@ -1550,13 +1558,14 @@ function ProxyCmp(opts) {
 }
 var POPOVER_INPUTS = ["alignment", "animated", "arrow", "keepContentsMounted", "backdropDismiss", "cssClass", "dismissOnSelect", "enterAnimation", "event", "focusTrap", "isOpen", "keyboardClose", "leaveAnimation", "mode", "showBackdrop", "translucent", "trigger", "triggerAction", "reference", "size", "side"];
 var POPOVER_METHODS = ["present", "dismiss", "onDidDismiss", "onWillDismiss"];
-var IonPopover = class IonPopover2 {
-  z;
-  // TODO(FW-2827): type
-  template;
-  isCmpOpen = false;
-  el;
+var _a;
+var IonPopover = (_a = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    // TODO(FW-2827): type
+    __publicField(this, "template");
+    __publicField(this, "isCmpOpen", false);
+    __publicField(this, "el");
     this.z = z;
     this.el = r.nativeElement;
     this.el.addEventListener("ionMount", () => {
@@ -1569,48 +1578,46 @@ var IonPopover = class IonPopover2 {
     });
     proxyOutputs(this, this.el, ["ionPopoverDidPresent", "ionPopoverWillPresent", "ionPopoverWillDismiss", "ionPopoverDidDismiss", "didPresent", "willPresent", "willDismiss", "didDismiss"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonPopover_Factory(t) {
-    return new (t || IonPopover2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵdir = ɵɵdefineDirective({
-    type: IonPopover2,
-    selectors: [["ion-popover"]],
-    contentQueries: function IonPopover_ContentQueries(rf, ctx, dirIndex) {
-      if (rf & 1) {
-        ɵɵcontentQuery(dirIndex, TemplateRef, 5);
-      }
-      if (rf & 2) {
-        let _t;
-        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.template = _t.first);
-      }
-    },
-    inputs: {
-      alignment: "alignment",
-      animated: "animated",
-      arrow: "arrow",
-      keepContentsMounted: "keepContentsMounted",
-      backdropDismiss: "backdropDismiss",
-      cssClass: "cssClass",
-      dismissOnSelect: "dismissOnSelect",
-      enterAnimation: "enterAnimation",
-      event: "event",
-      focusTrap: "focusTrap",
-      isOpen: "isOpen",
-      keyboardClose: "keyboardClose",
-      leaveAnimation: "leaveAnimation",
-      mode: "mode",
-      showBackdrop: "showBackdrop",
-      translucent: "translucent",
-      trigger: "trigger",
-      triggerAction: "triggerAction",
-      reference: "reference",
-      size: "size",
-      side: "side"
+}, /** @nocollapse */
+__publicField(_a, "ɵfac", function IonPopover_Factory(t) {
+  return new (t || _a)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a, "ɵdir", ɵɵdefineDirective({
+  type: _a,
+  selectors: [["ion-popover"]],
+  contentQueries: function IonPopover_ContentQueries(rf, ctx, dirIndex) {
+    if (rf & 1) {
+      ɵɵcontentQuery(dirIndex, TemplateRef, 5);
     }
-  });
-};
+    if (rf & 2) {
+      let _t;
+      ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.template = _t.first);
+    }
+  },
+  inputs: {
+    alignment: "alignment",
+    animated: "animated",
+    arrow: "arrow",
+    keepContentsMounted: "keepContentsMounted",
+    backdropDismiss: "backdropDismiss",
+    cssClass: "cssClass",
+    dismissOnSelect: "dismissOnSelect",
+    enterAnimation: "enterAnimation",
+    event: "event",
+    focusTrap: "focusTrap",
+    isOpen: "isOpen",
+    keyboardClose: "keyboardClose",
+    leaveAnimation: "leaveAnimation",
+    mode: "mode",
+    showBackdrop: "showBackdrop",
+    translucent: "translucent",
+    trigger: "trigger",
+    triggerAction: "triggerAction",
+    reference: "reference",
+    size: "size",
+    side: "side"
+  }
+})), _a);
 IonPopover = __decorate([
   ProxyCmp({
     inputs: POPOVER_INPUTS,
@@ -1650,13 +1657,14 @@ IonPopover = __decorate([
 })();
 var MODAL_INPUTS = ["animated", "keepContentsMounted", "backdropBreakpoint", "backdropDismiss", "breakpoints", "canDismiss", "cssClass", "enterAnimation", "event", "focusTrap", "handle", "handleBehavior", "initialBreakpoint", "isOpen", "keyboardClose", "leaveAnimation", "mode", "presentingElement", "showBackdrop", "translucent", "trigger"];
 var MODAL_METHODS = ["present", "dismiss", "onDidDismiss", "onWillDismiss", "setCurrentBreakpoint", "getCurrentBreakpoint"];
-var IonModal = class IonModal2 {
-  z;
-  // TODO(FW-2827): type
-  template;
-  isCmpOpen = false;
-  el;
+var _a2;
+var IonModal = (_a2 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    // TODO(FW-2827): type
+    __publicField(this, "template");
+    __publicField(this, "isCmpOpen", false);
+    __publicField(this, "el");
     this.z = z;
     this.el = r.nativeElement;
     this.el.addEventListener("ionMount", () => {
@@ -1669,48 +1677,46 @@ var IonModal = class IonModal2 {
     });
     proxyOutputs(this, this.el, ["ionModalDidPresent", "ionModalWillPresent", "ionModalWillDismiss", "ionModalDidDismiss", "ionBreakpointDidChange", "didPresent", "willPresent", "willDismiss", "didDismiss"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonModal_Factory(t) {
-    return new (t || IonModal2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵdir = ɵɵdefineDirective({
-    type: IonModal2,
-    selectors: [["ion-modal"]],
-    contentQueries: function IonModal_ContentQueries(rf, ctx, dirIndex) {
-      if (rf & 1) {
-        ɵɵcontentQuery(dirIndex, TemplateRef, 5);
-      }
-      if (rf & 2) {
-        let _t;
-        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.template = _t.first);
-      }
-    },
-    inputs: {
-      animated: "animated",
-      keepContentsMounted: "keepContentsMounted",
-      backdropBreakpoint: "backdropBreakpoint",
-      backdropDismiss: "backdropDismiss",
-      breakpoints: "breakpoints",
-      canDismiss: "canDismiss",
-      cssClass: "cssClass",
-      enterAnimation: "enterAnimation",
-      event: "event",
-      focusTrap: "focusTrap",
-      handle: "handle",
-      handleBehavior: "handleBehavior",
-      initialBreakpoint: "initialBreakpoint",
-      isOpen: "isOpen",
-      keyboardClose: "keyboardClose",
-      leaveAnimation: "leaveAnimation",
-      mode: "mode",
-      presentingElement: "presentingElement",
-      showBackdrop: "showBackdrop",
-      translucent: "translucent",
-      trigger: "trigger"
+}, /** @nocollapse */
+__publicField(_a2, "ɵfac", function IonModal_Factory(t) {
+  return new (t || _a2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a2, "ɵdir", ɵɵdefineDirective({
+  type: _a2,
+  selectors: [["ion-modal"]],
+  contentQueries: function IonModal_ContentQueries(rf, ctx, dirIndex) {
+    if (rf & 1) {
+      ɵɵcontentQuery(dirIndex, TemplateRef, 5);
     }
-  });
-};
+    if (rf & 2) {
+      let _t;
+      ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.template = _t.first);
+    }
+  },
+  inputs: {
+    animated: "animated",
+    keepContentsMounted: "keepContentsMounted",
+    backdropBreakpoint: "backdropBreakpoint",
+    backdropDismiss: "backdropDismiss",
+    breakpoints: "breakpoints",
+    canDismiss: "canDismiss",
+    cssClass: "cssClass",
+    enterAnimation: "enterAnimation",
+    event: "event",
+    focusTrap: "focusTrap",
+    handle: "handle",
+    handleBehavior: "handleBehavior",
+    initialBreakpoint: "initialBreakpoint",
+    isOpen: "isOpen",
+    keyboardClose: "keyboardClose",
+    leaveAnimation: "leaveAnimation",
+    mode: "mode",
+    presentingElement: "presentingElement",
+    showBackdrop: "showBackdrop",
+    translucent: "translucent",
+    trigger: "trigger"
+  }
+})), _a2);
 IonModal = __decorate([
   ProxyCmp({
     inputs: MODAL_INPUTS,
@@ -1816,18 +1822,18 @@ var destroyView = (view) => {
   }
 };
 var StackController = class {
-  containerEl;
-  router;
-  navCtrl;
-  zone;
-  location;
-  views = [];
-  runningTask;
-  skipTransition = false;
-  tabsPrefix;
-  activeView;
-  nextId = 0;
   constructor(tabsPrefix, containerEl, router, navCtrl, zone, location) {
+    __publicField(this, "containerEl");
+    __publicField(this, "router");
+    __publicField(this, "navCtrl");
+    __publicField(this, "zone");
+    __publicField(this, "location");
+    __publicField(this, "views", []);
+    __publicField(this, "runningTask");
+    __publicField(this, "skipTransition", false);
+    __publicField(this, "tabsPrefix");
+    __publicField(this, "activeView");
+    __publicField(this, "nextId", 0);
     this.containerEl = containerEl;
     this.router = router;
     this.navCtrl = navCtrl;
@@ -2063,46 +2069,54 @@ var cleanup = (activeRoute, views, viewsSnapshot, location, zone) => {
     }
   });
 };
-var IonRouterOutlet = class _IonRouterOutlet {
-  parentOutlet;
-  nativeEl;
-  activatedView = null;
-  tabsPrefix;
-  _swipeGesture;
-  stackCtrl;
-  // Maintain map of activated route proxies for each component instance
-  proxyMap = /* @__PURE__ */ new WeakMap();
-  // Keep the latest activated route in a subject for the proxy routes to switch map to
-  currentActivatedRoute$ = new BehaviorSubject(null);
-  activated = null;
+var _IonRouterOutlet = class _IonRouterOutlet {
+  constructor(name, tabs, commonLocation, elementRef, router, zone, activatedRoute, parentOutlet) {
+    __publicField(this, "parentOutlet");
+    __publicField(this, "nativeEl");
+    __publicField(this, "activatedView", null);
+    __publicField(this, "tabsPrefix");
+    __publicField(this, "_swipeGesture");
+    __publicField(this, "stackCtrl");
+    // Maintain map of activated route proxies for each component instance
+    __publicField(this, "proxyMap", /* @__PURE__ */ new WeakMap());
+    // Keep the latest activated route in a subject for the proxy routes to switch map to
+    __publicField(this, "currentActivatedRoute$", new BehaviorSubject(null));
+    __publicField(this, "activated", null);
+    __publicField(this, "_activatedRoute", null);
+    /**
+     * The name of the outlet
+     */
+    __publicField(this, "name", PRIMARY_OUTLET);
+    /** @internal */
+    __publicField(this, "stackWillChange", new EventEmitter());
+    /** @internal */
+    __publicField(this, "stackDidChange", new EventEmitter());
+    // eslint-disable-next-line @angular-eslint/no-output-rename
+    __publicField(this, "activateEvents", new EventEmitter());
+    // eslint-disable-next-line @angular-eslint/no-output-rename
+    __publicField(this, "deactivateEvents", new EventEmitter());
+    __publicField(this, "parentContexts", inject(ChildrenOutletContexts));
+    __publicField(this, "location", inject(ViewContainerRef));
+    __publicField(this, "environmentInjector", inject(EnvironmentInjector));
+    __publicField(this, "inputBinder", inject(INPUT_BINDER, {
+      optional: true
+    }));
+    /** @nodoc */
+    __publicField(this, "supportsBindingToComponentInputs", true);
+    // Ionic providers
+    __publicField(this, "config", inject(Config));
+    __publicField(this, "navCtrl", inject(NavController));
+    this.parentOutlet = parentOutlet;
+    this.nativeEl = elementRef.nativeElement;
+    this.name = name || PRIMARY_OUTLET;
+    this.tabsPrefix = tabs === "true" ? getUrl(router, activatedRoute) : void 0;
+    this.stackCtrl = new StackController(this.tabsPrefix, this.nativeEl, router, this.navCtrl, zone, commonLocation);
+    this.parentContexts.onChildOutletCreated(this.name, this);
+  }
   /** @internal */
   get activatedComponentRef() {
     return this.activated;
   }
-  _activatedRoute = null;
-  /**
-   * The name of the outlet
-   */
-  name = PRIMARY_OUTLET;
-  /** @internal */
-  stackWillChange = new EventEmitter();
-  /** @internal */
-  stackDidChange = new EventEmitter();
-  // eslint-disable-next-line @angular-eslint/no-output-rename
-  activateEvents = new EventEmitter();
-  // eslint-disable-next-line @angular-eslint/no-output-rename
-  deactivateEvents = new EventEmitter();
-  parentContexts = inject(ChildrenOutletContexts);
-  location = inject(ViewContainerRef);
-  environmentInjector = inject(EnvironmentInjector);
-  inputBinder = inject(INPUT_BINDER, {
-    optional: true
-  });
-  /** @nodoc */
-  supportsBindingToComponentInputs = true;
-  // Ionic providers
-  config = inject(Config);
-  navCtrl = inject(NavController);
   set animation(animation) {
     this.nativeEl.animation = animation;
   }
@@ -2116,14 +2130,6 @@ var IonRouterOutlet = class _IonRouterOutlet {
       onStart: () => this.stackCtrl.startBackTransition(),
       onEnd: (shouldContinue) => this.stackCtrl.endBackTransition(shouldContinue)
     } : void 0;
-  }
-  constructor(name, tabs, commonLocation, elementRef, router, zone, activatedRoute, parentOutlet) {
-    this.parentOutlet = parentOutlet;
-    this.nativeEl = elementRef.nativeElement;
-    this.name = name || PRIMARY_OUTLET;
-    this.tabsPrefix = tabs === "true" ? getUrl(router, activatedRoute) : void 0;
-    this.stackCtrl = new StackController(this.tabsPrefix, this.nativeEl, router, this.navCtrl, zone, commonLocation);
-    this.parentContexts.onChildOutletCreated(this.name, this);
   }
   ngOnDestroy() {
     this.stackCtrl.destroy();
@@ -2341,30 +2347,31 @@ var IonRouterOutlet = class _IonRouterOutlet {
       activatedRoute
     });
   }
-  /** @nocollapse */
-  static ɵfac = function IonRouterOutlet_Factory(t) {
-    return new (t || _IonRouterOutlet)(ɵɵinjectAttribute("name"), ɵɵinjectAttribute("tabs"), ɵɵdirectiveInject(Location), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(Router), ɵɵdirectiveInject(NgZone), ɵɵdirectiveInject(ActivatedRoute), ɵɵdirectiveInject(_IonRouterOutlet, 12));
-  };
-  /** @nocollapse */
-  static ɵdir = ɵɵdefineDirective({
-    type: _IonRouterOutlet,
-    selectors: [["ion-router-outlet"]],
-    inputs: {
-      animated: "animated",
-      animation: "animation",
-      mode: "mode",
-      swipeGesture: "swipeGesture",
-      name: "name"
-    },
-    outputs: {
-      stackWillChange: "stackWillChange",
-      stackDidChange: "stackDidChange",
-      activateEvents: "activate",
-      deactivateEvents: "deactivate"
-    },
-    exportAs: ["outlet"]
-  });
 };
+/** @nocollapse */
+__publicField(_IonRouterOutlet, "ɵfac", function IonRouterOutlet_Factory(t) {
+  return new (t || _IonRouterOutlet)(ɵɵinjectAttribute("name"), ɵɵinjectAttribute("tabs"), ɵɵdirectiveInject(Location), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(Router), ɵɵdirectiveInject(NgZone), ɵɵdirectiveInject(ActivatedRoute), ɵɵdirectiveInject(_IonRouterOutlet, 12));
+});
+/** @nocollapse */
+__publicField(_IonRouterOutlet, "ɵdir", ɵɵdefineDirective({
+  type: _IonRouterOutlet,
+  selectors: [["ion-router-outlet"]],
+  inputs: {
+    animated: "animated",
+    animation: "animation",
+    mode: "mode",
+    swipeGesture: "swipeGesture",
+    name: "name"
+  },
+  outputs: {
+    stackWillChange: "stackWillChange",
+    stackDidChange: "stackDidChange",
+    activateEvents: "activate",
+    deactivateEvents: "deactivate"
+  },
+  exportAs: ["outlet"]
+}));
+var IonRouterOutlet = _IonRouterOutlet;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(IonRouterOutlet, [{
     type: Directive,
@@ -2428,10 +2435,10 @@ var IonRouterOutlet = class _IonRouterOutlet {
   });
 })();
 var OutletInjector = class {
-  route;
-  childContexts;
-  parent;
   constructor(route, childContexts, parent) {
+    __publicField(this, "route");
+    __publicField(this, "childContexts");
+    __publicField(this, "parent");
     this.route = route;
     this.childContexts = childContexts;
     this.parent = parent;
@@ -2447,8 +2454,10 @@ var OutletInjector = class {
   }
 };
 var INPUT_BINDER = new InjectionToken("");
-var RoutedComponentInputBinder = class _RoutedComponentInputBinder {
-  outletDataSubscriptions = /* @__PURE__ */ new Map();
+var _RoutedComponentInputBinder = class _RoutedComponentInputBinder {
+  constructor() {
+    __publicField(this, "outletDataSubscriptions", /* @__PURE__ */ new Map());
+  }
   bindActivatedRouteToOutletComponent(outlet) {
     this.unsubscribeFromRouteData(outlet);
     this.subscribeToRouteData(outlet);
@@ -2485,16 +2494,17 @@ var RoutedComponentInputBinder = class _RoutedComponentInputBinder {
     });
     this.outletDataSubscriptions.set(outlet, dataSubscription);
   }
-  /** @nocollapse */
-  static ɵfac = function RoutedComponentInputBinder_Factory(t) {
-    return new (t || _RoutedComponentInputBinder)();
-  };
-  /** @nocollapse */
-  static ɵprov = ɵɵdefineInjectable({
-    token: _RoutedComponentInputBinder,
-    factory: _RoutedComponentInputBinder.ɵfac
-  });
 };
+/** @nocollapse */
+__publicField(_RoutedComponentInputBinder, "ɵfac", function RoutedComponentInputBinder_Factory(t) {
+  return new (t || _RoutedComponentInputBinder)();
+});
+/** @nocollapse */
+__publicField(_RoutedComponentInputBinder, "ɵprov", ɵɵdefineInjectable({
+  token: _RoutedComponentInputBinder,
+  factory: _RoutedComponentInputBinder.ɵfac
+}));
+var RoutedComponentInputBinder = _RoutedComponentInputBinder;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(RoutedComponentInputBinder, [{
     type: Injectable
@@ -2514,14 +2524,15 @@ function componentInputBindingFactory(router) {
   return null;
 }
 var BACK_BUTTON_INPUTS = ["color", "defaultHref", "disabled", "icon", "mode", "routerAnimation", "text", "type"];
-var IonBackButton = class IonBackButton2 {
-  routerOutlet;
-  navCtrl;
-  config;
-  r;
-  z;
-  el;
+var _a3;
+var IonBackButton = (_a3 = class {
   constructor(routerOutlet, navCtrl, config3, r, z, c) {
+    __publicField(this, "routerOutlet");
+    __publicField(this, "navCtrl");
+    __publicField(this, "config");
+    __publicField(this, "r");
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.routerOutlet = routerOutlet;
     this.navCtrl = navCtrl;
     this.config = config3;
@@ -2546,32 +2557,30 @@ var IonBackButton = class IonBackButton2 {
       ev.preventDefault();
     }
   }
-  /** @nocollapse */
-  static ɵfac = function IonBackButton_Factory(t) {
-    return new (t || IonBackButton2)(ɵɵdirectiveInject(IonRouterOutlet, 8), ɵɵdirectiveInject(NavController), ɵɵdirectiveInject(Config), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone), ɵɵdirectiveInject(ChangeDetectorRef));
-  };
-  /** @nocollapse */
-  static ɵdir = ɵɵdefineDirective({
-    type: IonBackButton2,
-    hostBindings: function IonBackButton_HostBindings(rf, ctx) {
-      if (rf & 1) {
-        ɵɵlistener("click", function IonBackButton_click_HostBindingHandler($event) {
-          return ctx.onClick($event);
-        });
-      }
-    },
-    inputs: {
-      color: "color",
-      defaultHref: "defaultHref",
-      disabled: "disabled",
-      icon: "icon",
-      mode: "mode",
-      routerAnimation: "routerAnimation",
-      text: "text",
-      type: "type"
+}, /** @nocollapse */
+__publicField(_a3, "ɵfac", function IonBackButton_Factory(t) {
+  return new (t || _a3)(ɵɵdirectiveInject(IonRouterOutlet, 8), ɵɵdirectiveInject(NavController), ɵɵdirectiveInject(Config), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone), ɵɵdirectiveInject(ChangeDetectorRef));
+}), /** @nocollapse */
+__publicField(_a3, "ɵdir", ɵɵdefineDirective({
+  type: _a3,
+  hostBindings: function IonBackButton_HostBindings(rf, ctx) {
+    if (rf & 1) {
+      ɵɵlistener("click", function IonBackButton_click_HostBindingHandler($event) {
+        return ctx.onClick($event);
+      });
     }
-  });
-};
+  },
+  inputs: {
+    color: "color",
+    defaultHref: "defaultHref",
+    disabled: "disabled",
+    icon: "icon",
+    mode: "mode",
+    routerAnimation: "routerAnimation",
+    text: "text",
+    type: "type"
+  }
+})), _a3);
 IonBackButton = __decorate([ProxyCmp({
   inputs: BACK_BUTTON_INPUTS
 })], IonBackButton);
@@ -2606,15 +2615,15 @@ IonBackButton = __decorate([ProxyCmp({
     }]
   });
 })();
-var RouterLinkDelegateDirective = class _RouterLinkDelegateDirective {
-  locationStrategy;
-  navCtrl;
-  elementRef;
-  router;
-  routerLink;
-  routerDirection = "forward";
-  routerAnimation;
+var _RouterLinkDelegateDirective = class _RouterLinkDelegateDirective {
   constructor(locationStrategy, navCtrl, elementRef, router, routerLink) {
+    __publicField(this, "locationStrategy");
+    __publicField(this, "navCtrl");
+    __publicField(this, "elementRef");
+    __publicField(this, "router");
+    __publicField(this, "routerLink");
+    __publicField(this, "routerDirection", "forward");
+    __publicField(this, "routerAnimation");
     this.locationStrategy = locationStrategy;
     this.navCtrl = navCtrl;
     this.elementRef = elementRef;
@@ -2659,28 +2668,29 @@ var RouterLinkDelegateDirective = class _RouterLinkDelegateDirective {
     this.navCtrl.setDirection(this.routerDirection, void 0, void 0, this.routerAnimation);
     ev.preventDefault();
   }
-  /** @nocollapse */
-  static ɵfac = function RouterLinkDelegateDirective_Factory(t) {
-    return new (t || _RouterLinkDelegateDirective)(ɵɵdirectiveInject(LocationStrategy), ɵɵdirectiveInject(NavController), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(Router), ɵɵdirectiveInject(RouterLink, 8));
-  };
-  /** @nocollapse */
-  static ɵdir = ɵɵdefineDirective({
-    type: _RouterLinkDelegateDirective,
-    selectors: [["", "routerLink", "", 5, "a", 5, "area"]],
-    hostBindings: function RouterLinkDelegateDirective_HostBindings(rf, ctx) {
-      if (rf & 1) {
-        ɵɵlistener("click", function RouterLinkDelegateDirective_click_HostBindingHandler($event) {
-          return ctx.onClick($event);
-        });
-      }
-    },
-    inputs: {
-      routerDirection: "routerDirection",
-      routerAnimation: "routerAnimation"
-    },
-    features: [ɵɵNgOnChangesFeature]
-  });
 };
+/** @nocollapse */
+__publicField(_RouterLinkDelegateDirective, "ɵfac", function RouterLinkDelegateDirective_Factory(t) {
+  return new (t || _RouterLinkDelegateDirective)(ɵɵdirectiveInject(LocationStrategy), ɵɵdirectiveInject(NavController), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(Router), ɵɵdirectiveInject(RouterLink, 8));
+});
+/** @nocollapse */
+__publicField(_RouterLinkDelegateDirective, "ɵdir", ɵɵdefineDirective({
+  type: _RouterLinkDelegateDirective,
+  selectors: [["", "routerLink", "", 5, "a", 5, "area"]],
+  hostBindings: function RouterLinkDelegateDirective_HostBindings(rf, ctx) {
+    if (rf & 1) {
+      ɵɵlistener("click", function RouterLinkDelegateDirective_click_HostBindingHandler($event) {
+        return ctx.onClick($event);
+      });
+    }
+  },
+  inputs: {
+    routerDirection: "routerDirection",
+    routerAnimation: "routerAnimation"
+  },
+  features: [ɵɵNgOnChangesFeature]
+}));
+var RouterLinkDelegateDirective = _RouterLinkDelegateDirective;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(RouterLinkDelegateDirective, [{
     type: Directive,
@@ -2715,15 +2725,15 @@ var RouterLinkDelegateDirective = class _RouterLinkDelegateDirective {
     }]
   });
 })();
-var RouterLinkWithHrefDelegateDirective = class _RouterLinkWithHrefDelegateDirective {
-  locationStrategy;
-  navCtrl;
-  elementRef;
-  router;
-  routerLink;
-  routerDirection = "forward";
-  routerAnimation;
+var _RouterLinkWithHrefDelegateDirective = class _RouterLinkWithHrefDelegateDirective {
   constructor(locationStrategy, navCtrl, elementRef, router, routerLink) {
+    __publicField(this, "locationStrategy");
+    __publicField(this, "navCtrl");
+    __publicField(this, "elementRef");
+    __publicField(this, "router");
+    __publicField(this, "routerLink");
+    __publicField(this, "routerDirection", "forward");
+    __publicField(this, "routerAnimation");
     this.locationStrategy = locationStrategy;
     this.navCtrl = navCtrl;
     this.elementRef = elementRef;
@@ -2748,28 +2758,29 @@ var RouterLinkWithHrefDelegateDirective = class _RouterLinkWithHrefDelegateDirec
   onClick() {
     this.navCtrl.setDirection(this.routerDirection, void 0, void 0, this.routerAnimation);
   }
-  /** @nocollapse */
-  static ɵfac = function RouterLinkWithHrefDelegateDirective_Factory(t) {
-    return new (t || _RouterLinkWithHrefDelegateDirective)(ɵɵdirectiveInject(LocationStrategy), ɵɵdirectiveInject(NavController), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(Router), ɵɵdirectiveInject(RouterLink, 8));
-  };
-  /** @nocollapse */
-  static ɵdir = ɵɵdefineDirective({
-    type: _RouterLinkWithHrefDelegateDirective,
-    selectors: [["a", "routerLink", ""], ["area", "routerLink", ""]],
-    hostBindings: function RouterLinkWithHrefDelegateDirective_HostBindings(rf, ctx) {
-      if (rf & 1) {
-        ɵɵlistener("click", function RouterLinkWithHrefDelegateDirective_click_HostBindingHandler() {
-          return ctx.onClick();
-        });
-      }
-    },
-    inputs: {
-      routerDirection: "routerDirection",
-      routerAnimation: "routerAnimation"
-    },
-    features: [ɵɵNgOnChangesFeature]
-  });
 };
+/** @nocollapse */
+__publicField(_RouterLinkWithHrefDelegateDirective, "ɵfac", function RouterLinkWithHrefDelegateDirective_Factory(t) {
+  return new (t || _RouterLinkWithHrefDelegateDirective)(ɵɵdirectiveInject(LocationStrategy), ɵɵdirectiveInject(NavController), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(Router), ɵɵdirectiveInject(RouterLink, 8));
+});
+/** @nocollapse */
+__publicField(_RouterLinkWithHrefDelegateDirective, "ɵdir", ɵɵdefineDirective({
+  type: _RouterLinkWithHrefDelegateDirective,
+  selectors: [["a", "routerLink", ""], ["area", "routerLink", ""]],
+  hostBindings: function RouterLinkWithHrefDelegateDirective_HostBindings(rf, ctx) {
+    if (rf & 1) {
+      ɵɵlistener("click", function RouterLinkWithHrefDelegateDirective_click_HostBindingHandler() {
+        return ctx.onClick();
+      });
+    }
+  },
+  inputs: {
+    routerDirection: "routerDirection",
+    routerAnimation: "routerAnimation"
+  },
+  features: [ɵɵNgOnChangesFeature]
+}));
+var RouterLinkWithHrefDelegateDirective = _RouterLinkWithHrefDelegateDirective;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(RouterLinkWithHrefDelegateDirective, [{
     type: Directive,
@@ -2806,32 +2817,31 @@ var RouterLinkWithHrefDelegateDirective = class _RouterLinkWithHrefDelegateDirec
 })();
 var NAV_INPUTS = ["animated", "animation", "root", "rootParams", "swipeGesture"];
 var NAV_METHODS = ["push", "insert", "insertPages", "pop", "popTo", "popToRoot", "removeIndex", "setRoot", "setPages", "getActive", "getByIndex", "canGoBack", "getPrevious"];
-var IonNav = class IonNav2 {
-  z;
-  el;
+var _a4;
+var IonNav = (_a4 = class {
   constructor(ref, environmentInjector, injector, angularDelegate, z, c) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = ref.nativeElement;
     ref.nativeElement.delegate = angularDelegate.create(environmentInjector, injector);
     proxyOutputs(this, this.el, ["ionNavDidChange", "ionNavWillChange"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonNav_Factory(t) {
-    return new (t || IonNav2)(ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(EnvironmentInjector), ɵɵdirectiveInject(Injector), ɵɵdirectiveInject(AngularDelegate), ɵɵdirectiveInject(NgZone), ɵɵdirectiveInject(ChangeDetectorRef));
-  };
-  /** @nocollapse */
-  static ɵdir = ɵɵdefineDirective({
-    type: IonNav2,
-    inputs: {
-      animated: "animated",
-      animation: "animation",
-      root: "root",
-      rootParams: "rootParams",
-      swipeGesture: "swipeGesture"
-    }
-  });
-};
+}, /** @nocollapse */
+__publicField(_a4, "ɵfac", function IonNav_Factory(t) {
+  return new (t || _a4)(ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(EnvironmentInjector), ɵɵdirectiveInject(Injector), ɵɵdirectiveInject(AngularDelegate), ɵɵdirectiveInject(NgZone), ɵɵdirectiveInject(ChangeDetectorRef));
+}), /** @nocollapse */
+__publicField(_a4, "ɵdir", ɵɵdefineDirective({
+  type: _a4,
+  inputs: {
+    animated: "animated",
+    animation: "animation",
+    root: "root",
+    rootParams: "rootParams",
+    swipeGesture: "swipeGesture"
+  }
+})), _a4);
 IonNav = __decorate([ProxyCmp({
   inputs: NAV_INPUTS,
   methods: NAV_METHODS
@@ -2859,22 +2869,22 @@ IonNav = __decorate([ProxyCmp({
     }];
   }, null);
 })();
-var IonTabs = class _IonTabs {
-  navCtrl;
-  tabsInner;
-  /**
-   * Emitted before the tab view is changed.
-   */
-  ionTabsWillChange = new EventEmitter();
-  /**
-   * Emitted after the tab view is changed.
-   */
-  ionTabsDidChange = new EventEmitter();
-  tabBarSlot = "bottom";
-  hasTab = false;
-  selectedTab;
-  leavingTab;
+var _IonTabs = class _IonTabs {
   constructor(navCtrl) {
+    __publicField(this, "navCtrl");
+    __publicField(this, "tabsInner");
+    /**
+     * Emitted before the tab view is changed.
+     */
+    __publicField(this, "ionTabsWillChange", new EventEmitter());
+    /**
+     * Emitted after the tab view is changed.
+     */
+    __publicField(this, "ionTabsDidChange", new EventEmitter());
+    __publicField(this, "tabBarSlot", "bottom");
+    __publicField(this, "hasTab", false);
+    __publicField(this, "selectedTab");
+    __publicField(this, "leavingTab");
     this.navCtrl = navCtrl;
   }
   ngAfterViewInit() {
@@ -3042,36 +3052,37 @@ var IonTabs = class _IonTabs {
       this.tabsInner.nativeElement.after(tabBar);
     }
   }
-  /** @nocollapse */
-  static ɵfac = function IonTabs_Factory(t) {
-    return new (t || _IonTabs)(ɵɵdirectiveInject(NavController));
-  };
-  /** @nocollapse */
-  static ɵdir = ɵɵdefineDirective({
-    type: _IonTabs,
-    selectors: [["ion-tabs"]],
-    viewQuery: function IonTabs_Query(rf, ctx) {
-      if (rf & 1) {
-        ɵɵviewQuery(_c0, 7, ElementRef);
-      }
-      if (rf & 2) {
-        let _t;
-        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.tabsInner = _t.first);
-      }
-    },
-    hostBindings: function IonTabs_HostBindings(rf, ctx) {
-      if (rf & 1) {
-        ɵɵlistener("ionTabButtonClick", function IonTabs_ionTabButtonClick_HostBindingHandler($event) {
-          return ctx.select($event);
-        });
-      }
-    },
-    outputs: {
-      ionTabsWillChange: "ionTabsWillChange",
-      ionTabsDidChange: "ionTabsDidChange"
-    }
-  });
 };
+/** @nocollapse */
+__publicField(_IonTabs, "ɵfac", function IonTabs_Factory(t) {
+  return new (t || _IonTabs)(ɵɵdirectiveInject(NavController));
+});
+/** @nocollapse */
+__publicField(_IonTabs, "ɵdir", ɵɵdefineDirective({
+  type: _IonTabs,
+  selectors: [["ion-tabs"]],
+  viewQuery: function IonTabs_Query(rf, ctx) {
+    if (rf & 1) {
+      ɵɵviewQuery(_c0, 7, ElementRef);
+    }
+    if (rf & 2) {
+      let _t;
+      ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.tabsInner = _t.first);
+    }
+  },
+  hostBindings: function IonTabs_HostBindings(rf, ctx) {
+    if (rf & 1) {
+      ɵɵlistener("ionTabButtonClick", function IonTabs_ionTabButtonClick_HostBindingHandler($event) {
+        return ctx.select($event);
+      });
+    }
+  },
+  outputs: {
+    ionTabsWillChange: "ionTabsWillChange",
+    ionTabsDidChange: "ionTabsDidChange"
+  }
+}));
+var IonTabs = _IonTabs;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(IonTabs, [{
     type: Directive,
@@ -3111,16 +3122,16 @@ var raf = (h) => {
   }
   return setTimeout(h);
 };
-var ValueAccessor = class _ValueAccessor {
-  injector;
-  elementRef;
-  onChange = () => {
-  };
-  onTouched = () => {
-  };
-  lastValue;
-  statusChanges;
+var _ValueAccessor = class _ValueAccessor {
   constructor(injector, elementRef) {
+    __publicField(this, "injector");
+    __publicField(this, "elementRef");
+    __publicField(this, "onChange", () => {
+    });
+    __publicField(this, "onTouched", () => {
+    });
+    __publicField(this, "lastValue");
+    __publicField(this, "statusChanges");
     this.injector = injector;
     this.elementRef = elementRef;
   }
@@ -3196,22 +3207,23 @@ var ValueAccessor = class _ValueAccessor {
       });
     }
   }
-  /** @nocollapse */
-  static ɵfac = function ValueAccessor_Factory(t) {
-    return new (t || _ValueAccessor)(ɵɵdirectiveInject(Injector), ɵɵdirectiveInject(ElementRef));
-  };
-  /** @nocollapse */
-  static ɵdir = ɵɵdefineDirective({
-    type: _ValueAccessor,
-    hostBindings: function ValueAccessor_HostBindings(rf, ctx) {
-      if (rf & 1) {
-        ɵɵlistener("ionBlur", function ValueAccessor_ionBlur_HostBindingHandler($event) {
-          return ctx._handleBlurEvent($event.target);
-        });
-      }
-    }
-  });
 };
+/** @nocollapse */
+__publicField(_ValueAccessor, "ɵfac", function ValueAccessor_Factory(t) {
+  return new (t || _ValueAccessor)(ɵɵdirectiveInject(Injector), ɵɵdirectiveInject(ElementRef));
+});
+/** @nocollapse */
+__publicField(_ValueAccessor, "ɵdir", ɵɵdefineDirective({
+  type: _ValueAccessor,
+  hostBindings: function ValueAccessor_HostBindings(rf, ctx) {
+    if (rf & 1) {
+      ɵɵlistener("ionBlur", function ValueAccessor_ionBlur_HostBindingHandler($event) {
+        return ctx._handleBlurEvent($event.target);
+      });
+    }
+  }
+}));
+var ValueAccessor = _ValueAccessor;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ValueAccessor, [{
     type: Directive
@@ -3313,8 +3325,8 @@ var IonicRouteStrategy = class {
   }
 };
 var OverlayBaseController = class {
-  ctrl;
   constructor(ctrl) {
+    __publicField(this, "ctrl");
     this.ctrl = ctrl;
   }
   /**
@@ -4464,7 +4476,7 @@ function applyPolyfills() {
     if ("function" !== typeof Object.assign || !Object.entries || !Array.prototype.find || !Array.prototype.includes || !String.prototype.startsWith || !String.prototype.endsWith || win3.NodeList && !win3.NodeList.prototype.forEach || !win3.fetch || !checkIfURLIsSupported() || typeof WeakMap == "undefined") {
       promises.push(import(
         /* webpackChunkName: "polyfills-core-js" */
-        "./core-js-WMWBPL6K.js"
+        "./core-js-W5AQZKUP.js"
       ));
     }
   }
@@ -4552,7 +4564,7 @@ function IonPopover_ng_container_0_Template(rf, ctx) {
     ɵɵproperty("ngTemplateOutlet", ctx_r0.template);
   }
 }
-var BooleanValueAccessorDirective = class _BooleanValueAccessorDirective extends ValueAccessor {
+var _BooleanValueAccessorDirective = class _BooleanValueAccessorDirective extends ValueAccessor {
   constructor(injector, el) {
     super(injector, el);
   }
@@ -4563,28 +4575,29 @@ var BooleanValueAccessorDirective = class _BooleanValueAccessorDirective extends
   _handleIonChange(el) {
     this.handleValueChange(el, el.checked);
   }
-  /** @nocollapse */
-  static ɵfac = function BooleanValueAccessorDirective_Factory(t) {
-    return new (t || _BooleanValueAccessorDirective)(ɵɵdirectiveInject(Injector), ɵɵdirectiveInject(ElementRef));
-  };
-  /** @nocollapse */
-  static ɵdir = ɵɵdefineDirective({
-    type: _BooleanValueAccessorDirective,
-    selectors: [["ion-checkbox"], ["ion-toggle"]],
-    hostBindings: function BooleanValueAccessorDirective_HostBindings(rf, ctx) {
-      if (rf & 1) {
-        ɵɵlistener("ionChange", function BooleanValueAccessorDirective_ionChange_HostBindingHandler($event) {
-          return ctx._handleIonChange($event.target);
-        });
-      }
-    },
-    features: [ɵɵProvidersFeature([{
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: _BooleanValueAccessorDirective,
-      multi: true
-    }]), ɵɵInheritDefinitionFeature]
-  });
 };
+/** @nocollapse */
+__publicField(_BooleanValueAccessorDirective, "ɵfac", function BooleanValueAccessorDirective_Factory(t) {
+  return new (t || _BooleanValueAccessorDirective)(ɵɵdirectiveInject(Injector), ɵɵdirectiveInject(ElementRef));
+});
+/** @nocollapse */
+__publicField(_BooleanValueAccessorDirective, "ɵdir", ɵɵdefineDirective({
+  type: _BooleanValueAccessorDirective,
+  selectors: [["ion-checkbox"], ["ion-toggle"]],
+  hostBindings: function BooleanValueAccessorDirective_HostBindings(rf, ctx) {
+    if (rf & 1) {
+      ɵɵlistener("ionChange", function BooleanValueAccessorDirective_ionChange_HostBindingHandler($event) {
+        return ctx._handleIonChange($event.target);
+      });
+    }
+  },
+  features: [ɵɵProvidersFeature([{
+    provide: NG_VALUE_ACCESSOR,
+    useExisting: _BooleanValueAccessorDirective,
+    multi: true
+  }]), ɵɵInheritDefinitionFeature]
+}));
+var BooleanValueAccessorDirective = _BooleanValueAccessorDirective;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(BooleanValueAccessorDirective, [{
     type: Directive,
@@ -4609,10 +4622,10 @@ var BooleanValueAccessorDirective = class _BooleanValueAccessorDirective extends
     }]
   });
 })();
-var NumericValueAccessorDirective = class _NumericValueAccessorDirective extends ValueAccessor {
-  el;
+var _NumericValueAccessorDirective = class _NumericValueAccessorDirective extends ValueAccessor {
   constructor(injector, el) {
     super(injector, el);
+    __publicField(this, "el");
     this.el = el;
   }
   handleInputEvent(el) {
@@ -4627,28 +4640,29 @@ var NumericValueAccessorDirective = class _NumericValueAccessorDirective extends
       super.registerOnChange(fn);
     }
   }
-  /** @nocollapse */
-  static ɵfac = function NumericValueAccessorDirective_Factory(t) {
-    return new (t || _NumericValueAccessorDirective)(ɵɵdirectiveInject(Injector), ɵɵdirectiveInject(ElementRef));
-  };
-  /** @nocollapse */
-  static ɵdir = ɵɵdefineDirective({
-    type: _NumericValueAccessorDirective,
-    selectors: [["ion-input", "type", "number"], ["ion-range"]],
-    hostBindings: function NumericValueAccessorDirective_HostBindings(rf, ctx) {
-      if (rf & 1) {
-        ɵɵlistener("ionInput", function NumericValueAccessorDirective_ionInput_HostBindingHandler($event) {
-          return ctx.handleInputEvent($event.target);
-        });
-      }
-    },
-    features: [ɵɵProvidersFeature([{
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: _NumericValueAccessorDirective,
-      multi: true
-    }]), ɵɵInheritDefinitionFeature]
-  });
 };
+/** @nocollapse */
+__publicField(_NumericValueAccessorDirective, "ɵfac", function NumericValueAccessorDirective_Factory(t) {
+  return new (t || _NumericValueAccessorDirective)(ɵɵdirectiveInject(Injector), ɵɵdirectiveInject(ElementRef));
+});
+/** @nocollapse */
+__publicField(_NumericValueAccessorDirective, "ɵdir", ɵɵdefineDirective({
+  type: _NumericValueAccessorDirective,
+  selectors: [["ion-input", "type", "number"], ["ion-range"]],
+  hostBindings: function NumericValueAccessorDirective_HostBindings(rf, ctx) {
+    if (rf & 1) {
+      ɵɵlistener("ionInput", function NumericValueAccessorDirective_ionInput_HostBindingHandler($event) {
+        return ctx.handleInputEvent($event.target);
+      });
+    }
+  },
+  features: [ɵɵProvidersFeature([{
+    provide: NG_VALUE_ACCESSOR,
+    useExisting: _NumericValueAccessorDirective,
+    multi: true
+  }]), ɵɵInheritDefinitionFeature]
+}));
+var NumericValueAccessorDirective = _NumericValueAccessorDirective;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(NumericValueAccessorDirective, [{
     type: Directive,
@@ -4673,35 +4687,36 @@ var NumericValueAccessorDirective = class _NumericValueAccessorDirective extends
     }]
   });
 })();
-var SelectValueAccessorDirective = class _SelectValueAccessorDirective extends ValueAccessor {
+var _SelectValueAccessorDirective = class _SelectValueAccessorDirective extends ValueAccessor {
   constructor(injector, el) {
     super(injector, el);
   }
   _handleChangeEvent(el) {
     this.handleValueChange(el, el.value);
   }
-  /** @nocollapse */
-  static ɵfac = function SelectValueAccessorDirective_Factory(t) {
-    return new (t || _SelectValueAccessorDirective)(ɵɵdirectiveInject(Injector), ɵɵdirectiveInject(ElementRef));
-  };
-  /** @nocollapse */
-  static ɵdir = ɵɵdefineDirective({
-    type: _SelectValueAccessorDirective,
-    selectors: [["ion-select"], ["ion-radio-group"], ["ion-segment"], ["ion-datetime"]],
-    hostBindings: function SelectValueAccessorDirective_HostBindings(rf, ctx) {
-      if (rf & 1) {
-        ɵɵlistener("ionChange", function SelectValueAccessorDirective_ionChange_HostBindingHandler($event) {
-          return ctx._handleChangeEvent($event.target);
-        });
-      }
-    },
-    features: [ɵɵProvidersFeature([{
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: _SelectValueAccessorDirective,
-      multi: true
-    }]), ɵɵInheritDefinitionFeature]
-  });
 };
+/** @nocollapse */
+__publicField(_SelectValueAccessorDirective, "ɵfac", function SelectValueAccessorDirective_Factory(t) {
+  return new (t || _SelectValueAccessorDirective)(ɵɵdirectiveInject(Injector), ɵɵdirectiveInject(ElementRef));
+});
+/** @nocollapse */
+__publicField(_SelectValueAccessorDirective, "ɵdir", ɵɵdefineDirective({
+  type: _SelectValueAccessorDirective,
+  selectors: [["ion-select"], ["ion-radio-group"], ["ion-segment"], ["ion-datetime"]],
+  hostBindings: function SelectValueAccessorDirective_HostBindings(rf, ctx) {
+    if (rf & 1) {
+      ɵɵlistener("ionChange", function SelectValueAccessorDirective_ionChange_HostBindingHandler($event) {
+        return ctx._handleChangeEvent($event.target);
+      });
+    }
+  },
+  features: [ɵɵProvidersFeature([{
+    provide: NG_VALUE_ACCESSOR,
+    useExisting: _SelectValueAccessorDirective,
+    multi: true
+  }]), ɵɵInheritDefinitionFeature]
+}));
+var SelectValueAccessorDirective = _SelectValueAccessorDirective;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(SelectValueAccessorDirective, [{
     type: Directive,
@@ -4727,35 +4742,36 @@ var SelectValueAccessorDirective = class _SelectValueAccessorDirective extends V
     }]
   });
 })();
-var TextValueAccessorDirective = class _TextValueAccessorDirective extends ValueAccessor {
+var _TextValueAccessorDirective = class _TextValueAccessorDirective extends ValueAccessor {
   constructor(injector, el) {
     super(injector, el);
   }
   _handleInputEvent(el) {
     this.handleValueChange(el, el.value);
   }
-  /** @nocollapse */
-  static ɵfac = function TextValueAccessorDirective_Factory(t) {
-    return new (t || _TextValueAccessorDirective)(ɵɵdirectiveInject(Injector), ɵɵdirectiveInject(ElementRef));
-  };
-  /** @nocollapse */
-  static ɵdir = ɵɵdefineDirective({
-    type: _TextValueAccessorDirective,
-    selectors: [["ion-input", 3, "type", "number"], ["ion-textarea"], ["ion-searchbar"]],
-    hostBindings: function TextValueAccessorDirective_HostBindings(rf, ctx) {
-      if (rf & 1) {
-        ɵɵlistener("ionInput", function TextValueAccessorDirective_ionInput_HostBindingHandler($event) {
-          return ctx._handleInputEvent($event.target);
-        });
-      }
-    },
-    features: [ɵɵProvidersFeature([{
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: _TextValueAccessorDirective,
-      multi: true
-    }]), ɵɵInheritDefinitionFeature]
-  });
 };
+/** @nocollapse */
+__publicField(_TextValueAccessorDirective, "ɵfac", function TextValueAccessorDirective_Factory(t) {
+  return new (t || _TextValueAccessorDirective)(ɵɵdirectiveInject(Injector), ɵɵdirectiveInject(ElementRef));
+});
+/** @nocollapse */
+__publicField(_TextValueAccessorDirective, "ɵdir", ɵɵdefineDirective({
+  type: _TextValueAccessorDirective,
+  selectors: [["ion-input", 3, "type", "number"], ["ion-textarea"], ["ion-searchbar"]],
+  hostBindings: function TextValueAccessorDirective_HostBindings(rf, ctx) {
+    if (rf & 1) {
+      ɵɵlistener("ionInput", function TextValueAccessorDirective_ionInput_HostBindingHandler($event) {
+        return ctx._handleInputEvent($event.target);
+      });
+    }
+  },
+  features: [ɵɵProvidersFeature([{
+    provide: NG_VALUE_ACCESSOR,
+    useExisting: _TextValueAccessorDirective,
+    multi: true
+  }]), ɵɵInheritDefinitionFeature]
+}));
+var TextValueAccessorDirective = _TextValueAccessorDirective;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TextValueAccessorDirective, [{
     type: Directive,
@@ -4833,43 +4849,42 @@ function ProxyCmp2(opts) {
   };
   return decorator;
 }
-var IonAccordion = class IonAccordion2 {
-  z;
-  el;
+var _a5;
+var IonAccordion = (_a5 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonAccordion_Factory(t) {
-    return new (t || IonAccordion2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonAccordion2,
-    selectors: [["ion-accordion"]],
-    inputs: {
-      disabled: "disabled",
-      mode: "mode",
-      readonly: "readonly",
-      toggleIcon: "toggleIcon",
-      toggleIconSlot: "toggleIconSlot",
-      value: "value"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonAccordion_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a5, "ɵfac", function IonAccordion_Factory(t) {
+  return new (t || _a5)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a5, "ɵcmp", ɵɵdefineComponent({
+  type: _a5,
+  selectors: [["ion-accordion"]],
+  inputs: {
+    disabled: "disabled",
+    mode: "mode",
+    readonly: "readonly",
+    toggleIcon: "toggleIcon",
+    toggleIconSlot: "toggleIconSlot",
+    value: "value"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonAccordion_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a5);
 IonAccordion = __decorate([ProxyCmp2({
   inputs: ["disabled", "mode", "readonly", "toggleIcon", "toggleIconSlot", "value"]
 })], IonAccordion);
@@ -4893,45 +4908,44 @@ IonAccordion = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonAccordionGroup = class IonAccordionGroup2 {
-  z;
-  el;
+var _a6;
+var IonAccordionGroup = (_a6 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs2(this, this.el, ["ionChange"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonAccordionGroup_Factory(t) {
-    return new (t || IonAccordionGroup2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonAccordionGroup2,
-    selectors: [["ion-accordion-group"]],
-    inputs: {
-      animated: "animated",
-      disabled: "disabled",
-      expand: "expand",
-      mode: "mode",
-      multiple: "multiple",
-      readonly: "readonly",
-      value: "value"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonAccordionGroup_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a6, "ɵfac", function IonAccordionGroup_Factory(t) {
+  return new (t || _a6)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a6, "ɵcmp", ɵɵdefineComponent({
+  type: _a6,
+  selectors: [["ion-accordion-group"]],
+  inputs: {
+    animated: "animated",
+    disabled: "disabled",
+    expand: "expand",
+    mode: "mode",
+    multiple: "multiple",
+    readonly: "readonly",
+    value: "value"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonAccordionGroup_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a6);
 IonAccordionGroup = __decorate([ProxyCmp2({
   inputs: ["animated", "disabled", "expand", "mode", "multiple", "readonly", "value"]
 })], IonAccordionGroup);
@@ -4955,52 +4969,51 @@ IonAccordionGroup = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonActionSheet = class IonActionSheet2 {
-  z;
-  el;
+var _a7;
+var IonActionSheet = (_a7 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs2(this, this.el, ["ionActionSheetDidPresent", "ionActionSheetWillPresent", "ionActionSheetWillDismiss", "ionActionSheetDidDismiss", "didPresent", "willPresent", "willDismiss", "didDismiss"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonActionSheet_Factory(t) {
-    return new (t || IonActionSheet2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonActionSheet2,
-    selectors: [["ion-action-sheet"]],
-    inputs: {
-      animated: "animated",
-      backdropDismiss: "backdropDismiss",
-      buttons: "buttons",
-      cssClass: "cssClass",
-      enterAnimation: "enterAnimation",
-      header: "header",
-      htmlAttributes: "htmlAttributes",
-      isOpen: "isOpen",
-      keyboardClose: "keyboardClose",
-      leaveAnimation: "leaveAnimation",
-      mode: "mode",
-      subHeader: "subHeader",
-      translucent: "translucent",
-      trigger: "trigger"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonActionSheet_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a7, "ɵfac", function IonActionSheet_Factory(t) {
+  return new (t || _a7)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a7, "ɵcmp", ɵɵdefineComponent({
+  type: _a7,
+  selectors: [["ion-action-sheet"]],
+  inputs: {
+    animated: "animated",
+    backdropDismiss: "backdropDismiss",
+    buttons: "buttons",
+    cssClass: "cssClass",
+    enterAnimation: "enterAnimation",
+    header: "header",
+    htmlAttributes: "htmlAttributes",
+    isOpen: "isOpen",
+    keyboardClose: "keyboardClose",
+    leaveAnimation: "leaveAnimation",
+    mode: "mode",
+    subHeader: "subHeader",
+    translucent: "translucent",
+    trigger: "trigger"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonActionSheet_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a7);
 IonActionSheet = __decorate([ProxyCmp2({
   inputs: ["animated", "backdropDismiss", "buttons", "cssClass", "enterAnimation", "header", "htmlAttributes", "isOpen", "keyboardClose", "leaveAnimation", "mode", "subHeader", "translucent", "trigger"],
   methods: ["present", "dismiss", "onDidDismiss", "onWillDismiss"]
@@ -5025,54 +5038,53 @@ IonActionSheet = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonAlert = class IonAlert2 {
-  z;
-  el;
+var _a8;
+var IonAlert = (_a8 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs2(this, this.el, ["ionAlertDidPresent", "ionAlertWillPresent", "ionAlertWillDismiss", "ionAlertDidDismiss", "didPresent", "willPresent", "willDismiss", "didDismiss"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonAlert_Factory(t) {
-    return new (t || IonAlert2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonAlert2,
-    selectors: [["ion-alert"]],
-    inputs: {
-      animated: "animated",
-      backdropDismiss: "backdropDismiss",
-      buttons: "buttons",
-      cssClass: "cssClass",
-      enterAnimation: "enterAnimation",
-      header: "header",
-      htmlAttributes: "htmlAttributes",
-      inputs: "inputs",
-      isOpen: "isOpen",
-      keyboardClose: "keyboardClose",
-      leaveAnimation: "leaveAnimation",
-      message: "message",
-      mode: "mode",
-      subHeader: "subHeader",
-      translucent: "translucent",
-      trigger: "trigger"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonAlert_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a8, "ɵfac", function IonAlert_Factory(t) {
+  return new (t || _a8)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a8, "ɵcmp", ɵɵdefineComponent({
+  type: _a8,
+  selectors: [["ion-alert"]],
+  inputs: {
+    animated: "animated",
+    backdropDismiss: "backdropDismiss",
+    buttons: "buttons",
+    cssClass: "cssClass",
+    enterAnimation: "enterAnimation",
+    header: "header",
+    htmlAttributes: "htmlAttributes",
+    inputs: "inputs",
+    isOpen: "isOpen",
+    keyboardClose: "keyboardClose",
+    leaveAnimation: "leaveAnimation",
+    message: "message",
+    mode: "mode",
+    subHeader: "subHeader",
+    translucent: "translucent",
+    trigger: "trigger"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonAlert_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a8);
 IonAlert = __decorate([ProxyCmp2({
   inputs: ["animated", "backdropDismiss", "buttons", "cssClass", "enterAnimation", "header", "htmlAttributes", "inputs", "isOpen", "keyboardClose", "leaveAnimation", "message", "mode", "subHeader", "translucent", "trigger"],
   methods: ["present", "dismiss", "onDidDismiss", "onWillDismiss"]
@@ -5097,35 +5109,34 @@ IonAlert = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonApp = class IonApp2 {
-  z;
-  el;
+var _a9;
+var IonApp = (_a9 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonApp_Factory(t) {
-    return new (t || IonApp2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonApp2,
-    selectors: [["ion-app"]],
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonApp_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a9, "ɵfac", function IonApp_Factory(t) {
+  return new (t || _a9)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a9, "ɵcmp", ɵɵdefineComponent({
+  type: _a9,
+  selectors: [["ion-app"]],
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonApp_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a9);
 IonApp = __decorate([ProxyCmp2({})], IonApp);
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(IonApp, [{
@@ -5147,35 +5158,34 @@ IonApp = __decorate([ProxyCmp2({})], IonApp);
     }];
   }, null);
 })();
-var IonAvatar = class IonAvatar2 {
-  z;
-  el;
+var _a10;
+var IonAvatar = (_a10 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonAvatar_Factory(t) {
-    return new (t || IonAvatar2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonAvatar2,
-    selectors: [["ion-avatar"]],
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonAvatar_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a10, "ɵfac", function IonAvatar_Factory(t) {
+  return new (t || _a10)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a10, "ɵcmp", ɵɵdefineComponent({
+  type: _a10,
+  selectors: [["ion-avatar"]],
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonAvatar_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a10);
 IonAvatar = __decorate([ProxyCmp2({})], IonAvatar);
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(IonAvatar, [{
@@ -5197,41 +5207,40 @@ IonAvatar = __decorate([ProxyCmp2({})], IonAvatar);
     }];
   }, null);
 })();
-var IonBackdrop = class IonBackdrop2 {
-  z;
-  el;
+var _a11;
+var IonBackdrop = (_a11 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs2(this, this.el, ["ionBackdropTap"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonBackdrop_Factory(t) {
-    return new (t || IonBackdrop2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonBackdrop2,
-    selectors: [["ion-backdrop"]],
-    inputs: {
-      stopPropagation: "stopPropagation",
-      tappable: "tappable",
-      visible: "visible"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonBackdrop_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a11, "ɵfac", function IonBackdrop_Factory(t) {
+  return new (t || _a11)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a11, "ɵcmp", ɵɵdefineComponent({
+  type: _a11,
+  selectors: [["ion-backdrop"]],
+  inputs: {
+    stopPropagation: "stopPropagation",
+    tappable: "tappable",
+    visible: "visible"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonBackdrop_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a11);
 IonBackdrop = __decorate([ProxyCmp2({
   inputs: ["stopPropagation", "tappable", "visible"]
 })], IonBackdrop);
@@ -5255,39 +5264,38 @@ IonBackdrop = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonBadge = class IonBadge2 {
-  z;
-  el;
+var _a12;
+var IonBadge = (_a12 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonBadge_Factory(t) {
-    return new (t || IonBadge2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonBadge2,
-    selectors: [["ion-badge"]],
-    inputs: {
-      color: "color",
-      mode: "mode"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonBadge_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a12, "ɵfac", function IonBadge_Factory(t) {
+  return new (t || _a12)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a12, "ɵcmp", ɵɵdefineComponent({
+  type: _a12,
+  selectors: [["ion-badge"]],
+  inputs: {
+    color: "color",
+    mode: "mode"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonBadge_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a12);
 IonBadge = __decorate([ProxyCmp2({
   inputs: ["color", "mode"]
 })], IonBadge);
@@ -5311,49 +5319,48 @@ IonBadge = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonBreadcrumb = class IonBreadcrumb2 {
-  z;
-  el;
+var _a13;
+var IonBreadcrumb = (_a13 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs2(this, this.el, ["ionFocus", "ionBlur"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonBreadcrumb_Factory(t) {
-    return new (t || IonBreadcrumb2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonBreadcrumb2,
-    selectors: [["ion-breadcrumb"]],
-    inputs: {
-      active: "active",
-      color: "color",
-      disabled: "disabled",
-      download: "download",
-      href: "href",
-      mode: "mode",
-      rel: "rel",
-      routerAnimation: "routerAnimation",
-      routerDirection: "routerDirection",
-      separator: "separator",
-      target: "target"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonBreadcrumb_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a13, "ɵfac", function IonBreadcrumb_Factory(t) {
+  return new (t || _a13)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a13, "ɵcmp", ɵɵdefineComponent({
+  type: _a13,
+  selectors: [["ion-breadcrumb"]],
+  inputs: {
+    active: "active",
+    color: "color",
+    disabled: "disabled",
+    download: "download",
+    href: "href",
+    mode: "mode",
+    rel: "rel",
+    routerAnimation: "routerAnimation",
+    routerDirection: "routerDirection",
+    separator: "separator",
+    target: "target"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonBreadcrumb_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a13);
 IonBreadcrumb = __decorate([ProxyCmp2({
   inputs: ["active", "color", "disabled", "download", "href", "mode", "rel", "routerAnimation", "routerDirection", "separator", "target"]
 })], IonBreadcrumb);
@@ -5377,43 +5384,42 @@ IonBreadcrumb = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonBreadcrumbs = class IonBreadcrumbs2 {
-  z;
-  el;
+var _a14;
+var IonBreadcrumbs = (_a14 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs2(this, this.el, ["ionCollapsedClick"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonBreadcrumbs_Factory(t) {
-    return new (t || IonBreadcrumbs2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonBreadcrumbs2,
-    selectors: [["ion-breadcrumbs"]],
-    inputs: {
-      color: "color",
-      itemsAfterCollapse: "itemsAfterCollapse",
-      itemsBeforeCollapse: "itemsBeforeCollapse",
-      maxItems: "maxItems",
-      mode: "mode"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonBreadcrumbs_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a14, "ɵfac", function IonBreadcrumbs_Factory(t) {
+  return new (t || _a14)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a14, "ɵcmp", ɵɵdefineComponent({
+  type: _a14,
+  selectors: [["ion-breadcrumbs"]],
+  inputs: {
+    color: "color",
+    itemsAfterCollapse: "itemsAfterCollapse",
+    itemsBeforeCollapse: "itemsBeforeCollapse",
+    maxItems: "maxItems",
+    mode: "mode"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonBreadcrumbs_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a14);
 IonBreadcrumbs = __decorate([ProxyCmp2({
   inputs: ["color", "itemsAfterCollapse", "itemsBeforeCollapse", "maxItems", "mode"]
 })], IonBreadcrumbs);
@@ -5437,55 +5443,54 @@ IonBreadcrumbs = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonButton = class IonButton2 {
-  z;
-  el;
+var _a15;
+var IonButton = (_a15 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs2(this, this.el, ["ionFocus", "ionBlur"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonButton_Factory(t) {
-    return new (t || IonButton2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonButton2,
-    selectors: [["ion-button"]],
-    inputs: {
-      buttonType: "buttonType",
-      color: "color",
-      disabled: "disabled",
-      download: "download",
-      expand: "expand",
-      fill: "fill",
-      form: "form",
-      href: "href",
-      mode: "mode",
-      rel: "rel",
-      routerAnimation: "routerAnimation",
-      routerDirection: "routerDirection",
-      shape: "shape",
-      size: "size",
-      strong: "strong",
-      target: "target",
-      type: "type"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonButton_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a15, "ɵfac", function IonButton_Factory(t) {
+  return new (t || _a15)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a15, "ɵcmp", ɵɵdefineComponent({
+  type: _a15,
+  selectors: [["ion-button"]],
+  inputs: {
+    buttonType: "buttonType",
+    color: "color",
+    disabled: "disabled",
+    download: "download",
+    expand: "expand",
+    fill: "fill",
+    form: "form",
+    href: "href",
+    mode: "mode",
+    rel: "rel",
+    routerAnimation: "routerAnimation",
+    routerDirection: "routerDirection",
+    shape: "shape",
+    size: "size",
+    strong: "strong",
+    target: "target",
+    type: "type"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonButton_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a15);
 IonButton = __decorate([ProxyCmp2({
   inputs: ["buttonType", "color", "disabled", "download", "expand", "fill", "form", "href", "mode", "rel", "routerAnimation", "routerDirection", "shape", "size", "strong", "target", "type"]
 })], IonButton);
@@ -5509,38 +5514,37 @@ IonButton = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonButtons = class IonButtons2 {
-  z;
-  el;
+var _a16;
+var IonButtons = (_a16 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonButtons_Factory(t) {
-    return new (t || IonButtons2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonButtons2,
-    selectors: [["ion-buttons"]],
-    inputs: {
-      collapse: "collapse"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonButtons_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a16, "ɵfac", function IonButtons_Factory(t) {
+  return new (t || _a16)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a16, "ɵcmp", ɵɵdefineComponent({
+  type: _a16,
+  selectors: [["ion-buttons"]],
+  inputs: {
+    collapse: "collapse"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonButtons_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a16);
 IonButtons = __decorate([ProxyCmp2({
   inputs: ["collapse"]
 })], IonButtons);
@@ -5564,48 +5568,47 @@ IonButtons = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonCard = class IonCard2 {
-  z;
-  el;
+var _a17;
+var IonCard = (_a17 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonCard_Factory(t) {
-    return new (t || IonCard2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonCard2,
-    selectors: [["ion-card"]],
-    inputs: {
-      button: "button",
-      color: "color",
-      disabled: "disabled",
-      download: "download",
-      href: "href",
-      mode: "mode",
-      rel: "rel",
-      routerAnimation: "routerAnimation",
-      routerDirection: "routerDirection",
-      target: "target",
-      type: "type"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonCard_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a17, "ɵfac", function IonCard_Factory(t) {
+  return new (t || _a17)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a17, "ɵcmp", ɵɵdefineComponent({
+  type: _a17,
+  selectors: [["ion-card"]],
+  inputs: {
+    button: "button",
+    color: "color",
+    disabled: "disabled",
+    download: "download",
+    href: "href",
+    mode: "mode",
+    rel: "rel",
+    routerAnimation: "routerAnimation",
+    routerDirection: "routerDirection",
+    target: "target",
+    type: "type"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonCard_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a17);
 IonCard = __decorate([ProxyCmp2({
   inputs: ["button", "color", "disabled", "download", "href", "mode", "rel", "routerAnimation", "routerDirection", "target", "type"]
 })], IonCard);
@@ -5629,38 +5632,37 @@ IonCard = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonCardContent = class IonCardContent2 {
-  z;
-  el;
+var _a18;
+var IonCardContent = (_a18 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonCardContent_Factory(t) {
-    return new (t || IonCardContent2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonCardContent2,
-    selectors: [["ion-card-content"]],
-    inputs: {
-      mode: "mode"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonCardContent_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a18, "ɵfac", function IonCardContent_Factory(t) {
+  return new (t || _a18)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a18, "ɵcmp", ɵɵdefineComponent({
+  type: _a18,
+  selectors: [["ion-card-content"]],
+  inputs: {
+    mode: "mode"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonCardContent_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a18);
 IonCardContent = __decorate([ProxyCmp2({
   inputs: ["mode"]
 })], IonCardContent);
@@ -5684,40 +5686,39 @@ IonCardContent = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonCardHeader = class IonCardHeader2 {
-  z;
-  el;
+var _a19;
+var IonCardHeader = (_a19 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonCardHeader_Factory(t) {
-    return new (t || IonCardHeader2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonCardHeader2,
-    selectors: [["ion-card-header"]],
-    inputs: {
-      color: "color",
-      mode: "mode",
-      translucent: "translucent"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonCardHeader_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a19, "ɵfac", function IonCardHeader_Factory(t) {
+  return new (t || _a19)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a19, "ɵcmp", ɵɵdefineComponent({
+  type: _a19,
+  selectors: [["ion-card-header"]],
+  inputs: {
+    color: "color",
+    mode: "mode",
+    translucent: "translucent"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonCardHeader_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a19);
 IonCardHeader = __decorate([ProxyCmp2({
   inputs: ["color", "mode", "translucent"]
 })], IonCardHeader);
@@ -5741,39 +5742,38 @@ IonCardHeader = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonCardSubtitle = class IonCardSubtitle2 {
-  z;
-  el;
+var _a20;
+var IonCardSubtitle = (_a20 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonCardSubtitle_Factory(t) {
-    return new (t || IonCardSubtitle2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonCardSubtitle2,
-    selectors: [["ion-card-subtitle"]],
-    inputs: {
-      color: "color",
-      mode: "mode"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonCardSubtitle_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a20, "ɵfac", function IonCardSubtitle_Factory(t) {
+  return new (t || _a20)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a20, "ɵcmp", ɵɵdefineComponent({
+  type: _a20,
+  selectors: [["ion-card-subtitle"]],
+  inputs: {
+    color: "color",
+    mode: "mode"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonCardSubtitle_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a20);
 IonCardSubtitle = __decorate([ProxyCmp2({
   inputs: ["color", "mode"]
 })], IonCardSubtitle);
@@ -5797,39 +5797,38 @@ IonCardSubtitle = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonCardTitle = class IonCardTitle2 {
-  z;
-  el;
+var _a21;
+var IonCardTitle = (_a21 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonCardTitle_Factory(t) {
-    return new (t || IonCardTitle2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonCardTitle2,
-    selectors: [["ion-card-title"]],
-    inputs: {
-      color: "color",
-      mode: "mode"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonCardTitle_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a21, "ɵfac", function IonCardTitle_Factory(t) {
+  return new (t || _a21)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a21, "ɵcmp", ɵɵdefineComponent({
+  type: _a21,
+  selectors: [["ion-card-title"]],
+  inputs: {
+    color: "color",
+    mode: "mode"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonCardTitle_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a21);
 IonCardTitle = __decorate([ProxyCmp2({
   inputs: ["color", "mode"]
 })], IonCardTitle);
@@ -5853,48 +5852,47 @@ IonCardTitle = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonCheckbox = class IonCheckbox2 {
-  z;
-  el;
+var _a22;
+var IonCheckbox = (_a22 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs2(this, this.el, ["ionChange", "ionFocus", "ionBlur"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonCheckbox_Factory(t) {
-    return new (t || IonCheckbox2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonCheckbox2,
-    selectors: [["ion-checkbox"]],
-    inputs: {
-      alignment: "alignment",
-      checked: "checked",
-      color: "color",
-      disabled: "disabled",
-      indeterminate: "indeterminate",
-      justify: "justify",
-      labelPlacement: "labelPlacement",
-      mode: "mode",
-      name: "name",
-      value: "value"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonCheckbox_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a22, "ɵfac", function IonCheckbox_Factory(t) {
+  return new (t || _a22)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a22, "ɵcmp", ɵɵdefineComponent({
+  type: _a22,
+  selectors: [["ion-checkbox"]],
+  inputs: {
+    alignment: "alignment",
+    checked: "checked",
+    color: "color",
+    disabled: "disabled",
+    indeterminate: "indeterminate",
+    justify: "justify",
+    labelPlacement: "labelPlacement",
+    mode: "mode",
+    name: "name",
+    value: "value"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonCheckbox_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a22);
 IonCheckbox = __decorate([ProxyCmp2({
   inputs: ["alignment", "checked", "color", "disabled", "indeterminate", "justify", "labelPlacement", "mode", "name", "value"]
 })], IonCheckbox);
@@ -5918,41 +5916,40 @@ IonCheckbox = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonChip = class IonChip2 {
-  z;
-  el;
+var _a23;
+var IonChip = (_a23 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonChip_Factory(t) {
-    return new (t || IonChip2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonChip2,
-    selectors: [["ion-chip"]],
-    inputs: {
-      color: "color",
-      disabled: "disabled",
-      mode: "mode",
-      outline: "outline"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonChip_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a23, "ɵfac", function IonChip_Factory(t) {
+  return new (t || _a23)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a23, "ɵcmp", ɵɵdefineComponent({
+  type: _a23,
+  selectors: [["ion-chip"]],
+  inputs: {
+    color: "color",
+    disabled: "disabled",
+    mode: "mode",
+    outline: "outline"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonChip_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a23);
 IonChip = __decorate([ProxyCmp2({
   inputs: ["color", "disabled", "mode", "outline"]
 })], IonChip);
@@ -5976,61 +5973,60 @@ IonChip = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonCol = class IonCol2 {
-  z;
-  el;
+var _a24;
+var IonCol = (_a24 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonCol_Factory(t) {
-    return new (t || IonCol2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonCol2,
-    selectors: [["ion-col"]],
-    inputs: {
-      offset: "offset",
-      offsetLg: "offsetLg",
-      offsetMd: "offsetMd",
-      offsetSm: "offsetSm",
-      offsetXl: "offsetXl",
-      offsetXs: "offsetXs",
-      pull: "pull",
-      pullLg: "pullLg",
-      pullMd: "pullMd",
-      pullSm: "pullSm",
-      pullXl: "pullXl",
-      pullXs: "pullXs",
-      push: "push",
-      pushLg: "pushLg",
-      pushMd: "pushMd",
-      pushSm: "pushSm",
-      pushXl: "pushXl",
-      pushXs: "pushXs",
-      size: "size",
-      sizeLg: "sizeLg",
-      sizeMd: "sizeMd",
-      sizeSm: "sizeSm",
-      sizeXl: "sizeXl",
-      sizeXs: "sizeXs"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonCol_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a24, "ɵfac", function IonCol_Factory(t) {
+  return new (t || _a24)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a24, "ɵcmp", ɵɵdefineComponent({
+  type: _a24,
+  selectors: [["ion-col"]],
+  inputs: {
+    offset: "offset",
+    offsetLg: "offsetLg",
+    offsetMd: "offsetMd",
+    offsetSm: "offsetSm",
+    offsetXl: "offsetXl",
+    offsetXs: "offsetXs",
+    pull: "pull",
+    pullLg: "pullLg",
+    pullMd: "pullMd",
+    pullSm: "pullSm",
+    pullXl: "pullXl",
+    pullXs: "pullXs",
+    push: "push",
+    pushLg: "pushLg",
+    pushMd: "pushMd",
+    pushSm: "pushSm",
+    pushXl: "pushXl",
+    pushXs: "pushXs",
+    size: "size",
+    sizeLg: "sizeLg",
+    sizeMd: "sizeMd",
+    sizeSm: "sizeSm",
+    sizeXl: "sizeXl",
+    sizeXs: "sizeXs"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonCol_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a24);
 IonCol = __decorate([ProxyCmp2({
   inputs: ["offset", "offsetLg", "offsetMd", "offsetSm", "offsetXl", "offsetXs", "pull", "pullLg", "pullMd", "pullSm", "pullXl", "pullXs", "push", "pushLg", "pushMd", "pushSm", "pushXl", "pushXs", "size", "sizeLg", "sizeMd", "sizeSm", "sizeXl", "sizeXs"]
 })], IonCol);
@@ -6054,45 +6050,44 @@ IonCol = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonContent = class IonContent2 {
-  z;
-  el;
+var _a25;
+var IonContent = (_a25 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs2(this, this.el, ["ionScrollStart", "ionScroll", "ionScrollEnd"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonContent_Factory(t) {
-    return new (t || IonContent2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonContent2,
-    selectors: [["ion-content"]],
-    inputs: {
-      color: "color",
-      fixedSlotPlacement: "fixedSlotPlacement",
-      forceOverscroll: "forceOverscroll",
-      fullscreen: "fullscreen",
-      scrollEvents: "scrollEvents",
-      scrollX: "scrollX",
-      scrollY: "scrollY"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonContent_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a25, "ɵfac", function IonContent_Factory(t) {
+  return new (t || _a25)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a25, "ɵcmp", ɵɵdefineComponent({
+  type: _a25,
+  selectors: [["ion-content"]],
+  inputs: {
+    color: "color",
+    fixedSlotPlacement: "fixedSlotPlacement",
+    forceOverscroll: "forceOverscroll",
+    fullscreen: "fullscreen",
+    scrollEvents: "scrollEvents",
+    scrollX: "scrollX",
+    scrollY: "scrollY"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonContent_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a25);
 IonContent = __decorate([ProxyCmp2({
   inputs: ["color", "fixedSlotPlacement", "forceOverscroll", "fullscreen", "scrollEvents", "scrollX", "scrollY"],
   methods: ["getScrollElement", "scrollToTop", "scrollToBottom", "scrollByPoint", "scrollToPoint"]
@@ -6117,69 +6112,68 @@ IonContent = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonDatetime = class IonDatetime2 {
-  z;
-  el;
+var _a26;
+var IonDatetime = (_a26 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs2(this, this.el, ["ionCancel", "ionChange", "ionFocus", "ionBlur"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonDatetime_Factory(t) {
-    return new (t || IonDatetime2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonDatetime2,
-    selectors: [["ion-datetime"]],
-    inputs: {
-      cancelText: "cancelText",
-      clearText: "clearText",
-      color: "color",
-      dayValues: "dayValues",
-      disabled: "disabled",
-      doneText: "doneText",
-      firstDayOfWeek: "firstDayOfWeek",
-      formatOptions: "formatOptions",
-      highlightedDates: "highlightedDates",
-      hourCycle: "hourCycle",
-      hourValues: "hourValues",
-      isDateEnabled: "isDateEnabled",
-      locale: "locale",
-      max: "max",
-      min: "min",
-      minuteValues: "minuteValues",
-      mode: "mode",
-      monthValues: "monthValues",
-      multiple: "multiple",
-      name: "name",
-      preferWheel: "preferWheel",
-      presentation: "presentation",
-      readonly: "readonly",
-      showClearButton: "showClearButton",
-      showDefaultButtons: "showDefaultButtons",
-      showDefaultTimeLabel: "showDefaultTimeLabel",
-      showDefaultTitle: "showDefaultTitle",
-      size: "size",
-      titleSelectedDatesFormatter: "titleSelectedDatesFormatter",
-      value: "value",
-      yearValues: "yearValues"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonDatetime_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a26, "ɵfac", function IonDatetime_Factory(t) {
+  return new (t || _a26)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a26, "ɵcmp", ɵɵdefineComponent({
+  type: _a26,
+  selectors: [["ion-datetime"]],
+  inputs: {
+    cancelText: "cancelText",
+    clearText: "clearText",
+    color: "color",
+    dayValues: "dayValues",
+    disabled: "disabled",
+    doneText: "doneText",
+    firstDayOfWeek: "firstDayOfWeek",
+    formatOptions: "formatOptions",
+    highlightedDates: "highlightedDates",
+    hourCycle: "hourCycle",
+    hourValues: "hourValues",
+    isDateEnabled: "isDateEnabled",
+    locale: "locale",
+    max: "max",
+    min: "min",
+    minuteValues: "minuteValues",
+    mode: "mode",
+    monthValues: "monthValues",
+    multiple: "multiple",
+    name: "name",
+    preferWheel: "preferWheel",
+    presentation: "presentation",
+    readonly: "readonly",
+    showClearButton: "showClearButton",
+    showDefaultButtons: "showDefaultButtons",
+    showDefaultTimeLabel: "showDefaultTimeLabel",
+    showDefaultTitle: "showDefaultTitle",
+    size: "size",
+    titleSelectedDatesFormatter: "titleSelectedDatesFormatter",
+    value: "value",
+    yearValues: "yearValues"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonDatetime_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a26);
 IonDatetime = __decorate([ProxyCmp2({
   inputs: ["cancelText", "clearText", "color", "dayValues", "disabled", "doneText", "firstDayOfWeek", "formatOptions", "highlightedDates", "hourCycle", "hourValues", "isDateEnabled", "locale", "max", "min", "minuteValues", "mode", "monthValues", "multiple", "name", "preferWheel", "presentation", "readonly", "showClearButton", "showDefaultButtons", "showDefaultTimeLabel", "showDefaultTitle", "size", "titleSelectedDatesFormatter", "value", "yearValues"],
   methods: ["confirm", "reset", "cancel"]
@@ -6204,41 +6198,40 @@ IonDatetime = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonDatetimeButton = class IonDatetimeButton2 {
-  z;
-  el;
+var _a27;
+var IonDatetimeButton = (_a27 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonDatetimeButton_Factory(t) {
-    return new (t || IonDatetimeButton2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonDatetimeButton2,
-    selectors: [["ion-datetime-button"]],
-    inputs: {
-      color: "color",
-      datetime: "datetime",
-      disabled: "disabled",
-      mode: "mode"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonDatetimeButton_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a27, "ɵfac", function IonDatetimeButton_Factory(t) {
+  return new (t || _a27)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a27, "ɵcmp", ɵɵdefineComponent({
+  type: _a27,
+  selectors: [["ion-datetime-button"]],
+  inputs: {
+    color: "color",
+    datetime: "datetime",
+    disabled: "disabled",
+    mode: "mode"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonDatetimeButton_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a27);
 IonDatetimeButton = __decorate([ProxyCmp2({
   inputs: ["color", "datetime", "disabled", "mode"]
 })], IonDatetimeButton);
@@ -6262,41 +6255,40 @@ IonDatetimeButton = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonFab = class IonFab2 {
-  z;
-  el;
+var _a28;
+var IonFab = (_a28 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonFab_Factory(t) {
-    return new (t || IonFab2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonFab2,
-    selectors: [["ion-fab"]],
-    inputs: {
-      activated: "activated",
-      edge: "edge",
-      horizontal: "horizontal",
-      vertical: "vertical"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonFab_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a28, "ɵfac", function IonFab_Factory(t) {
+  return new (t || _a28)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a28, "ɵcmp", ɵɵdefineComponent({
+  type: _a28,
+  selectors: [["ion-fab"]],
+  inputs: {
+    activated: "activated",
+    edge: "edge",
+    horizontal: "horizontal",
+    vertical: "vertical"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonFab_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a28);
 IonFab = __decorate([ProxyCmp2({
   inputs: ["activated", "edge", "horizontal", "vertical"],
   methods: ["close"]
@@ -6321,53 +6313,52 @@ IonFab = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonFabButton = class IonFabButton2 {
-  z;
-  el;
+var _a29;
+var IonFabButton = (_a29 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs2(this, this.el, ["ionFocus", "ionBlur"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonFabButton_Factory(t) {
-    return new (t || IonFabButton2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonFabButton2,
-    selectors: [["ion-fab-button"]],
-    inputs: {
-      activated: "activated",
-      closeIcon: "closeIcon",
-      color: "color",
-      disabled: "disabled",
-      download: "download",
-      href: "href",
-      mode: "mode",
-      rel: "rel",
-      routerAnimation: "routerAnimation",
-      routerDirection: "routerDirection",
-      show: "show",
-      size: "size",
-      target: "target",
-      translucent: "translucent",
-      type: "type"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonFabButton_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a29, "ɵfac", function IonFabButton_Factory(t) {
+  return new (t || _a29)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a29, "ɵcmp", ɵɵdefineComponent({
+  type: _a29,
+  selectors: [["ion-fab-button"]],
+  inputs: {
+    activated: "activated",
+    closeIcon: "closeIcon",
+    color: "color",
+    disabled: "disabled",
+    download: "download",
+    href: "href",
+    mode: "mode",
+    rel: "rel",
+    routerAnimation: "routerAnimation",
+    routerDirection: "routerDirection",
+    show: "show",
+    size: "size",
+    target: "target",
+    translucent: "translucent",
+    type: "type"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonFabButton_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a29);
 IonFabButton = __decorate([ProxyCmp2({
   inputs: ["activated", "closeIcon", "color", "disabled", "download", "href", "mode", "rel", "routerAnimation", "routerDirection", "show", "size", "target", "translucent", "type"]
 })], IonFabButton);
@@ -6391,39 +6382,38 @@ IonFabButton = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonFabList = class IonFabList2 {
-  z;
-  el;
+var _a30;
+var IonFabList = (_a30 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonFabList_Factory(t) {
-    return new (t || IonFabList2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonFabList2,
-    selectors: [["ion-fab-list"]],
-    inputs: {
-      activated: "activated",
-      side: "side"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonFabList_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a30, "ɵfac", function IonFabList_Factory(t) {
+  return new (t || _a30)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a30, "ɵcmp", ɵɵdefineComponent({
+  type: _a30,
+  selectors: [["ion-fab-list"]],
+  inputs: {
+    activated: "activated",
+    side: "side"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonFabList_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a30);
 IonFabList = __decorate([ProxyCmp2({
   inputs: ["activated", "side"]
 })], IonFabList);
@@ -6447,40 +6437,39 @@ IonFabList = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonFooter = class IonFooter2 {
-  z;
-  el;
+var _a31;
+var IonFooter = (_a31 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonFooter_Factory(t) {
-    return new (t || IonFooter2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonFooter2,
-    selectors: [["ion-footer"]],
-    inputs: {
-      collapse: "collapse",
-      mode: "mode",
-      translucent: "translucent"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonFooter_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a31, "ɵfac", function IonFooter_Factory(t) {
+  return new (t || _a31)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a31, "ɵcmp", ɵɵdefineComponent({
+  type: _a31,
+  selectors: [["ion-footer"]],
+  inputs: {
+    collapse: "collapse",
+    mode: "mode",
+    translucent: "translucent"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonFooter_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a31);
 IonFooter = __decorate([ProxyCmp2({
   inputs: ["collapse", "mode", "translucent"]
 })], IonFooter);
@@ -6504,38 +6493,37 @@ IonFooter = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonGrid = class IonGrid2 {
-  z;
-  el;
+var _a32;
+var IonGrid = (_a32 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonGrid_Factory(t) {
-    return new (t || IonGrid2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonGrid2,
-    selectors: [["ion-grid"]],
-    inputs: {
-      fixed: "fixed"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonGrid_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a32, "ɵfac", function IonGrid_Factory(t) {
+  return new (t || _a32)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a32, "ɵcmp", ɵɵdefineComponent({
+  type: _a32,
+  selectors: [["ion-grid"]],
+  inputs: {
+    fixed: "fixed"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonGrid_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a32);
 IonGrid = __decorate([ProxyCmp2({
   inputs: ["fixed"]
 })], IonGrid);
@@ -6559,40 +6547,39 @@ IonGrid = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonHeader = class IonHeader2 {
-  z;
-  el;
+var _a33;
+var IonHeader = (_a33 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonHeader_Factory(t) {
-    return new (t || IonHeader2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonHeader2,
-    selectors: [["ion-header"]],
-    inputs: {
-      collapse: "collapse",
-      mode: "mode",
-      translucent: "translucent"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonHeader_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a33, "ɵfac", function IonHeader_Factory(t) {
+  return new (t || _a33)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a33, "ɵcmp", ɵɵdefineComponent({
+  type: _a33,
+  selectors: [["ion-header"]],
+  inputs: {
+    collapse: "collapse",
+    mode: "mode",
+    translucent: "translucent"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonHeader_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a33);
 IonHeader = __decorate([ProxyCmp2({
   inputs: ["collapse", "mode", "translucent"]
 })], IonHeader);
@@ -6616,48 +6603,47 @@ IonHeader = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonIcon = class IonIcon2 {
-  z;
-  el;
+var _a34;
+var IonIcon = (_a34 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonIcon_Factory(t) {
-    return new (t || IonIcon2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonIcon2,
-    selectors: [["ion-icon"]],
-    inputs: {
-      color: "color",
-      flipRtl: "flipRtl",
-      icon: "icon",
-      ios: "ios",
-      lazy: "lazy",
-      md: "md",
-      mode: "mode",
-      name: "name",
-      sanitize: "sanitize",
-      size: "size",
-      src: "src"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonIcon_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a34, "ɵfac", function IonIcon_Factory(t) {
+  return new (t || _a34)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a34, "ɵcmp", ɵɵdefineComponent({
+  type: _a34,
+  selectors: [["ion-icon"]],
+  inputs: {
+    color: "color",
+    flipRtl: "flipRtl",
+    icon: "icon",
+    ios: "ios",
+    lazy: "lazy",
+    md: "md",
+    mode: "mode",
+    name: "name",
+    sanitize: "sanitize",
+    size: "size",
+    src: "src"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonIcon_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a34);
 IonIcon = __decorate([ProxyCmp2({
   inputs: ["color", "flipRtl", "icon", "ios", "lazy", "md", "mode", "name", "sanitize", "size", "src"]
 })], IonIcon);
@@ -6681,40 +6667,39 @@ IonIcon = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonImg = class IonImg2 {
-  z;
-  el;
+var _a35;
+var IonImg = (_a35 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs2(this, this.el, ["ionImgWillLoad", "ionImgDidLoad", "ionError"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonImg_Factory(t) {
-    return new (t || IonImg2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonImg2,
-    selectors: [["ion-img"]],
-    inputs: {
-      alt: "alt",
-      src: "src"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonImg_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a35, "ɵfac", function IonImg_Factory(t) {
+  return new (t || _a35)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a35, "ɵcmp", ɵɵdefineComponent({
+  type: _a35,
+  selectors: [["ion-img"]],
+  inputs: {
+    alt: "alt",
+    src: "src"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonImg_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a35);
 IonImg = __decorate([ProxyCmp2({
   inputs: ["alt", "src"]
 })], IonImg);
@@ -6738,41 +6723,40 @@ IonImg = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonInfiniteScroll = class IonInfiniteScroll2 {
-  z;
-  el;
+var _a36;
+var IonInfiniteScroll = (_a36 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs2(this, this.el, ["ionInfinite"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonInfiniteScroll_Factory(t) {
-    return new (t || IonInfiniteScroll2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonInfiniteScroll2,
-    selectors: [["ion-infinite-scroll"]],
-    inputs: {
-      disabled: "disabled",
-      position: "position",
-      threshold: "threshold"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonInfiniteScroll_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a36, "ɵfac", function IonInfiniteScroll_Factory(t) {
+  return new (t || _a36)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a36, "ɵcmp", ɵɵdefineComponent({
+  type: _a36,
+  selectors: [["ion-infinite-scroll"]],
+  inputs: {
+    disabled: "disabled",
+    position: "position",
+    threshold: "threshold"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonInfiniteScroll_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a36);
 IonInfiniteScroll = __decorate([ProxyCmp2({
   inputs: ["disabled", "position", "threshold"],
   methods: ["complete"]
@@ -6797,39 +6781,38 @@ IonInfiniteScroll = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonInfiniteScrollContent = class IonInfiniteScrollContent2 {
-  z;
-  el;
+var _a37;
+var IonInfiniteScrollContent = (_a37 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonInfiniteScrollContent_Factory(t) {
-    return new (t || IonInfiniteScrollContent2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonInfiniteScrollContent2,
-    selectors: [["ion-infinite-scroll-content"]],
-    inputs: {
-      loadingSpinner: "loadingSpinner",
-      loadingText: "loadingText"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonInfiniteScrollContent_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a37, "ɵfac", function IonInfiniteScrollContent_Factory(t) {
+  return new (t || _a37)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a37, "ɵcmp", ɵɵdefineComponent({
+  type: _a37,
+  selectors: [["ion-infinite-scroll-content"]],
+  inputs: {
+    loadingSpinner: "loadingSpinner",
+    loadingText: "loadingText"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonInfiniteScrollContent_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a37);
 IonInfiniteScrollContent = __decorate([ProxyCmp2({
   inputs: ["loadingSpinner", "loadingText"]
 })], IonInfiniteScrollContent);
@@ -6853,73 +6836,72 @@ IonInfiniteScrollContent = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonInput = class IonInput2 {
-  z;
-  el;
+var _a38;
+var IonInput = (_a38 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs2(this, this.el, ["ionInput", "ionChange", "ionBlur", "ionFocus"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonInput_Factory(t) {
-    return new (t || IonInput2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonInput2,
-    selectors: [["ion-input"]],
-    inputs: {
-      autocapitalize: "autocapitalize",
-      autocomplete: "autocomplete",
-      autocorrect: "autocorrect",
-      autofocus: "autofocus",
-      clearInput: "clearInput",
-      clearInputIcon: "clearInputIcon",
-      clearOnEdit: "clearOnEdit",
-      color: "color",
-      counter: "counter",
-      counterFormatter: "counterFormatter",
-      debounce: "debounce",
-      disabled: "disabled",
-      enterkeyhint: "enterkeyhint",
-      errorText: "errorText",
-      fill: "fill",
-      helperText: "helperText",
-      inputmode: "inputmode",
-      label: "label",
-      labelPlacement: "labelPlacement",
-      max: "max",
-      maxlength: "maxlength",
-      min: "min",
-      minlength: "minlength",
-      mode: "mode",
-      multiple: "multiple",
-      name: "name",
-      pattern: "pattern",
-      placeholder: "placeholder",
-      readonly: "readonly",
-      required: "required",
-      shape: "shape",
-      spellcheck: "spellcheck",
-      step: "step",
-      type: "type",
-      value: "value"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonInput_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a38, "ɵfac", function IonInput_Factory(t) {
+  return new (t || _a38)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a38, "ɵcmp", ɵɵdefineComponent({
+  type: _a38,
+  selectors: [["ion-input"]],
+  inputs: {
+    autocapitalize: "autocapitalize",
+    autocomplete: "autocomplete",
+    autocorrect: "autocorrect",
+    autofocus: "autofocus",
+    clearInput: "clearInput",
+    clearInputIcon: "clearInputIcon",
+    clearOnEdit: "clearOnEdit",
+    color: "color",
+    counter: "counter",
+    counterFormatter: "counterFormatter",
+    debounce: "debounce",
+    disabled: "disabled",
+    enterkeyhint: "enterkeyhint",
+    errorText: "errorText",
+    fill: "fill",
+    helperText: "helperText",
+    inputmode: "inputmode",
+    label: "label",
+    labelPlacement: "labelPlacement",
+    max: "max",
+    maxlength: "maxlength",
+    min: "min",
+    minlength: "minlength",
+    mode: "mode",
+    multiple: "multiple",
+    name: "name",
+    pattern: "pattern",
+    placeholder: "placeholder",
+    readonly: "readonly",
+    required: "required",
+    shape: "shape",
+    spellcheck: "spellcheck",
+    step: "step",
+    type: "type",
+    value: "value"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonInput_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a38);
 IonInput = __decorate([ProxyCmp2({
   inputs: ["autocapitalize", "autocomplete", "autocorrect", "autofocus", "clearInput", "clearInputIcon", "clearOnEdit", "color", "counter", "counterFormatter", "debounce", "disabled", "enterkeyhint", "errorText", "fill", "helperText", "inputmode", "label", "labelPlacement", "max", "maxlength", "min", "minlength", "mode", "multiple", "name", "pattern", "placeholder", "readonly", "required", "shape", "spellcheck", "step", "type", "value"],
   methods: ["setFocus", "getInputElement"]
@@ -6944,41 +6926,40 @@ IonInput = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonInputPasswordToggle = class IonInputPasswordToggle2 {
-  z;
-  el;
+var _a39;
+var IonInputPasswordToggle = (_a39 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonInputPasswordToggle_Factory(t) {
-    return new (t || IonInputPasswordToggle2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonInputPasswordToggle2,
-    selectors: [["ion-input-password-toggle"]],
-    inputs: {
-      color: "color",
-      hideIcon: "hideIcon",
-      mode: "mode",
-      showIcon: "showIcon"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonInputPasswordToggle_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a39, "ɵfac", function IonInputPasswordToggle_Factory(t) {
+  return new (t || _a39)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a39, "ɵcmp", ɵɵdefineComponent({
+  type: _a39,
+  selectors: [["ion-input-password-toggle"]],
+  inputs: {
+    color: "color",
+    hideIcon: "hideIcon",
+    mode: "mode",
+    showIcon: "showIcon"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonInputPasswordToggle_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a39);
 IonInputPasswordToggle = __decorate([ProxyCmp2({
   inputs: ["color", "hideIcon", "mode", "showIcon"]
 })], IonInputPasswordToggle);
@@ -7002,51 +6983,50 @@ IonInputPasswordToggle = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonItem = class IonItem2 {
-  z;
-  el;
+var _a40;
+var IonItem = (_a40 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonItem_Factory(t) {
-    return new (t || IonItem2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonItem2,
-    selectors: [["ion-item"]],
-    inputs: {
-      button: "button",
-      color: "color",
-      detail: "detail",
-      detailIcon: "detailIcon",
-      disabled: "disabled",
-      download: "download",
-      href: "href",
-      lines: "lines",
-      mode: "mode",
-      rel: "rel",
-      routerAnimation: "routerAnimation",
-      routerDirection: "routerDirection",
-      target: "target",
-      type: "type"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonItem_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a40, "ɵfac", function IonItem_Factory(t) {
+  return new (t || _a40)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a40, "ɵcmp", ɵɵdefineComponent({
+  type: _a40,
+  selectors: [["ion-item"]],
+  inputs: {
+    button: "button",
+    color: "color",
+    detail: "detail",
+    detailIcon: "detailIcon",
+    disabled: "disabled",
+    download: "download",
+    href: "href",
+    lines: "lines",
+    mode: "mode",
+    rel: "rel",
+    routerAnimation: "routerAnimation",
+    routerDirection: "routerDirection",
+    target: "target",
+    type: "type"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonItem_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a40);
 IonItem = __decorate([ProxyCmp2({
   inputs: ["button", "color", "detail", "detailIcon", "disabled", "download", "href", "lines", "mode", "rel", "routerAnimation", "routerDirection", "target", "type"]
 })], IonItem);
@@ -7070,40 +7050,39 @@ IonItem = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonItemDivider = class IonItemDivider2 {
-  z;
-  el;
+var _a41;
+var IonItemDivider = (_a41 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonItemDivider_Factory(t) {
-    return new (t || IonItemDivider2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonItemDivider2,
-    selectors: [["ion-item-divider"]],
-    inputs: {
-      color: "color",
-      mode: "mode",
-      sticky: "sticky"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonItemDivider_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a41, "ɵfac", function IonItemDivider_Factory(t) {
+  return new (t || _a41)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a41, "ɵcmp", ɵɵdefineComponent({
+  type: _a41,
+  selectors: [["ion-item-divider"]],
+  inputs: {
+    color: "color",
+    mode: "mode",
+    sticky: "sticky"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonItemDivider_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a41);
 IonItemDivider = __decorate([ProxyCmp2({
   inputs: ["color", "mode", "sticky"]
 })], IonItemDivider);
@@ -7127,35 +7106,34 @@ IonItemDivider = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonItemGroup = class IonItemGroup2 {
-  z;
-  el;
+var _a42;
+var IonItemGroup = (_a42 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonItemGroup_Factory(t) {
-    return new (t || IonItemGroup2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonItemGroup2,
-    selectors: [["ion-item-group"]],
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonItemGroup_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a42, "ɵfac", function IonItemGroup_Factory(t) {
+  return new (t || _a42)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a42, "ɵcmp", ɵɵdefineComponent({
+  type: _a42,
+  selectors: [["ion-item-group"]],
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonItemGroup_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a42);
 IonItemGroup = __decorate([ProxyCmp2({})], IonItemGroup);
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(IonItemGroup, [{
@@ -7177,46 +7155,45 @@ IonItemGroup = __decorate([ProxyCmp2({})], IonItemGroup);
     }];
   }, null);
 })();
-var IonItemOption = class IonItemOption2 {
-  z;
-  el;
+var _a43;
+var IonItemOption = (_a43 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonItemOption_Factory(t) {
-    return new (t || IonItemOption2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonItemOption2,
-    selectors: [["ion-item-option"]],
-    inputs: {
-      color: "color",
-      disabled: "disabled",
-      download: "download",
-      expandable: "expandable",
-      href: "href",
-      mode: "mode",
-      rel: "rel",
-      target: "target",
-      type: "type"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonItemOption_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a43, "ɵfac", function IonItemOption_Factory(t) {
+  return new (t || _a43)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a43, "ɵcmp", ɵɵdefineComponent({
+  type: _a43,
+  selectors: [["ion-item-option"]],
+  inputs: {
+    color: "color",
+    disabled: "disabled",
+    download: "download",
+    expandable: "expandable",
+    href: "href",
+    mode: "mode",
+    rel: "rel",
+    target: "target",
+    type: "type"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonItemOption_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a43);
 IonItemOption = __decorate([ProxyCmp2({
   inputs: ["color", "disabled", "download", "expandable", "href", "mode", "rel", "target", "type"]
 })], IonItemOption);
@@ -7240,39 +7217,38 @@ IonItemOption = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonItemOptions = class IonItemOptions2 {
-  z;
-  el;
+var _a44;
+var IonItemOptions = (_a44 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs2(this, this.el, ["ionSwipe"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonItemOptions_Factory(t) {
-    return new (t || IonItemOptions2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonItemOptions2,
-    selectors: [["ion-item-options"]],
-    inputs: {
-      side: "side"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonItemOptions_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a44, "ɵfac", function IonItemOptions_Factory(t) {
+  return new (t || _a44)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a44, "ɵcmp", ɵɵdefineComponent({
+  type: _a44,
+  selectors: [["ion-item-options"]],
+  inputs: {
+    side: "side"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonItemOptions_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a44);
 IonItemOptions = __decorate([ProxyCmp2({
   inputs: ["side"]
 })], IonItemOptions);
@@ -7296,39 +7272,38 @@ IonItemOptions = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonItemSliding = class IonItemSliding2 {
-  z;
-  el;
+var _a45;
+var IonItemSliding = (_a45 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs2(this, this.el, ["ionDrag"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonItemSliding_Factory(t) {
-    return new (t || IonItemSliding2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonItemSliding2,
-    selectors: [["ion-item-sliding"]],
-    inputs: {
-      disabled: "disabled"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonItemSliding_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a45, "ɵfac", function IonItemSliding_Factory(t) {
+  return new (t || _a45)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a45, "ɵcmp", ɵɵdefineComponent({
+  type: _a45,
+  selectors: [["ion-item-sliding"]],
+  inputs: {
+    disabled: "disabled"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonItemSliding_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a45);
 IonItemSliding = __decorate([ProxyCmp2({
   inputs: ["disabled"],
   methods: ["getOpenAmount", "getSlidingRatio", "open", "close", "closeOpened"]
@@ -7353,40 +7328,39 @@ IonItemSliding = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonLabel = class IonLabel2 {
-  z;
-  el;
+var _a46;
+var IonLabel = (_a46 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonLabel_Factory(t) {
-    return new (t || IonLabel2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonLabel2,
-    selectors: [["ion-label"]],
-    inputs: {
-      color: "color",
-      mode: "mode",
-      position: "position"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonLabel_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a46, "ɵfac", function IonLabel_Factory(t) {
+  return new (t || _a46)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a46, "ɵcmp", ɵɵdefineComponent({
+  type: _a46,
+  selectors: [["ion-label"]],
+  inputs: {
+    color: "color",
+    mode: "mode",
+    position: "position"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonLabel_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a46);
 IonLabel = __decorate([ProxyCmp2({
   inputs: ["color", "mode", "position"]
 })], IonLabel);
@@ -7410,40 +7384,39 @@ IonLabel = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonList = class IonList2 {
-  z;
-  el;
+var _a47;
+var IonList = (_a47 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonList_Factory(t) {
-    return new (t || IonList2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonList2,
-    selectors: [["ion-list"]],
-    inputs: {
-      inset: "inset",
-      lines: "lines",
-      mode: "mode"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonList_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a47, "ɵfac", function IonList_Factory(t) {
+  return new (t || _a47)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a47, "ɵcmp", ɵɵdefineComponent({
+  type: _a47,
+  selectors: [["ion-list"]],
+  inputs: {
+    inset: "inset",
+    lines: "lines",
+    mode: "mode"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonList_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a47);
 IonList = __decorate([ProxyCmp2({
   inputs: ["inset", "lines", "mode"],
   methods: ["closeSlidingItems"]
@@ -7468,40 +7441,39 @@ IonList = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonListHeader = class IonListHeader2 {
-  z;
-  el;
+var _a48;
+var IonListHeader = (_a48 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonListHeader_Factory(t) {
-    return new (t || IonListHeader2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonListHeader2,
-    selectors: [["ion-list-header"]],
-    inputs: {
-      color: "color",
-      lines: "lines",
-      mode: "mode"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonListHeader_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a48, "ɵfac", function IonListHeader_Factory(t) {
+  return new (t || _a48)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a48, "ɵcmp", ɵɵdefineComponent({
+  type: _a48,
+  selectors: [["ion-list-header"]],
+  inputs: {
+    color: "color",
+    lines: "lines",
+    mode: "mode"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonListHeader_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a48);
 IonListHeader = __decorate([ProxyCmp2({
   inputs: ["color", "lines", "mode"]
 })], IonListHeader);
@@ -7525,53 +7497,52 @@ IonListHeader = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonLoading = class IonLoading2 {
-  z;
-  el;
+var _a49;
+var IonLoading = (_a49 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs2(this, this.el, ["ionLoadingDidPresent", "ionLoadingWillPresent", "ionLoadingWillDismiss", "ionLoadingDidDismiss", "didPresent", "willPresent", "willDismiss", "didDismiss"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonLoading_Factory(t) {
-    return new (t || IonLoading2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonLoading2,
-    selectors: [["ion-loading"]],
-    inputs: {
-      animated: "animated",
-      backdropDismiss: "backdropDismiss",
-      cssClass: "cssClass",
-      duration: "duration",
-      enterAnimation: "enterAnimation",
-      htmlAttributes: "htmlAttributes",
-      isOpen: "isOpen",
-      keyboardClose: "keyboardClose",
-      leaveAnimation: "leaveAnimation",
-      message: "message",
-      mode: "mode",
-      showBackdrop: "showBackdrop",
-      spinner: "spinner",
-      translucent: "translucent",
-      trigger: "trigger"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonLoading_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a49, "ɵfac", function IonLoading_Factory(t) {
+  return new (t || _a49)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a49, "ɵcmp", ɵɵdefineComponent({
+  type: _a49,
+  selectors: [["ion-loading"]],
+  inputs: {
+    animated: "animated",
+    backdropDismiss: "backdropDismiss",
+    cssClass: "cssClass",
+    duration: "duration",
+    enterAnimation: "enterAnimation",
+    htmlAttributes: "htmlAttributes",
+    isOpen: "isOpen",
+    keyboardClose: "keyboardClose",
+    leaveAnimation: "leaveAnimation",
+    message: "message",
+    mode: "mode",
+    showBackdrop: "showBackdrop",
+    spinner: "spinner",
+    translucent: "translucent",
+    trigger: "trigger"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonLoading_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a49);
 IonLoading = __decorate([ProxyCmp2({
   inputs: ["animated", "backdropDismiss", "cssClass", "duration", "enterAnimation", "htmlAttributes", "isOpen", "keyboardClose", "leaveAnimation", "message", "mode", "showBackdrop", "spinner", "translucent", "trigger"],
   methods: ["present", "dismiss", "onDidDismiss", "onWillDismiss"]
@@ -7596,45 +7567,44 @@ IonLoading = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonMenu = class IonMenu2 {
-  z;
-  el;
+var _a50;
+var IonMenu = (_a50 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs2(this, this.el, ["ionWillOpen", "ionWillClose", "ionDidOpen", "ionDidClose"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonMenu_Factory(t) {
-    return new (t || IonMenu2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonMenu2,
-    selectors: [["ion-menu"]],
-    inputs: {
-      contentId: "contentId",
-      disabled: "disabled",
-      maxEdgeStart: "maxEdgeStart",
-      menuId: "menuId",
-      side: "side",
-      swipeGesture: "swipeGesture",
-      type: "type"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonMenu_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a50, "ɵfac", function IonMenu_Factory(t) {
+  return new (t || _a50)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a50, "ɵcmp", ɵɵdefineComponent({
+  type: _a50,
+  selectors: [["ion-menu"]],
+  inputs: {
+    contentId: "contentId",
+    disabled: "disabled",
+    maxEdgeStart: "maxEdgeStart",
+    menuId: "menuId",
+    side: "side",
+    swipeGesture: "swipeGesture",
+    type: "type"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonMenu_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a50);
 IonMenu = __decorate([ProxyCmp2({
   inputs: ["contentId", "disabled", "maxEdgeStart", "menuId", "side", "swipeGesture", "type"],
   methods: ["isOpen", "isActive", "open", "close", "toggle", "setOpen"]
@@ -7659,43 +7629,42 @@ IonMenu = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonMenuButton = class IonMenuButton2 {
-  z;
-  el;
+var _a51;
+var IonMenuButton = (_a51 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonMenuButton_Factory(t) {
-    return new (t || IonMenuButton2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonMenuButton2,
-    selectors: [["ion-menu-button"]],
-    inputs: {
-      autoHide: "autoHide",
-      color: "color",
-      disabled: "disabled",
-      menu: "menu",
-      mode: "mode",
-      type: "type"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonMenuButton_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a51, "ɵfac", function IonMenuButton_Factory(t) {
+  return new (t || _a51)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a51, "ɵcmp", ɵɵdefineComponent({
+  type: _a51,
+  selectors: [["ion-menu-button"]],
+  inputs: {
+    autoHide: "autoHide",
+    color: "color",
+    disabled: "disabled",
+    menu: "menu",
+    mode: "mode",
+    type: "type"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonMenuButton_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a51);
 IonMenuButton = __decorate([ProxyCmp2({
   inputs: ["autoHide", "color", "disabled", "menu", "mode", "type"]
 })], IonMenuButton);
@@ -7719,39 +7688,38 @@ IonMenuButton = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonMenuToggle = class IonMenuToggle2 {
-  z;
-  el;
+var _a52;
+var IonMenuToggle = (_a52 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonMenuToggle_Factory(t) {
-    return new (t || IonMenuToggle2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonMenuToggle2,
-    selectors: [["ion-menu-toggle"]],
-    inputs: {
-      autoHide: "autoHide",
-      menu: "menu"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonMenuToggle_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a52, "ɵfac", function IonMenuToggle_Factory(t) {
+  return new (t || _a52)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a52, "ɵcmp", ɵɵdefineComponent({
+  type: _a52,
+  selectors: [["ion-menu-toggle"]],
+  inputs: {
+    autoHide: "autoHide",
+    menu: "menu"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonMenuToggle_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a52);
 IonMenuToggle = __decorate([ProxyCmp2({
   inputs: ["autoHide", "menu"]
 })], IonMenuToggle);
@@ -7775,41 +7743,40 @@ IonMenuToggle = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonNavLink = class IonNavLink2 {
-  z;
-  el;
+var _a53;
+var IonNavLink = (_a53 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonNavLink_Factory(t) {
-    return new (t || IonNavLink2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonNavLink2,
-    selectors: [["ion-nav-link"]],
-    inputs: {
-      component: "component",
-      componentProps: "componentProps",
-      routerAnimation: "routerAnimation",
-      routerDirection: "routerDirection"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonNavLink_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a53, "ɵfac", function IonNavLink_Factory(t) {
+  return new (t || _a53)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a53, "ɵcmp", ɵɵdefineComponent({
+  type: _a53,
+  selectors: [["ion-nav-link"]],
+  inputs: {
+    component: "component",
+    componentProps: "componentProps",
+    routerAnimation: "routerAnimation",
+    routerDirection: "routerDirection"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonNavLink_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a53);
 IonNavLink = __decorate([ProxyCmp2({
   inputs: ["component", "componentProps", "routerAnimation", "routerDirection"]
 })], IonNavLink);
@@ -7833,39 +7800,38 @@ IonNavLink = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonNote = class IonNote2 {
-  z;
-  el;
+var _a54;
+var IonNote = (_a54 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonNote_Factory(t) {
-    return new (t || IonNote2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonNote2,
-    selectors: [["ion-note"]],
-    inputs: {
-      color: "color",
-      mode: "mode"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonNote_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a54, "ɵfac", function IonNote_Factory(t) {
+  return new (t || _a54)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a54, "ɵcmp", ɵɵdefineComponent({
+  type: _a54,
+  selectors: [["ion-note"]],
+  inputs: {
+    color: "color",
+    mode: "mode"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonNote_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a54);
 IonNote = __decorate([ProxyCmp2({
   inputs: ["color", "mode"]
 })], IonNote);
@@ -7889,38 +7855,37 @@ IonNote = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonPicker = class IonPicker2 {
-  z;
-  el;
+var _a55;
+var IonPicker = (_a55 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonPicker_Factory(t) {
-    return new (t || IonPicker2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonPicker2,
-    selectors: [["ion-picker"]],
-    inputs: {
-      mode: "mode"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonPicker_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a55, "ɵfac", function IonPicker_Factory(t) {
+  return new (t || _a55)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a55, "ɵcmp", ɵɵdefineComponent({
+  type: _a55,
+  selectors: [["ion-picker"]],
+  inputs: {
+    mode: "mode"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonPicker_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a55);
 IonPicker = __decorate([ProxyCmp2({
   inputs: ["mode"]
 })], IonPicker);
@@ -7944,42 +7909,41 @@ IonPicker = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonPickerColumn = class IonPickerColumn2 {
-  z;
-  el;
+var _a56;
+var IonPickerColumn = (_a56 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs2(this, this.el, ["ionChange"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonPickerColumn_Factory(t) {
-    return new (t || IonPickerColumn2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonPickerColumn2,
-    selectors: [["ion-picker-column"]],
-    inputs: {
-      color: "color",
-      disabled: "disabled",
-      mode: "mode",
-      value: "value"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonPickerColumn_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a56, "ɵfac", function IonPickerColumn_Factory(t) {
+  return new (t || _a56)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a56, "ɵcmp", ɵɵdefineComponent({
+  type: _a56,
+  selectors: [["ion-picker-column"]],
+  inputs: {
+    color: "color",
+    disabled: "disabled",
+    mode: "mode",
+    value: "value"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonPickerColumn_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a56);
 IonPickerColumn = __decorate([ProxyCmp2({
   inputs: ["color", "disabled", "mode", "value"],
   methods: ["setFocus"]
@@ -8004,40 +7968,39 @@ IonPickerColumn = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonPickerColumnOption = class IonPickerColumnOption2 {
-  z;
-  el;
+var _a57;
+var IonPickerColumnOption = (_a57 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonPickerColumnOption_Factory(t) {
-    return new (t || IonPickerColumnOption2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonPickerColumnOption2,
-    selectors: [["ion-picker-column-option"]],
-    inputs: {
-      color: "color",
-      disabled: "disabled",
-      value: "value"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonPickerColumnOption_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a57, "ɵfac", function IonPickerColumnOption_Factory(t) {
+  return new (t || _a57)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a57, "ɵcmp", ɵɵdefineComponent({
+  type: _a57,
+  selectors: [["ion-picker-column-option"]],
+  inputs: {
+    color: "color",
+    disabled: "disabled",
+    value: "value"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonPickerColumnOption_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a57);
 IonPickerColumnOption = __decorate([ProxyCmp2({
   inputs: ["color", "disabled", "value"]
 })], IonPickerColumnOption);
@@ -8061,52 +8024,51 @@ IonPickerColumnOption = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonPickerLegacy = class IonPickerLegacy2 {
-  z;
-  el;
+var _a58;
+var IonPickerLegacy = (_a58 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs2(this, this.el, ["ionPickerDidPresent", "ionPickerWillPresent", "ionPickerWillDismiss", "ionPickerDidDismiss", "didPresent", "willPresent", "willDismiss", "didDismiss"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonPickerLegacy_Factory(t) {
-    return new (t || IonPickerLegacy2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonPickerLegacy2,
-    selectors: [["ion-picker-legacy"]],
-    inputs: {
-      animated: "animated",
-      backdropDismiss: "backdropDismiss",
-      buttons: "buttons",
-      columns: "columns",
-      cssClass: "cssClass",
-      duration: "duration",
-      enterAnimation: "enterAnimation",
-      htmlAttributes: "htmlAttributes",
-      isOpen: "isOpen",
-      keyboardClose: "keyboardClose",
-      leaveAnimation: "leaveAnimation",
-      mode: "mode",
-      showBackdrop: "showBackdrop",
-      trigger: "trigger"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonPickerLegacy_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a58, "ɵfac", function IonPickerLegacy_Factory(t) {
+  return new (t || _a58)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a58, "ɵcmp", ɵɵdefineComponent({
+  type: _a58,
+  selectors: [["ion-picker-legacy"]],
+  inputs: {
+    animated: "animated",
+    backdropDismiss: "backdropDismiss",
+    buttons: "buttons",
+    columns: "columns",
+    cssClass: "cssClass",
+    duration: "duration",
+    enterAnimation: "enterAnimation",
+    htmlAttributes: "htmlAttributes",
+    isOpen: "isOpen",
+    keyboardClose: "keyboardClose",
+    leaveAnimation: "leaveAnimation",
+    mode: "mode",
+    showBackdrop: "showBackdrop",
+    trigger: "trigger"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonPickerLegacy_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a58);
 IonPickerLegacy = __decorate([ProxyCmp2({
   inputs: ["animated", "backdropDismiss", "buttons", "columns", "cssClass", "duration", "enterAnimation", "htmlAttributes", "isOpen", "keyboardClose", "leaveAnimation", "mode", "showBackdrop", "trigger"],
   methods: ["present", "dismiss", "onDidDismiss", "onWillDismiss", "getColumn"]
@@ -8131,43 +8093,42 @@ IonPickerLegacy = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonProgressBar = class IonProgressBar2 {
-  z;
-  el;
+var _a59;
+var IonProgressBar = (_a59 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonProgressBar_Factory(t) {
-    return new (t || IonProgressBar2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonProgressBar2,
-    selectors: [["ion-progress-bar"]],
-    inputs: {
-      buffer: "buffer",
-      color: "color",
-      mode: "mode",
-      reversed: "reversed",
-      type: "type",
-      value: "value"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonProgressBar_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a59, "ɵfac", function IonProgressBar_Factory(t) {
+  return new (t || _a59)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a59, "ɵcmp", ɵɵdefineComponent({
+  type: _a59,
+  selectors: [["ion-progress-bar"]],
+  inputs: {
+    buffer: "buffer",
+    color: "color",
+    mode: "mode",
+    reversed: "reversed",
+    type: "type",
+    value: "value"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonProgressBar_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a59);
 IonProgressBar = __decorate([ProxyCmp2({
   inputs: ["buffer", "color", "mode", "reversed", "type", "value"]
 })], IonProgressBar);
@@ -8191,46 +8152,45 @@ IonProgressBar = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonRadio = class IonRadio2 {
-  z;
-  el;
+var _a60;
+var IonRadio = (_a60 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs2(this, this.el, ["ionFocus", "ionBlur"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonRadio_Factory(t) {
-    return new (t || IonRadio2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonRadio2,
-    selectors: [["ion-radio"]],
-    inputs: {
-      alignment: "alignment",
-      color: "color",
-      disabled: "disabled",
-      justify: "justify",
-      labelPlacement: "labelPlacement",
-      mode: "mode",
-      name: "name",
-      value: "value"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonRadio_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a60, "ɵfac", function IonRadio_Factory(t) {
+  return new (t || _a60)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a60, "ɵcmp", ɵɵdefineComponent({
+  type: _a60,
+  selectors: [["ion-radio"]],
+  inputs: {
+    alignment: "alignment",
+    color: "color",
+    disabled: "disabled",
+    justify: "justify",
+    labelPlacement: "labelPlacement",
+    mode: "mode",
+    name: "name",
+    value: "value"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonRadio_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a60);
 IonRadio = __decorate([ProxyCmp2({
   inputs: ["alignment", "color", "disabled", "justify", "labelPlacement", "mode", "name", "value"]
 })], IonRadio);
@@ -8254,42 +8214,41 @@ IonRadio = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonRadioGroup = class IonRadioGroup2 {
-  z;
-  el;
+var _a61;
+var IonRadioGroup = (_a61 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs2(this, this.el, ["ionChange"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonRadioGroup_Factory(t) {
-    return new (t || IonRadioGroup2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonRadioGroup2,
-    selectors: [["ion-radio-group"]],
-    inputs: {
-      allowEmptySelection: "allowEmptySelection",
-      compareWith: "compareWith",
-      name: "name",
-      value: "value"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonRadioGroup_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a61, "ɵfac", function IonRadioGroup_Factory(t) {
+  return new (t || _a61)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a61, "ɵcmp", ɵɵdefineComponent({
+  type: _a61,
+  selectors: [["ion-radio-group"]],
+  inputs: {
+    allowEmptySelection: "allowEmptySelection",
+    compareWith: "compareWith",
+    name: "name",
+    value: "value"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonRadioGroup_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a61);
 IonRadioGroup = __decorate([ProxyCmp2({
   inputs: ["allowEmptySelection", "compareWith", "name", "value"]
 })], IonRadioGroup);
@@ -8313,55 +8272,54 @@ IonRadioGroup = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonRange = class IonRange2 {
-  z;
-  el;
+var _a62;
+var IonRange = (_a62 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs2(this, this.el, ["ionChange", "ionInput", "ionFocus", "ionBlur", "ionKnobMoveStart", "ionKnobMoveEnd"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonRange_Factory(t) {
-    return new (t || IonRange2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonRange2,
-    selectors: [["ion-range"]],
-    inputs: {
-      activeBarStart: "activeBarStart",
-      color: "color",
-      debounce: "debounce",
-      disabled: "disabled",
-      dualKnobs: "dualKnobs",
-      label: "label",
-      labelPlacement: "labelPlacement",
-      max: "max",
-      min: "min",
-      mode: "mode",
-      name: "name",
-      pin: "pin",
-      pinFormatter: "pinFormatter",
-      snaps: "snaps",
-      step: "step",
-      ticks: "ticks",
-      value: "value"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonRange_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a62, "ɵfac", function IonRange_Factory(t) {
+  return new (t || _a62)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a62, "ɵcmp", ɵɵdefineComponent({
+  type: _a62,
+  selectors: [["ion-range"]],
+  inputs: {
+    activeBarStart: "activeBarStart",
+    color: "color",
+    debounce: "debounce",
+    disabled: "disabled",
+    dualKnobs: "dualKnobs",
+    label: "label",
+    labelPlacement: "labelPlacement",
+    max: "max",
+    min: "min",
+    mode: "mode",
+    name: "name",
+    pin: "pin",
+    pinFormatter: "pinFormatter",
+    snaps: "snaps",
+    step: "step",
+    ticks: "ticks",
+    value: "value"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonRange_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a62);
 IonRange = __decorate([ProxyCmp2({
   inputs: ["activeBarStart", "color", "debounce", "disabled", "dualKnobs", "label", "labelPlacement", "max", "min", "mode", "name", "pin", "pinFormatter", "snaps", "step", "ticks", "value"]
 })], IonRange);
@@ -8385,45 +8343,44 @@ IonRange = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonRefresher = class IonRefresher2 {
-  z;
-  el;
+var _a63;
+var IonRefresher = (_a63 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs2(this, this.el, ["ionRefresh", "ionPull", "ionStart"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonRefresher_Factory(t) {
-    return new (t || IonRefresher2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonRefresher2,
-    selectors: [["ion-refresher"]],
-    inputs: {
-      closeDuration: "closeDuration",
-      disabled: "disabled",
-      mode: "mode",
-      pullFactor: "pullFactor",
-      pullMax: "pullMax",
-      pullMin: "pullMin",
-      snapbackDuration: "snapbackDuration"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonRefresher_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a63, "ɵfac", function IonRefresher_Factory(t) {
+  return new (t || _a63)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a63, "ɵcmp", ɵɵdefineComponent({
+  type: _a63,
+  selectors: [["ion-refresher"]],
+  inputs: {
+    closeDuration: "closeDuration",
+    disabled: "disabled",
+    mode: "mode",
+    pullFactor: "pullFactor",
+    pullMax: "pullMax",
+    pullMin: "pullMin",
+    snapbackDuration: "snapbackDuration"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonRefresher_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a63);
 IonRefresher = __decorate([ProxyCmp2({
   inputs: ["closeDuration", "disabled", "mode", "pullFactor", "pullMax", "pullMin", "snapbackDuration"],
   methods: ["complete", "cancel", "getProgress"]
@@ -8448,41 +8405,40 @@ IonRefresher = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonRefresherContent = class IonRefresherContent2 {
-  z;
-  el;
+var _a64;
+var IonRefresherContent = (_a64 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonRefresherContent_Factory(t) {
-    return new (t || IonRefresherContent2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonRefresherContent2,
-    selectors: [["ion-refresher-content"]],
-    inputs: {
-      pullingIcon: "pullingIcon",
-      pullingText: "pullingText",
-      refreshingSpinner: "refreshingSpinner",
-      refreshingText: "refreshingText"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonRefresherContent_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a64, "ɵfac", function IonRefresherContent_Factory(t) {
+  return new (t || _a64)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a64, "ɵcmp", ɵɵdefineComponent({
+  type: _a64,
+  selectors: [["ion-refresher-content"]],
+  inputs: {
+    pullingIcon: "pullingIcon",
+    pullingText: "pullingText",
+    refreshingSpinner: "refreshingSpinner",
+    refreshingText: "refreshingText"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonRefresherContent_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a64);
 IonRefresherContent = __decorate([ProxyCmp2({
   inputs: ["pullingIcon", "pullingText", "refreshingSpinner", "refreshingText"]
 })], IonRefresherContent);
@@ -8506,35 +8462,34 @@ IonRefresherContent = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonReorder = class IonReorder2 {
-  z;
-  el;
+var _a65;
+var IonReorder = (_a65 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonReorder_Factory(t) {
-    return new (t || IonReorder2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonReorder2,
-    selectors: [["ion-reorder"]],
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonReorder_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a65, "ɵfac", function IonReorder_Factory(t) {
+  return new (t || _a65)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a65, "ɵcmp", ɵɵdefineComponent({
+  type: _a65,
+  selectors: [["ion-reorder"]],
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonReorder_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a65);
 IonReorder = __decorate([ProxyCmp2({})], IonReorder);
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(IonReorder, [{
@@ -8556,39 +8511,38 @@ IonReorder = __decorate([ProxyCmp2({})], IonReorder);
     }];
   }, null);
 })();
-var IonReorderGroup = class IonReorderGroup2 {
-  z;
-  el;
+var _a66;
+var IonReorderGroup = (_a66 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs2(this, this.el, ["ionItemReorder"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonReorderGroup_Factory(t) {
-    return new (t || IonReorderGroup2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonReorderGroup2,
-    selectors: [["ion-reorder-group"]],
-    inputs: {
-      disabled: "disabled"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonReorderGroup_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a66, "ɵfac", function IonReorderGroup_Factory(t) {
+  return new (t || _a66)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a66, "ɵcmp", ɵɵdefineComponent({
+  type: _a66,
+  selectors: [["ion-reorder-group"]],
+  inputs: {
+    disabled: "disabled"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonReorderGroup_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a66);
 IonReorderGroup = __decorate([ProxyCmp2({
   inputs: ["disabled"],
   methods: ["complete"]
@@ -8613,38 +8567,37 @@ IonReorderGroup = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonRippleEffect = class IonRippleEffect2 {
-  z;
-  el;
+var _a67;
+var IonRippleEffect = (_a67 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonRippleEffect_Factory(t) {
-    return new (t || IonRippleEffect2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonRippleEffect2,
-    selectors: [["ion-ripple-effect"]],
-    inputs: {
-      type: "type"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonRippleEffect_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a67, "ɵfac", function IonRippleEffect_Factory(t) {
+  return new (t || _a67)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a67, "ɵcmp", ɵɵdefineComponent({
+  type: _a67,
+  selectors: [["ion-ripple-effect"]],
+  inputs: {
+    type: "type"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonRippleEffect_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a67);
 IonRippleEffect = __decorate([ProxyCmp2({
   inputs: ["type"],
   methods: ["addRipple"]
@@ -8669,35 +8622,34 @@ IonRippleEffect = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonRow = class IonRow2 {
-  z;
-  el;
+var _a68;
+var IonRow = (_a68 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonRow_Factory(t) {
-    return new (t || IonRow2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonRow2,
-    selectors: [["ion-row"]],
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonRow_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a68, "ɵfac", function IonRow_Factory(t) {
+  return new (t || _a68)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a68, "ɵcmp", ɵɵdefineComponent({
+  type: _a68,
+  selectors: [["ion-row"]],
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonRow_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a68);
 IonRow = __decorate([ProxyCmp2({})], IonRow);
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(IonRow, [{
@@ -8719,61 +8671,60 @@ IonRow = __decorate([ProxyCmp2({})], IonRow);
     }];
   }, null);
 })();
-var IonSearchbar = class IonSearchbar2 {
-  z;
-  el;
+var _a69;
+var IonSearchbar = (_a69 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs2(this, this.el, ["ionInput", "ionChange", "ionCancel", "ionClear", "ionBlur", "ionFocus"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonSearchbar_Factory(t) {
-    return new (t || IonSearchbar2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonSearchbar2,
-    selectors: [["ion-searchbar"]],
-    inputs: {
-      animated: "animated",
-      autocapitalize: "autocapitalize",
-      autocomplete: "autocomplete",
-      autocorrect: "autocorrect",
-      cancelButtonIcon: "cancelButtonIcon",
-      cancelButtonText: "cancelButtonText",
-      clearIcon: "clearIcon",
-      color: "color",
-      debounce: "debounce",
-      disabled: "disabled",
-      enterkeyhint: "enterkeyhint",
-      inputmode: "inputmode",
-      maxlength: "maxlength",
-      minlength: "minlength",
-      mode: "mode",
-      name: "name",
-      placeholder: "placeholder",
-      searchIcon: "searchIcon",
-      showCancelButton: "showCancelButton",
-      showClearButton: "showClearButton",
-      spellcheck: "spellcheck",
-      type: "type",
-      value: "value"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonSearchbar_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a69, "ɵfac", function IonSearchbar_Factory(t) {
+  return new (t || _a69)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a69, "ɵcmp", ɵɵdefineComponent({
+  type: _a69,
+  selectors: [["ion-searchbar"]],
+  inputs: {
+    animated: "animated",
+    autocapitalize: "autocapitalize",
+    autocomplete: "autocomplete",
+    autocorrect: "autocorrect",
+    cancelButtonIcon: "cancelButtonIcon",
+    cancelButtonText: "cancelButtonText",
+    clearIcon: "clearIcon",
+    color: "color",
+    debounce: "debounce",
+    disabled: "disabled",
+    enterkeyhint: "enterkeyhint",
+    inputmode: "inputmode",
+    maxlength: "maxlength",
+    minlength: "minlength",
+    mode: "mode",
+    name: "name",
+    placeholder: "placeholder",
+    searchIcon: "searchIcon",
+    showCancelButton: "showCancelButton",
+    showClearButton: "showClearButton",
+    spellcheck: "spellcheck",
+    type: "type",
+    value: "value"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonSearchbar_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a69);
 IonSearchbar = __decorate([ProxyCmp2({
   inputs: ["animated", "autocapitalize", "autocomplete", "autocorrect", "cancelButtonIcon", "cancelButtonText", "clearIcon", "color", "debounce", "disabled", "enterkeyhint", "inputmode", "maxlength", "minlength", "mode", "name", "placeholder", "searchIcon", "showCancelButton", "showClearButton", "spellcheck", "type", "value"],
   methods: ["setFocus", "getInputElement"]
@@ -8798,45 +8749,44 @@ IonSearchbar = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonSegment = class IonSegment2 {
-  z;
-  el;
+var _a70;
+var IonSegment = (_a70 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs2(this, this.el, ["ionChange"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonSegment_Factory(t) {
-    return new (t || IonSegment2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonSegment2,
-    selectors: [["ion-segment"]],
-    inputs: {
-      color: "color",
-      disabled: "disabled",
-      mode: "mode",
-      scrollable: "scrollable",
-      selectOnFocus: "selectOnFocus",
-      swipeGesture: "swipeGesture",
-      value: "value"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonSegment_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a70, "ɵfac", function IonSegment_Factory(t) {
+  return new (t || _a70)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a70, "ɵcmp", ɵɵdefineComponent({
+  type: _a70,
+  selectors: [["ion-segment"]],
+  inputs: {
+    color: "color",
+    disabled: "disabled",
+    mode: "mode",
+    scrollable: "scrollable",
+    selectOnFocus: "selectOnFocus",
+    swipeGesture: "swipeGesture",
+    value: "value"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonSegment_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a70);
 IonSegment = __decorate([ProxyCmp2({
   inputs: ["color", "disabled", "mode", "scrollable", "selectOnFocus", "swipeGesture", "value"]
 })], IonSegment);
@@ -8860,42 +8810,41 @@ IonSegment = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonSegmentButton = class IonSegmentButton2 {
-  z;
-  el;
+var _a71;
+var IonSegmentButton = (_a71 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonSegmentButton_Factory(t) {
-    return new (t || IonSegmentButton2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonSegmentButton2,
-    selectors: [["ion-segment-button"]],
-    inputs: {
-      disabled: "disabled",
-      layout: "layout",
-      mode: "mode",
-      type: "type",
-      value: "value"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonSegmentButton_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a71, "ɵfac", function IonSegmentButton_Factory(t) {
+  return new (t || _a71)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a71, "ɵcmp", ɵɵdefineComponent({
+  type: _a71,
+  selectors: [["ion-segment-button"]],
+  inputs: {
+    disabled: "disabled",
+    layout: "layout",
+    mode: "mode",
+    type: "type",
+    value: "value"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonSegmentButton_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a71);
 IonSegmentButton = __decorate([ProxyCmp2({
   inputs: ["disabled", "layout", "mode", "type", "value"]
 })], IonSegmentButton);
@@ -8919,58 +8868,57 @@ IonSegmentButton = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonSelect = class IonSelect2 {
-  z;
-  el;
+var _a72;
+var IonSelect = (_a72 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs2(this, this.el, ["ionChange", "ionCancel", "ionDismiss", "ionFocus", "ionBlur"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonSelect_Factory(t) {
-    return new (t || IonSelect2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonSelect2,
-    selectors: [["ion-select"]],
-    inputs: {
-      cancelText: "cancelText",
-      color: "color",
-      compareWith: "compareWith",
-      disabled: "disabled",
-      expandedIcon: "expandedIcon",
-      fill: "fill",
-      interface: "interface",
-      interfaceOptions: "interfaceOptions",
-      justify: "justify",
-      label: "label",
-      labelPlacement: "labelPlacement",
-      mode: "mode",
-      multiple: "multiple",
-      name: "name",
-      okText: "okText",
-      placeholder: "placeholder",
-      selectedText: "selectedText",
-      shape: "shape",
-      toggleIcon: "toggleIcon",
-      value: "value"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonSelect_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a72, "ɵfac", function IonSelect_Factory(t) {
+  return new (t || _a72)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a72, "ɵcmp", ɵɵdefineComponent({
+  type: _a72,
+  selectors: [["ion-select"]],
+  inputs: {
+    cancelText: "cancelText",
+    color: "color",
+    compareWith: "compareWith",
+    disabled: "disabled",
+    expandedIcon: "expandedIcon",
+    fill: "fill",
+    interface: "interface",
+    interfaceOptions: "interfaceOptions",
+    justify: "justify",
+    label: "label",
+    labelPlacement: "labelPlacement",
+    mode: "mode",
+    multiple: "multiple",
+    name: "name",
+    okText: "okText",
+    placeholder: "placeholder",
+    selectedText: "selectedText",
+    shape: "shape",
+    toggleIcon: "toggleIcon",
+    value: "value"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonSelect_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a72);
 IonSelect = __decorate([ProxyCmp2({
   inputs: ["cancelText", "color", "compareWith", "disabled", "expandedIcon", "fill", "interface", "interfaceOptions", "justify", "label", "labelPlacement", "mode", "multiple", "name", "okText", "placeholder", "selectedText", "shape", "toggleIcon", "value"],
   methods: ["open"]
@@ -8995,39 +8943,38 @@ IonSelect = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonSelectOption = class IonSelectOption2 {
-  z;
-  el;
+var _a73;
+var IonSelectOption = (_a73 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonSelectOption_Factory(t) {
-    return new (t || IonSelectOption2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonSelectOption2,
-    selectors: [["ion-select-option"]],
-    inputs: {
-      disabled: "disabled",
-      value: "value"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonSelectOption_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a73, "ɵfac", function IonSelectOption_Factory(t) {
+  return new (t || _a73)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a73, "ɵcmp", ɵɵdefineComponent({
+  type: _a73,
+  selectors: [["ion-select-option"]],
+  inputs: {
+    disabled: "disabled",
+    value: "value"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonSelectOption_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a73);
 IonSelectOption = __decorate([ProxyCmp2({
   inputs: ["disabled", "value"]
 })], IonSelectOption);
@@ -9051,38 +8998,37 @@ IonSelectOption = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonSkeletonText = class IonSkeletonText2 {
-  z;
-  el;
+var _a74;
+var IonSkeletonText = (_a74 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonSkeletonText_Factory(t) {
-    return new (t || IonSkeletonText2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonSkeletonText2,
-    selectors: [["ion-skeleton-text"]],
-    inputs: {
-      animated: "animated"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonSkeletonText_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a74, "ɵfac", function IonSkeletonText_Factory(t) {
+  return new (t || _a74)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a74, "ɵcmp", ɵɵdefineComponent({
+  type: _a74,
+  selectors: [["ion-skeleton-text"]],
+  inputs: {
+    animated: "animated"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonSkeletonText_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a74);
 IonSkeletonText = __decorate([ProxyCmp2({
   inputs: ["animated"]
 })], IonSkeletonText);
@@ -9106,41 +9052,40 @@ IonSkeletonText = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonSpinner = class IonSpinner2 {
-  z;
-  el;
+var _a75;
+var IonSpinner = (_a75 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonSpinner_Factory(t) {
-    return new (t || IonSpinner2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonSpinner2,
-    selectors: [["ion-spinner"]],
-    inputs: {
-      color: "color",
-      duration: "duration",
-      name: "name",
-      paused: "paused"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonSpinner_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a75, "ɵfac", function IonSpinner_Factory(t) {
+  return new (t || _a75)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a75, "ɵcmp", ɵɵdefineComponent({
+  type: _a75,
+  selectors: [["ion-spinner"]],
+  inputs: {
+    color: "color",
+    duration: "duration",
+    name: "name",
+    paused: "paused"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonSpinner_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a75);
 IonSpinner = __decorate([ProxyCmp2({
   inputs: ["color", "duration", "name", "paused"]
 })], IonSpinner);
@@ -9164,41 +9109,40 @@ IonSpinner = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonSplitPane = class IonSplitPane2 {
-  z;
-  el;
+var _a76;
+var IonSplitPane = (_a76 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs2(this, this.el, ["ionSplitPaneVisible"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonSplitPane_Factory(t) {
-    return new (t || IonSplitPane2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonSplitPane2,
-    selectors: [["ion-split-pane"]],
-    inputs: {
-      contentId: "contentId",
-      disabled: "disabled",
-      when: "when"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonSplitPane_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a76, "ɵfac", function IonSplitPane_Factory(t) {
+  return new (t || _a76)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a76, "ɵcmp", ɵɵdefineComponent({
+  type: _a76,
+  selectors: [["ion-split-pane"]],
+  inputs: {
+    contentId: "contentId",
+    disabled: "disabled",
+    when: "when"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonSplitPane_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a76);
 IonSplitPane = __decorate([ProxyCmp2({
   inputs: ["contentId", "disabled", "when"]
 })], IonSplitPane);
@@ -9222,39 +9166,38 @@ IonSplitPane = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonTab = class IonTab2 {
-  z;
-  el;
+var _a77;
+var IonTab = (_a77 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonTab_Factory(t) {
-    return new (t || IonTab2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonTab2,
-    selectors: [["ion-tab"]],
-    inputs: {
-      component: "component",
-      tab: "tab"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonTab_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a77, "ɵfac", function IonTab_Factory(t) {
+  return new (t || _a77)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a77, "ɵcmp", ɵɵdefineComponent({
+  type: _a77,
+  selectors: [["ion-tab"]],
+  inputs: {
+    component: "component",
+    tab: "tab"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonTab_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a77);
 IonTab = __decorate([ProxyCmp2({
   inputs: ["component", "tab"],
   methods: ["setActive"]
@@ -9279,41 +9222,40 @@ IonTab = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonTabBar = class IonTabBar2 {
-  z;
-  el;
+var _a78;
+var IonTabBar = (_a78 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonTabBar_Factory(t) {
-    return new (t || IonTabBar2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonTabBar2,
-    selectors: [["ion-tab-bar"]],
-    inputs: {
-      color: "color",
-      mode: "mode",
-      selectedTab: "selectedTab",
-      translucent: "translucent"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonTabBar_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a78, "ɵfac", function IonTabBar_Factory(t) {
+  return new (t || _a78)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a78, "ɵcmp", ɵɵdefineComponent({
+  type: _a78,
+  selectors: [["ion-tab-bar"]],
+  inputs: {
+    color: "color",
+    mode: "mode",
+    selectedTab: "selectedTab",
+    translucent: "translucent"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonTabBar_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a78);
 IonTabBar = __decorate([ProxyCmp2({
   inputs: ["color", "mode", "selectedTab", "translucent"]
 })], IonTabBar);
@@ -9337,46 +9279,45 @@ IonTabBar = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonTabButton = class IonTabButton2 {
-  z;
-  el;
+var _a79;
+var IonTabButton = (_a79 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonTabButton_Factory(t) {
-    return new (t || IonTabButton2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonTabButton2,
-    selectors: [["ion-tab-button"]],
-    inputs: {
-      disabled: "disabled",
-      download: "download",
-      href: "href",
-      layout: "layout",
-      mode: "mode",
-      rel: "rel",
-      selected: "selected",
-      tab: "tab",
-      target: "target"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonTabButton_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a79, "ɵfac", function IonTabButton_Factory(t) {
+  return new (t || _a79)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a79, "ɵcmp", ɵɵdefineComponent({
+  type: _a79,
+  selectors: [["ion-tab-button"]],
+  inputs: {
+    disabled: "disabled",
+    download: "download",
+    href: "href",
+    layout: "layout",
+    mode: "mode",
+    rel: "rel",
+    selected: "selected",
+    tab: "tab",
+    target: "target"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonTabButton_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a79);
 IonTabButton = __decorate([ProxyCmp2({
   inputs: ["disabled", "download", "href", "layout", "mode", "rel", "selected", "tab", "target"]
 })], IonTabButton);
@@ -9400,39 +9341,38 @@ IonTabButton = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonText = class IonText2 {
-  z;
-  el;
+var _a80;
+var IonText = (_a80 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonText_Factory(t) {
-    return new (t || IonText2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonText2,
-    selectors: [["ion-text"]],
-    inputs: {
-      color: "color",
-      mode: "mode"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonText_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a80, "ɵfac", function IonText_Factory(t) {
+  return new (t || _a80)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a80, "ɵcmp", ɵɵdefineComponent({
+  type: _a80,
+  selectors: [["ion-text"]],
+  inputs: {
+    color: "color",
+    mode: "mode"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonText_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a80);
 IonText = __decorate([ProxyCmp2({
   inputs: ["color", "mode"]
 })], IonText);
@@ -9456,67 +9396,66 @@ IonText = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonTextarea = class IonTextarea2 {
-  z;
-  el;
+var _a81;
+var IonTextarea = (_a81 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs2(this, this.el, ["ionChange", "ionInput", "ionBlur", "ionFocus"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonTextarea_Factory(t) {
-    return new (t || IonTextarea2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonTextarea2,
-    selectors: [["ion-textarea"]],
-    inputs: {
-      autoGrow: "autoGrow",
-      autocapitalize: "autocapitalize",
-      autofocus: "autofocus",
-      clearOnEdit: "clearOnEdit",
-      color: "color",
-      cols: "cols",
-      counter: "counter",
-      counterFormatter: "counterFormatter",
-      debounce: "debounce",
-      disabled: "disabled",
-      enterkeyhint: "enterkeyhint",
-      errorText: "errorText",
-      fill: "fill",
-      helperText: "helperText",
-      inputmode: "inputmode",
-      label: "label",
-      labelPlacement: "labelPlacement",
-      maxlength: "maxlength",
-      minlength: "minlength",
-      mode: "mode",
-      name: "name",
-      placeholder: "placeholder",
-      readonly: "readonly",
-      required: "required",
-      rows: "rows",
-      shape: "shape",
-      spellcheck: "spellcheck",
-      value: "value",
-      wrap: "wrap"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonTextarea_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a81, "ɵfac", function IonTextarea_Factory(t) {
+  return new (t || _a81)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a81, "ɵcmp", ɵɵdefineComponent({
+  type: _a81,
+  selectors: [["ion-textarea"]],
+  inputs: {
+    autoGrow: "autoGrow",
+    autocapitalize: "autocapitalize",
+    autofocus: "autofocus",
+    clearOnEdit: "clearOnEdit",
+    color: "color",
+    cols: "cols",
+    counter: "counter",
+    counterFormatter: "counterFormatter",
+    debounce: "debounce",
+    disabled: "disabled",
+    enterkeyhint: "enterkeyhint",
+    errorText: "errorText",
+    fill: "fill",
+    helperText: "helperText",
+    inputmode: "inputmode",
+    label: "label",
+    labelPlacement: "labelPlacement",
+    maxlength: "maxlength",
+    minlength: "minlength",
+    mode: "mode",
+    name: "name",
+    placeholder: "placeholder",
+    readonly: "readonly",
+    required: "required",
+    rows: "rows",
+    shape: "shape",
+    spellcheck: "spellcheck",
+    value: "value",
+    wrap: "wrap"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonTextarea_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a81);
 IonTextarea = __decorate([ProxyCmp2({
   inputs: ["autoGrow", "autocapitalize", "autofocus", "clearOnEdit", "color", "cols", "counter", "counterFormatter", "debounce", "disabled", "enterkeyhint", "errorText", "fill", "helperText", "inputmode", "label", "labelPlacement", "maxlength", "minlength", "mode", "name", "placeholder", "readonly", "required", "rows", "shape", "spellcheck", "value", "wrap"],
   methods: ["setFocus", "getInputElement"]
@@ -9541,35 +9480,34 @@ IonTextarea = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonThumbnail = class IonThumbnail2 {
-  z;
-  el;
+var _a82;
+var IonThumbnail = (_a82 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonThumbnail_Factory(t) {
-    return new (t || IonThumbnail2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonThumbnail2,
-    selectors: [["ion-thumbnail"]],
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonThumbnail_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a82, "ɵfac", function IonThumbnail_Factory(t) {
+  return new (t || _a82)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a82, "ɵcmp", ɵɵdefineComponent({
+  type: _a82,
+  selectors: [["ion-thumbnail"]],
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonThumbnail_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a82);
 IonThumbnail = __decorate([ProxyCmp2({})], IonThumbnail);
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(IonThumbnail, [{
@@ -9591,39 +9529,38 @@ IonThumbnail = __decorate([ProxyCmp2({})], IonThumbnail);
     }];
   }, null);
 })();
-var IonTitle = class IonTitle2 {
-  z;
-  el;
+var _a83;
+var IonTitle = (_a83 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonTitle_Factory(t) {
-    return new (t || IonTitle2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonTitle2,
-    selectors: [["ion-title"]],
-    inputs: {
-      color: "color",
-      size: "size"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonTitle_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a83, "ɵfac", function IonTitle_Factory(t) {
+  return new (t || _a83)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a83, "ɵcmp", ɵɵdefineComponent({
+  type: _a83,
+  selectors: [["ion-title"]],
+  inputs: {
+    color: "color",
+    size: "size"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonTitle_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a83);
 IonTitle = __decorate([ProxyCmp2({
   inputs: ["color", "size"]
 })], IonTitle);
@@ -9647,58 +9584,57 @@ IonTitle = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonToast = class IonToast2 {
-  z;
-  el;
+var _a84;
+var IonToast = (_a84 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs2(this, this.el, ["ionToastDidPresent", "ionToastWillPresent", "ionToastWillDismiss", "ionToastDidDismiss", "didPresent", "willPresent", "willDismiss", "didDismiss"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonToast_Factory(t) {
-    return new (t || IonToast2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonToast2,
-    selectors: [["ion-toast"]],
-    inputs: {
-      animated: "animated",
-      buttons: "buttons",
-      color: "color",
-      cssClass: "cssClass",
-      duration: "duration",
-      enterAnimation: "enterAnimation",
-      header: "header",
-      htmlAttributes: "htmlAttributes",
-      icon: "icon",
-      isOpen: "isOpen",
-      keyboardClose: "keyboardClose",
-      layout: "layout",
-      leaveAnimation: "leaveAnimation",
-      message: "message",
-      mode: "mode",
-      position: "position",
-      positionAnchor: "positionAnchor",
-      swipeGesture: "swipeGesture",
-      translucent: "translucent",
-      trigger: "trigger"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonToast_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a84, "ɵfac", function IonToast_Factory(t) {
+  return new (t || _a84)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a84, "ɵcmp", ɵɵdefineComponent({
+  type: _a84,
+  selectors: [["ion-toast"]],
+  inputs: {
+    animated: "animated",
+    buttons: "buttons",
+    color: "color",
+    cssClass: "cssClass",
+    duration: "duration",
+    enterAnimation: "enterAnimation",
+    header: "header",
+    htmlAttributes: "htmlAttributes",
+    icon: "icon",
+    isOpen: "isOpen",
+    keyboardClose: "keyboardClose",
+    layout: "layout",
+    leaveAnimation: "leaveAnimation",
+    message: "message",
+    mode: "mode",
+    position: "position",
+    positionAnchor: "positionAnchor",
+    swipeGesture: "swipeGesture",
+    translucent: "translucent",
+    trigger: "trigger"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonToast_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a84);
 IonToast = __decorate([ProxyCmp2({
   inputs: ["animated", "buttons", "color", "cssClass", "duration", "enterAnimation", "header", "htmlAttributes", "icon", "isOpen", "keyboardClose", "layout", "leaveAnimation", "message", "mode", "position", "positionAnchor", "swipeGesture", "translucent", "trigger"],
   methods: ["present", "dismiss", "onDidDismiss", "onWillDismiss"]
@@ -9723,48 +9659,47 @@ IonToast = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonToggle = class IonToggle2 {
-  z;
-  el;
+var _a85;
+var IonToggle = (_a85 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
     proxyOutputs2(this, this.el, ["ionChange", "ionFocus", "ionBlur"]);
   }
-  /** @nocollapse */
-  static ɵfac = function IonToggle_Factory(t) {
-    return new (t || IonToggle2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonToggle2,
-    selectors: [["ion-toggle"]],
-    inputs: {
-      alignment: "alignment",
-      checked: "checked",
-      color: "color",
-      disabled: "disabled",
-      enableOnOffLabels: "enableOnOffLabels",
-      justify: "justify",
-      labelPlacement: "labelPlacement",
-      mode: "mode",
-      name: "name",
-      value: "value"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonToggle_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a85, "ɵfac", function IonToggle_Factory(t) {
+  return new (t || _a85)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a85, "ɵcmp", ɵɵdefineComponent({
+  type: _a85,
+  selectors: [["ion-toggle"]],
+  inputs: {
+    alignment: "alignment",
+    checked: "checked",
+    color: "color",
+    disabled: "disabled",
+    enableOnOffLabels: "enableOnOffLabels",
+    justify: "justify",
+    labelPlacement: "labelPlacement",
+    mode: "mode",
+    name: "name",
+    value: "value"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonToggle_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a85);
 IonToggle = __decorate([ProxyCmp2({
   inputs: ["alignment", "checked", "color", "disabled", "enableOnOffLabels", "justify", "labelPlacement", "mode", "name", "value"]
 })], IonToggle);
@@ -9788,39 +9723,38 @@ IonToggle = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonToolbar = class IonToolbar2 {
-  z;
-  el;
+var _a86;
+var IonToolbar = (_a86 = class {
   constructor(c, r, z) {
+    __publicField(this, "z");
+    __publicField(this, "el");
     this.z = z;
     c.detach();
     this.el = r.nativeElement;
   }
-  /** @nocollapse */
-  static ɵfac = function IonToolbar_Factory(t) {
-    return new (t || IonToolbar2)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: IonToolbar2,
-    selectors: [["ion-toolbar"]],
-    inputs: {
-      color: "color",
-      mode: "mode"
-    },
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonToolbar_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
-};
+}, /** @nocollapse */
+__publicField(_a86, "ɵfac", function IonToolbar_Factory(t) {
+  return new (t || _a86)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone));
+}), /** @nocollapse */
+__publicField(_a86, "ɵcmp", ɵɵdefineComponent({
+  type: _a86,
+  selectors: [["ion-toolbar"]],
+  inputs: {
+    color: "color",
+    mode: "mode"
+  },
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonToolbar_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+})), _a86);
 IonToolbar = __decorate([ProxyCmp2({
   inputs: ["color", "mode"]
 })], IonToolbar);
@@ -9844,16 +9778,7 @@ IonToolbar = __decorate([ProxyCmp2({
     }];
   }, null);
 })();
-var IonRouterOutlet2 = class _IonRouterOutlet extends IonRouterOutlet {
-  parentOutlet;
-  /**
-   * `static: true` must be set so the query results are resolved
-   * before change detection runs. Otherwise, the view container
-   * ref will be ion-router-outlet instead of ng-container, and
-   * the first view will be added as a sibling of ion-router-outlet
-   * instead of a child.
-   */
-  outletContent;
+var _IonRouterOutlet2 = class _IonRouterOutlet2 extends IonRouterOutlet {
   /**
    * We need to pass in the correct instance of IonRouterOutlet
    * otherwise parentOutlet will be null in a nested outlet context.
@@ -9862,41 +9787,51 @@ var IonRouterOutlet2 = class _IonRouterOutlet extends IonRouterOutlet {
    */
   constructor(name, tabs, commonLocation, elementRef, router, zone, activatedRoute, parentOutlet) {
     super(name, tabs, commonLocation, elementRef, router, zone, activatedRoute, parentOutlet);
+    __publicField(this, "parentOutlet");
+    /**
+     * `static: true` must be set so the query results are resolved
+     * before change detection runs. Otherwise, the view container
+     * ref will be ion-router-outlet instead of ng-container, and
+     * the first view will be added as a sibling of ion-router-outlet
+     * instead of a child.
+     */
+    __publicField(this, "outletContent");
     this.parentOutlet = parentOutlet;
   }
-  /** @nocollapse */
-  static ɵfac = function IonRouterOutlet_Factory(t) {
-    return new (t || _IonRouterOutlet)(ɵɵinjectAttribute("name"), ɵɵinjectAttribute("tabs"), ɵɵdirectiveInject(Location), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(Router), ɵɵdirectiveInject(NgZone), ɵɵdirectiveInject(ActivatedRoute), ɵɵdirectiveInject(_IonRouterOutlet, 12));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: _IonRouterOutlet,
-    selectors: [["ion-router-outlet"]],
-    viewQuery: function IonRouterOutlet_Query(rf, ctx) {
-      if (rf & 1) {
-        ɵɵviewQuery(_c1, 7, ViewContainerRef);
-      }
-      if (rf & 2) {
-        let _t;
-        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.outletContent = _t.first);
-      }
-    },
-    features: [ɵɵInheritDefinitionFeature],
-    ngContentSelectors: _c02,
-    decls: 3,
-    vars: 0,
-    consts: [["outletContent", ""]],
-    template: function IonRouterOutlet_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵelementContainerStart(0, null, 0);
-        ɵɵprojection(2);
-        ɵɵelementContainerEnd();
-      }
-    },
-    encapsulation: 2
-  });
 };
+/** @nocollapse */
+__publicField(_IonRouterOutlet2, "ɵfac", function IonRouterOutlet_Factory(t) {
+  return new (t || _IonRouterOutlet2)(ɵɵinjectAttribute("name"), ɵɵinjectAttribute("tabs"), ɵɵdirectiveInject(Location), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(Router), ɵɵdirectiveInject(NgZone), ɵɵdirectiveInject(ActivatedRoute), ɵɵdirectiveInject(_IonRouterOutlet2, 12));
+});
+/** @nocollapse */
+__publicField(_IonRouterOutlet2, "ɵcmp", ɵɵdefineComponent({
+  type: _IonRouterOutlet2,
+  selectors: [["ion-router-outlet"]],
+  viewQuery: function IonRouterOutlet_Query(rf, ctx) {
+    if (rf & 1) {
+      ɵɵviewQuery(_c1, 7, ViewContainerRef);
+    }
+    if (rf & 2) {
+      let _t;
+      ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.outletContent = _t.first);
+    }
+  },
+  features: [ɵɵInheritDefinitionFeature],
+  ngContentSelectors: _c02,
+  decls: 3,
+  vars: 0,
+  consts: [["outletContent", ""]],
+  template: function IonRouterOutlet_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵelementContainerStart(0, null, 0);
+      ɵɵprojection(2);
+      ɵɵelementContainerEnd();
+    }
+  },
+  encapsulation: 2
+}));
+var IonRouterOutlet2 = _IonRouterOutlet2;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(IonRouterOutlet2, [{
     type: Component,
@@ -9947,69 +9882,73 @@ var IonRouterOutlet2 = class _IonRouterOutlet extends IonRouterOutlet {
     }]
   });
 })();
-var IonTabs2 = class _IonTabs extends IonTabs {
-  outlet;
-  tabBar;
-  tabBars;
-  tabs;
-  /** @nocollapse */
-  static ɵfac = /* @__PURE__ */ (() => {
-    let ɵIonTabs_BaseFactory;
-    return function IonTabs_Factory(t) {
-      return (ɵIonTabs_BaseFactory || (ɵIonTabs_BaseFactory = ɵɵgetInheritedFactory(_IonTabs)))(t || _IonTabs);
-    };
-  })();
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: _IonTabs,
-    selectors: [["ion-tabs"]],
-    contentQueries: function IonTabs_ContentQueries(rf, ctx, dirIndex) {
-      if (rf & 1) {
-        ɵɵcontentQuery(dirIndex, IonTabBar, 5);
-        ɵɵcontentQuery(dirIndex, IonTabBar, 4);
-        ɵɵcontentQuery(dirIndex, IonTab, 4);
-      }
-      if (rf & 2) {
-        let _t;
-        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.tabBar = _t.first);
-        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.tabBars = _t);
-        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.tabs = _t);
-      }
-    },
-    viewQuery: function IonTabs_Query(rf, ctx) {
-      if (rf & 1) {
-        ɵɵviewQuery(_c2, 5, IonRouterOutlet2);
-      }
-      if (rf & 2) {
-        let _t;
-        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.outlet = _t.first);
-      }
-    },
-    features: [ɵɵInheritDefinitionFeature],
-    ngContentSelectors: _c4,
-    decls: 6,
-    vars: 2,
-    consts: [["tabsInner", ""], ["outlet", ""], [1, "tabs-inner"], ["tabs", "true", 3, "stackWillChange", "stackDidChange", 4, "ngIf"], [4, "ngIf"], ["tabs", "true", 3, "stackWillChange", "stackDidChange"]],
-    template: function IonTabs_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef(_c3);
-        ɵɵprojection(0);
-        ɵɵelementStart(1, "div", 2, 0);
-        ɵɵtemplate(3, IonTabs_ion_router_outlet_3_Template, 2, 0, "ion-router-outlet", 3)(4, IonTabs_ng_content_4_Template, 1, 0, "ng-content", 4);
-        ɵɵelementEnd();
-        ɵɵprojection(5, 1);
-      }
-      if (rf & 2) {
-        ɵɵadvance(3);
-        ɵɵproperty("ngIf", ctx.tabs.length === 0);
-        ɵɵadvance();
-        ɵɵproperty("ngIf", ctx.tabs.length > 0);
-      }
-    },
-    dependencies: [NgIf, IonRouterOutlet2],
-    styles: ["[_nghost-%COMP%]{display:flex;position:absolute;inset:0;flex-direction:column;width:100%;height:100%;contain:layout size style}.tabs-inner[_ngcontent-%COMP%]{position:relative;flex:1;contain:layout size style}"]
-  });
+var _IonTabs2 = class _IonTabs2 extends IonTabs {
+  constructor() {
+    super(...arguments);
+    __publicField(this, "outlet");
+    __publicField(this, "tabBar");
+    __publicField(this, "tabBars");
+    __publicField(this, "tabs");
+  }
 };
+/** @nocollapse */
+__publicField(_IonTabs2, "ɵfac", /* @__PURE__ */ (() => {
+  let ɵIonTabs_BaseFactory;
+  return function IonTabs_Factory(t) {
+    return (ɵIonTabs_BaseFactory || (ɵIonTabs_BaseFactory = ɵɵgetInheritedFactory(_IonTabs2)))(t || _IonTabs2);
+  };
+})());
+/** @nocollapse */
+__publicField(_IonTabs2, "ɵcmp", ɵɵdefineComponent({
+  type: _IonTabs2,
+  selectors: [["ion-tabs"]],
+  contentQueries: function IonTabs_ContentQueries(rf, ctx, dirIndex) {
+    if (rf & 1) {
+      ɵɵcontentQuery(dirIndex, IonTabBar, 5);
+      ɵɵcontentQuery(dirIndex, IonTabBar, 4);
+      ɵɵcontentQuery(dirIndex, IonTab, 4);
+    }
+    if (rf & 2) {
+      let _t;
+      ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.tabBar = _t.first);
+      ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.tabBars = _t);
+      ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.tabs = _t);
+    }
+  },
+  viewQuery: function IonTabs_Query(rf, ctx) {
+    if (rf & 1) {
+      ɵɵviewQuery(_c2, 5, IonRouterOutlet2);
+    }
+    if (rf & 2) {
+      let _t;
+      ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.outlet = _t.first);
+    }
+  },
+  features: [ɵɵInheritDefinitionFeature],
+  ngContentSelectors: _c4,
+  decls: 6,
+  vars: 2,
+  consts: [["tabsInner", ""], ["outlet", ""], [1, "tabs-inner"], ["tabs", "true", 3, "stackWillChange", "stackDidChange", 4, "ngIf"], [4, "ngIf"], ["tabs", "true", 3, "stackWillChange", "stackDidChange"]],
+  template: function IonTabs_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef(_c3);
+      ɵɵprojection(0);
+      ɵɵelementStart(1, "div", 2, 0);
+      ɵɵtemplate(3, IonTabs_ion_router_outlet_3_Template, 2, 0, "ion-router-outlet", 3)(4, IonTabs_ng_content_4_Template, 1, 0, "ng-content", 4);
+      ɵɵelementEnd();
+      ɵɵprojection(5, 1);
+    }
+    if (rf & 2) {
+      ɵɵadvance(3);
+      ɵɵproperty("ngIf", ctx.tabs.length === 0);
+      ɵɵadvance();
+      ɵɵproperty("ngIf", ctx.tabs.length > 0);
+    }
+  },
+  dependencies: [NgIf, IonRouterOutlet2],
+  styles: ["[_nghost-%COMP%]{display:flex;position:absolute;inset:0;flex-direction:column;width:100%;height:100%;contain:layout size style}.tabs-inner[_ngcontent-%COMP%]{position:relative;flex:1;contain:layout size style}"]
+}));
+var IonTabs2 = _IonTabs2;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(IonTabs2, [{
     type: Component,
@@ -10055,34 +9994,35 @@ var IonTabs2 = class _IonTabs extends IonTabs {
     }]
   });
 })();
-var IonBackButton3 = class _IonBackButton extends IonBackButton {
+var _IonBackButton = class _IonBackButton extends IonBackButton {
   constructor(routerOutlet, navCtrl, config3, r, z, c) {
     super(routerOutlet, navCtrl, config3, r, z, c);
   }
-  /** @nocollapse */
-  static ɵfac = function IonBackButton_Factory(t) {
-    return new (t || _IonBackButton)(ɵɵdirectiveInject(IonRouterOutlet2, 8), ɵɵdirectiveInject(NavController), ɵɵdirectiveInject(Config), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone), ɵɵdirectiveInject(ChangeDetectorRef));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: _IonBackButton,
-    selectors: [["ion-back-button"]],
-    features: [ɵɵInheritDefinitionFeature],
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonBackButton_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
 };
+/** @nocollapse */
+__publicField(_IonBackButton, "ɵfac", function IonBackButton_Factory(t) {
+  return new (t || _IonBackButton)(ɵɵdirectiveInject(IonRouterOutlet2, 8), ɵɵdirectiveInject(NavController), ɵɵdirectiveInject(Config), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgZone), ɵɵdirectiveInject(ChangeDetectorRef));
+});
+/** @nocollapse */
+__publicField(_IonBackButton, "ɵcmp", ɵɵdefineComponent({
+  type: _IonBackButton,
+  selectors: [["ion-back-button"]],
+  features: [ɵɵInheritDefinitionFeature],
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonBackButton_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+}));
+var IonBackButton2 = _IonBackButton;
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(IonBackButton3, [{
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(IonBackButton2, [{
     type: Component,
     args: [{
       selector: "ion-back-button",
@@ -10108,34 +10048,35 @@ var IonBackButton3 = class _IonBackButton extends IonBackButton {
     }];
   }, null);
 })();
-var IonNav3 = class _IonNav extends IonNav {
+var _IonNav = class _IonNav extends IonNav {
   constructor(ref, environmentInjector, injector, angularDelegate, z, c) {
     super(ref, environmentInjector, injector, angularDelegate, z, c);
   }
-  /** @nocollapse */
-  static ɵfac = function IonNav_Factory(t) {
-    return new (t || _IonNav)(ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(EnvironmentInjector), ɵɵdirectiveInject(Injector), ɵɵdirectiveInject(AngularDelegate), ɵɵdirectiveInject(NgZone), ɵɵdirectiveInject(ChangeDetectorRef));
-  };
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: _IonNav,
-    selectors: [["ion-nav"]],
-    features: [ɵɵInheritDefinitionFeature],
-    ngContentSelectors: _c02,
-    decls: 1,
-    vars: 0,
-    template: function IonNav_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵprojectionDef();
-        ɵɵprojection(0);
-      }
-    },
-    encapsulation: 2,
-    changeDetection: 0
-  });
 };
+/** @nocollapse */
+__publicField(_IonNav, "ɵfac", function IonNav_Factory(t) {
+  return new (t || _IonNav)(ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(EnvironmentInjector), ɵɵdirectiveInject(Injector), ɵɵdirectiveInject(AngularDelegate), ɵɵdirectiveInject(NgZone), ɵɵdirectiveInject(ChangeDetectorRef));
+});
+/** @nocollapse */
+__publicField(_IonNav, "ɵcmp", ɵɵdefineComponent({
+  type: _IonNav,
+  selectors: [["ion-nav"]],
+  features: [ɵɵInheritDefinitionFeature],
+  ngContentSelectors: _c02,
+  decls: 1,
+  vars: 0,
+  template: function IonNav_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵprojectionDef();
+      ɵɵprojection(0);
+    }
+  },
+  encapsulation: 2,
+  changeDetection: 0
+}));
+var IonNav2 = _IonNav;
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(IonNav3, [{
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(IonNav2, [{
     type: Component,
     args: [{
       selector: "ion-nav",
@@ -10158,21 +10099,22 @@ var IonNav3 = class _IonNav extends IonNav {
     }];
   }, null);
 })();
-var RouterLinkDelegateDirective2 = class _RouterLinkDelegateDirective extends RouterLinkDelegateDirective {
-  /** @nocollapse */
-  static ɵfac = /* @__PURE__ */ (() => {
-    let ɵRouterLinkDelegateDirective_BaseFactory;
-    return function RouterLinkDelegateDirective_Factory(t) {
-      return (ɵRouterLinkDelegateDirective_BaseFactory || (ɵRouterLinkDelegateDirective_BaseFactory = ɵɵgetInheritedFactory(_RouterLinkDelegateDirective)))(t || _RouterLinkDelegateDirective);
-    };
-  })();
-  /** @nocollapse */
-  static ɵdir = ɵɵdefineDirective({
-    type: _RouterLinkDelegateDirective,
-    selectors: [["", "routerLink", "", 5, "a", 5, "area"]],
-    features: [ɵɵInheritDefinitionFeature]
-  });
+var _RouterLinkDelegateDirective2 = class _RouterLinkDelegateDirective2 extends RouterLinkDelegateDirective {
 };
+/** @nocollapse */
+__publicField(_RouterLinkDelegateDirective2, "ɵfac", /* @__PURE__ */ (() => {
+  let ɵRouterLinkDelegateDirective_BaseFactory;
+  return function RouterLinkDelegateDirective_Factory(t) {
+    return (ɵRouterLinkDelegateDirective_BaseFactory || (ɵRouterLinkDelegateDirective_BaseFactory = ɵɵgetInheritedFactory(_RouterLinkDelegateDirective2)))(t || _RouterLinkDelegateDirective2);
+  };
+})());
+/** @nocollapse */
+__publicField(_RouterLinkDelegateDirective2, "ɵdir", ɵɵdefineDirective({
+  type: _RouterLinkDelegateDirective2,
+  selectors: [["", "routerLink", "", 5, "a", 5, "area"]],
+  features: [ɵɵInheritDefinitionFeature]
+}));
+var RouterLinkDelegateDirective2 = _RouterLinkDelegateDirective2;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(RouterLinkDelegateDirective2, [{
     type: Directive,
@@ -10181,21 +10123,22 @@ var RouterLinkDelegateDirective2 = class _RouterLinkDelegateDirective extends Ro
     }]
   }], null, null);
 })();
-var RouterLinkWithHrefDelegateDirective2 = class _RouterLinkWithHrefDelegateDirective extends RouterLinkWithHrefDelegateDirective {
-  /** @nocollapse */
-  static ɵfac = /* @__PURE__ */ (() => {
-    let ɵRouterLinkWithHrefDelegateDirective_BaseFactory;
-    return function RouterLinkWithHrefDelegateDirective_Factory(t) {
-      return (ɵRouterLinkWithHrefDelegateDirective_BaseFactory || (ɵRouterLinkWithHrefDelegateDirective_BaseFactory = ɵɵgetInheritedFactory(_RouterLinkWithHrefDelegateDirective)))(t || _RouterLinkWithHrefDelegateDirective);
-    };
-  })();
-  /** @nocollapse */
-  static ɵdir = ɵɵdefineDirective({
-    type: _RouterLinkWithHrefDelegateDirective,
-    selectors: [["a", "routerLink", ""], ["area", "routerLink", ""]],
-    features: [ɵɵInheritDefinitionFeature]
-  });
+var _RouterLinkWithHrefDelegateDirective2 = class _RouterLinkWithHrefDelegateDirective2 extends RouterLinkWithHrefDelegateDirective {
 };
+/** @nocollapse */
+__publicField(_RouterLinkWithHrefDelegateDirective2, "ɵfac", /* @__PURE__ */ (() => {
+  let ɵRouterLinkWithHrefDelegateDirective_BaseFactory;
+  return function RouterLinkWithHrefDelegateDirective_Factory(t) {
+    return (ɵRouterLinkWithHrefDelegateDirective_BaseFactory || (ɵRouterLinkWithHrefDelegateDirective_BaseFactory = ɵɵgetInheritedFactory(_RouterLinkWithHrefDelegateDirective2)))(t || _RouterLinkWithHrefDelegateDirective2);
+  };
+})());
+/** @nocollapse */
+__publicField(_RouterLinkWithHrefDelegateDirective2, "ɵdir", ɵɵdefineDirective({
+  type: _RouterLinkWithHrefDelegateDirective2,
+  selectors: [["a", "routerLink", ""], ["area", "routerLink", ""]],
+  features: [ɵɵInheritDefinitionFeature]
+}));
+var RouterLinkWithHrefDelegateDirective2 = _RouterLinkWithHrefDelegateDirective2;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(RouterLinkWithHrefDelegateDirective2, [{
     type: Directive,
@@ -10204,37 +10147,38 @@ var RouterLinkWithHrefDelegateDirective2 = class _RouterLinkWithHrefDelegateDire
     }]
   }], null, null);
 })();
-var IonModal3 = class _IonModal extends IonModal {
-  /** @nocollapse */
-  static ɵfac = /* @__PURE__ */ (() => {
-    let ɵIonModal_BaseFactory;
-    return function IonModal_Factory(t) {
-      return (ɵIonModal_BaseFactory || (ɵIonModal_BaseFactory = ɵɵgetInheritedFactory(_IonModal)))(t || _IonModal);
-    };
-  })();
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: _IonModal,
-    selectors: [["ion-modal"]],
-    features: [ɵɵInheritDefinitionFeature],
-    decls: 1,
-    vars: 1,
-    consts: [["class", "ion-delegate-host ion-page", 4, "ngIf"], [1, "ion-delegate-host", "ion-page"], [3, "ngTemplateOutlet"]],
-    template: function IonModal_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵtemplate(0, IonModal_div_0_Template, 2, 1, "div", 0);
-      }
-      if (rf & 2) {
-        ɵɵproperty("ngIf", ctx.isCmpOpen || ctx.keepContentsMounted);
-      }
-    },
-    dependencies: [NgIf, NgTemplateOutlet],
-    encapsulation: 2,
-    changeDetection: 0
-  });
+var _IonModal = class _IonModal extends IonModal {
 };
+/** @nocollapse */
+__publicField(_IonModal, "ɵfac", /* @__PURE__ */ (() => {
+  let ɵIonModal_BaseFactory;
+  return function IonModal_Factory(t) {
+    return (ɵIonModal_BaseFactory || (ɵIonModal_BaseFactory = ɵɵgetInheritedFactory(_IonModal)))(t || _IonModal);
+  };
+})());
+/** @nocollapse */
+__publicField(_IonModal, "ɵcmp", ɵɵdefineComponent({
+  type: _IonModal,
+  selectors: [["ion-modal"]],
+  features: [ɵɵInheritDefinitionFeature],
+  decls: 1,
+  vars: 1,
+  consts: [["class", "ion-delegate-host ion-page", 4, "ngIf"], [1, "ion-delegate-host", "ion-page"], [3, "ngTemplateOutlet"]],
+  template: function IonModal_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵtemplate(0, IonModal_div_0_Template, 2, 1, "div", 0);
+    }
+    if (rf & 2) {
+      ɵɵproperty("ngIf", ctx.isCmpOpen || ctx.keepContentsMounted);
+    }
+  },
+  dependencies: [NgIf, NgTemplateOutlet],
+  encapsulation: 2,
+  changeDetection: 0
+}));
+var IonModal2 = _IonModal;
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(IonModal3, [{
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(IonModal2, [{
     type: Component,
     args: [{
       selector: "ion-modal",
@@ -10245,37 +10189,38 @@ var IonModal3 = class _IonModal extends IonModal {
     }]
   }], null, null);
 })();
-var IonPopover3 = class _IonPopover extends IonPopover {
-  /** @nocollapse */
-  static ɵfac = /* @__PURE__ */ (() => {
-    let ɵIonPopover_BaseFactory;
-    return function IonPopover_Factory(t) {
-      return (ɵIonPopover_BaseFactory || (ɵIonPopover_BaseFactory = ɵɵgetInheritedFactory(_IonPopover)))(t || _IonPopover);
-    };
-  })();
-  /** @nocollapse */
-  static ɵcmp = ɵɵdefineComponent({
-    type: _IonPopover,
-    selectors: [["ion-popover"]],
-    features: [ɵɵInheritDefinitionFeature],
-    decls: 1,
-    vars: 1,
-    consts: [[3, "ngTemplateOutlet", 4, "ngIf"], [3, "ngTemplateOutlet"]],
-    template: function IonPopover_Template(rf, ctx) {
-      if (rf & 1) {
-        ɵɵtemplate(0, IonPopover_ng_container_0_Template, 1, 1, "ng-container", 0);
-      }
-      if (rf & 2) {
-        ɵɵproperty("ngIf", ctx.isCmpOpen || ctx.keepContentsMounted);
-      }
-    },
-    dependencies: [NgIf, NgTemplateOutlet],
-    encapsulation: 2,
-    changeDetection: 0
-  });
+var _IonPopover = class _IonPopover extends IonPopover {
 };
+/** @nocollapse */
+__publicField(_IonPopover, "ɵfac", /* @__PURE__ */ (() => {
+  let ɵIonPopover_BaseFactory;
+  return function IonPopover_Factory(t) {
+    return (ɵIonPopover_BaseFactory || (ɵIonPopover_BaseFactory = ɵɵgetInheritedFactory(_IonPopover)))(t || _IonPopover);
+  };
+})());
+/** @nocollapse */
+__publicField(_IonPopover, "ɵcmp", ɵɵdefineComponent({
+  type: _IonPopover,
+  selectors: [["ion-popover"]],
+  features: [ɵɵInheritDefinitionFeature],
+  decls: 1,
+  vars: 1,
+  consts: [[3, "ngTemplateOutlet", 4, "ngIf"], [3, "ngTemplateOutlet"]],
+  template: function IonPopover_Template(rf, ctx) {
+    if (rf & 1) {
+      ɵɵtemplate(0, IonPopover_ng_container_0_Template, 1, 1, "ng-container", 0);
+    }
+    if (rf & 2) {
+      ɵɵproperty("ngIf", ctx.isCmpOpen || ctx.keepContentsMounted);
+    }
+  },
+  dependencies: [NgIf, NgTemplateOutlet],
+  encapsulation: 2,
+  changeDetection: 0
+}));
+var IonPopover2 = _IonPopover;
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(IonPopover3, [{
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(IonPopover2, [{
     type: Component,
     args: [{
       selector: "ion-popover",
@@ -10289,27 +10234,28 @@ var ION_MAX_VALIDATOR = {
   useExisting: forwardRef(() => IonMaxValidator),
   multi: true
 };
-var IonMaxValidator = class _IonMaxValidator extends MaxValidator {
-  /** @nocollapse */
-  static ɵfac = /* @__PURE__ */ (() => {
-    let ɵIonMaxValidator_BaseFactory;
-    return function IonMaxValidator_Factory(t) {
-      return (ɵIonMaxValidator_BaseFactory || (ɵIonMaxValidator_BaseFactory = ɵɵgetInheritedFactory(_IonMaxValidator)))(t || _IonMaxValidator);
-    };
-  })();
-  /** @nocollapse */
-  static ɵdir = ɵɵdefineDirective({
-    type: _IonMaxValidator,
-    selectors: [["ion-input", "type", "number", "max", "", "formControlName", ""], ["ion-input", "type", "number", "max", "", "formControl", ""], ["ion-input", "type", "number", "max", "", "ngModel", ""]],
-    hostVars: 1,
-    hostBindings: function IonMaxValidator_HostBindings(rf, ctx) {
-      if (rf & 2) {
-        ɵɵattribute("max", ctx._enabled ? ctx.max : null);
-      }
-    },
-    features: [ɵɵProvidersFeature([ION_MAX_VALIDATOR]), ɵɵInheritDefinitionFeature]
-  });
+var _IonMaxValidator = class _IonMaxValidator extends MaxValidator {
 };
+/** @nocollapse */
+__publicField(_IonMaxValidator, "ɵfac", /* @__PURE__ */ (() => {
+  let ɵIonMaxValidator_BaseFactory;
+  return function IonMaxValidator_Factory(t) {
+    return (ɵIonMaxValidator_BaseFactory || (ɵIonMaxValidator_BaseFactory = ɵɵgetInheritedFactory(_IonMaxValidator)))(t || _IonMaxValidator);
+  };
+})());
+/** @nocollapse */
+__publicField(_IonMaxValidator, "ɵdir", ɵɵdefineDirective({
+  type: _IonMaxValidator,
+  selectors: [["ion-input", "type", "number", "max", "", "formControlName", ""], ["ion-input", "type", "number", "max", "", "formControl", ""], ["ion-input", "type", "number", "max", "", "ngModel", ""]],
+  hostVars: 1,
+  hostBindings: function IonMaxValidator_HostBindings(rf, ctx) {
+    if (rf & 2) {
+      ɵɵattribute("max", ctx._enabled ? ctx.max : null);
+    }
+  },
+  features: [ɵɵProvidersFeature([ION_MAX_VALIDATOR]), ɵɵInheritDefinitionFeature]
+}));
+var IonMaxValidator = _IonMaxValidator;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(IonMaxValidator, [{
     type: Directive,
@@ -10328,27 +10274,28 @@ var ION_MIN_VALIDATOR = {
   useExisting: forwardRef(() => IonMinValidator),
   multi: true
 };
-var IonMinValidator = class _IonMinValidator extends MinValidator {
-  /** @nocollapse */
-  static ɵfac = /* @__PURE__ */ (() => {
-    let ɵIonMinValidator_BaseFactory;
-    return function IonMinValidator_Factory(t) {
-      return (ɵIonMinValidator_BaseFactory || (ɵIonMinValidator_BaseFactory = ɵɵgetInheritedFactory(_IonMinValidator)))(t || _IonMinValidator);
-    };
-  })();
-  /** @nocollapse */
-  static ɵdir = ɵɵdefineDirective({
-    type: _IonMinValidator,
-    selectors: [["ion-input", "type", "number", "min", "", "formControlName", ""], ["ion-input", "type", "number", "min", "", "formControl", ""], ["ion-input", "type", "number", "min", "", "ngModel", ""]],
-    hostVars: 1,
-    hostBindings: function IonMinValidator_HostBindings(rf, ctx) {
-      if (rf & 2) {
-        ɵɵattribute("min", ctx._enabled ? ctx.min : null);
-      }
-    },
-    features: [ɵɵProvidersFeature([ION_MIN_VALIDATOR]), ɵɵInheritDefinitionFeature]
-  });
+var _IonMinValidator = class _IonMinValidator extends MinValidator {
 };
+/** @nocollapse */
+__publicField(_IonMinValidator, "ɵfac", /* @__PURE__ */ (() => {
+  let ɵIonMinValidator_BaseFactory;
+  return function IonMinValidator_Factory(t) {
+    return (ɵIonMinValidator_BaseFactory || (ɵIonMinValidator_BaseFactory = ɵɵgetInheritedFactory(_IonMinValidator)))(t || _IonMinValidator);
+  };
+})());
+/** @nocollapse */
+__publicField(_IonMinValidator, "ɵdir", ɵɵdefineDirective({
+  type: _IonMinValidator,
+  selectors: [["ion-input", "type", "number", "min", "", "formControlName", ""], ["ion-input", "type", "number", "min", "", "formControl", ""], ["ion-input", "type", "number", "min", "", "ngModel", ""]],
+  hostVars: 1,
+  hostBindings: function IonMinValidator_HostBindings(rf, ctx) {
+    if (rf & 2) {
+      ɵɵattribute("min", ctx._enabled ? ctx.min : null);
+    }
+  },
+  features: [ɵɵProvidersFeature([ION_MIN_VALIDATOR]), ɵɵInheritDefinitionFeature]
+}));
+var IonMinValidator = _IonMinValidator;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(IonMinValidator, [{
     type: Directive,
@@ -10362,21 +10309,22 @@ var IonMinValidator = class _IonMinValidator extends MinValidator {
     }]
   }], null, null);
 })();
-var AlertController = class _AlertController extends OverlayBaseController {
+var _AlertController = class _AlertController extends OverlayBaseController {
   constructor() {
     super(alertController2);
   }
-  /** @nocollapse */
-  static ɵfac = function AlertController_Factory(t) {
-    return new (t || _AlertController)();
-  };
-  /** @nocollapse */
-  static ɵprov = ɵɵdefineInjectable({
-    token: _AlertController,
-    factory: _AlertController.ɵfac,
-    providedIn: "root"
-  });
 };
+/** @nocollapse */
+__publicField(_AlertController, "ɵfac", function AlertController_Factory(t) {
+  return new (t || _AlertController)();
+});
+/** @nocollapse */
+__publicField(_AlertController, "ɵprov", ɵɵdefineInjectable({
+  token: _AlertController,
+  factory: _AlertController.ɵfac,
+  providedIn: "root"
+}));
+var AlertController = _AlertController;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(AlertController, [{
     type: Injectable,
@@ -10387,7 +10335,7 @@ var AlertController = class _AlertController extends OverlayBaseController {
     return [];
   }, null);
 })();
-var AnimationController = class _AnimationController {
+var _AnimationController = class _AnimationController {
   /**
    * Create a new animation
    */
@@ -10411,17 +10359,18 @@ var AnimationController = class _AnimationController {
   easingTime(p0, p1, p2, p3, progression) {
     return getTimeGivenProgression2(p0, p1, p2, p3, progression);
   }
-  /** @nocollapse */
-  static ɵfac = function AnimationController_Factory(t) {
-    return new (t || _AnimationController)();
-  };
-  /** @nocollapse */
-  static ɵprov = ɵɵdefineInjectable({
-    token: _AnimationController,
-    factory: _AnimationController.ɵfac,
-    providedIn: "root"
-  });
 };
+/** @nocollapse */
+__publicField(_AnimationController, "ɵfac", function AnimationController_Factory(t) {
+  return new (t || _AnimationController)();
+});
+/** @nocollapse */
+__publicField(_AnimationController, "ɵprov", ɵɵdefineInjectable({
+  token: _AnimationController,
+  factory: _AnimationController.ɵfac,
+  providedIn: "root"
+}));
+var AnimationController = _AnimationController;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(AnimationController, [{
     type: Injectable,
@@ -10430,21 +10379,22 @@ var AnimationController = class _AnimationController {
     }]
   }], null, null);
 })();
-var ActionSheetController = class _ActionSheetController extends OverlayBaseController {
+var _ActionSheetController = class _ActionSheetController extends OverlayBaseController {
   constructor() {
     super(actionSheetController2);
   }
-  /** @nocollapse */
-  static ɵfac = function ActionSheetController_Factory(t) {
-    return new (t || _ActionSheetController)();
-  };
-  /** @nocollapse */
-  static ɵprov = ɵɵdefineInjectable({
-    token: _ActionSheetController,
-    factory: _ActionSheetController.ɵfac,
-    providedIn: "root"
-  });
 };
+/** @nocollapse */
+__publicField(_ActionSheetController, "ɵfac", function ActionSheetController_Factory(t) {
+  return new (t || _ActionSheetController)();
+});
+/** @nocollapse */
+__publicField(_ActionSheetController, "ɵprov", ɵɵdefineInjectable({
+  token: _ActionSheetController,
+  factory: _ActionSheetController.ɵfac,
+  providedIn: "root"
+}));
+var ActionSheetController = _ActionSheetController;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ActionSheetController, [{
     type: Injectable,
@@ -10455,9 +10405,9 @@ var ActionSheetController = class _ActionSheetController extends OverlayBaseCont
     return [];
   }, null);
 })();
-var GestureController3 = class _GestureController {
-  zone;
+var _GestureController = class _GestureController {
   constructor(zone) {
+    __publicField(this, "zone");
     this.zone = zone;
   }
   /**
@@ -10474,17 +10424,18 @@ var GestureController3 = class _GestureController {
     }
     return createGesture2(opts);
   }
-  /** @nocollapse */
-  static ɵfac = function GestureController_Factory(t) {
-    return new (t || _GestureController)(ɵɵinject(NgZone));
-  };
-  /** @nocollapse */
-  static ɵprov = ɵɵdefineInjectable({
-    token: _GestureController,
-    factory: _GestureController.ɵfac,
-    providedIn: "root"
-  });
 };
+/** @nocollapse */
+__publicField(_GestureController, "ɵfac", function GestureController_Factory(t) {
+  return new (t || _GestureController)(ɵɵinject(NgZone));
+});
+/** @nocollapse */
+__publicField(_GestureController, "ɵprov", ɵɵdefineInjectable({
+  token: _GestureController,
+  factory: _GestureController.ɵfac,
+  providedIn: "root"
+}));
+var GestureController3 = _GestureController;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(GestureController3, [{
     type: Injectable,
@@ -10497,21 +10448,22 @@ var GestureController3 = class _GestureController {
     }];
   }, null);
 })();
-var LoadingController = class _LoadingController extends OverlayBaseController {
+var _LoadingController = class _LoadingController extends OverlayBaseController {
   constructor() {
     super(loadingController2);
   }
-  /** @nocollapse */
-  static ɵfac = function LoadingController_Factory(t) {
-    return new (t || _LoadingController)();
-  };
-  /** @nocollapse */
-  static ɵprov = ɵɵdefineInjectable({
-    token: _LoadingController,
-    factory: _LoadingController.ɵfac,
-    providedIn: "root"
-  });
 };
+/** @nocollapse */
+__publicField(_LoadingController, "ɵfac", function LoadingController_Factory(t) {
+  return new (t || _LoadingController)();
+});
+/** @nocollapse */
+__publicField(_LoadingController, "ɵprov", ɵɵdefineInjectable({
+  token: _LoadingController,
+  factory: _LoadingController.ɵfac,
+  providedIn: "root"
+}));
+var LoadingController = _LoadingController;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(LoadingController, [{
     type: Injectable,
@@ -10522,21 +10474,22 @@ var LoadingController = class _LoadingController extends OverlayBaseController {
     return [];
   }, null);
 })();
-var MenuController2 = class _MenuController extends MenuController {
+var _MenuController = class _MenuController extends MenuController {
   constructor() {
     super(menuController2);
   }
-  /** @nocollapse */
-  static ɵfac = function MenuController_Factory(t) {
-    return new (t || _MenuController)();
-  };
-  /** @nocollapse */
-  static ɵprov = ɵɵdefineInjectable({
-    token: _MenuController,
-    factory: _MenuController.ɵfac,
-    providedIn: "root"
-  });
 };
+/** @nocollapse */
+__publicField(_MenuController, "ɵfac", function MenuController_Factory(t) {
+  return new (t || _MenuController)();
+});
+/** @nocollapse */
+__publicField(_MenuController, "ɵprov", ɵɵdefineInjectable({
+  token: _MenuController,
+  factory: _MenuController.ɵfac,
+  providedIn: "root"
+}));
+var MenuController2 = _MenuController;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MenuController2, [{
     type: Injectable,
@@ -10547,28 +10500,29 @@ var MenuController2 = class _MenuController extends MenuController {
     return [];
   }, null);
 })();
-var ModalController = class _ModalController extends OverlayBaseController {
-  angularDelegate = inject(AngularDelegate);
-  injector = inject(Injector);
-  environmentInjector = inject(EnvironmentInjector);
+var _ModalController = class _ModalController extends OverlayBaseController {
   constructor() {
     super(modalController2);
+    __publicField(this, "angularDelegate", inject(AngularDelegate));
+    __publicField(this, "injector", inject(Injector));
+    __publicField(this, "environmentInjector", inject(EnvironmentInjector));
   }
   create(opts) {
     return super.create(__spreadProps(__spreadValues({}, opts), {
       delegate: this.angularDelegate.create(this.environmentInjector, this.injector, "modal")
     }));
   }
-  /** @nocollapse */
-  static ɵfac = function ModalController_Factory(t) {
-    return new (t || _ModalController)();
-  };
-  /** @nocollapse */
-  static ɵprov = ɵɵdefineInjectable({
-    token: _ModalController,
-    factory: _ModalController.ɵfac
-  });
 };
+/** @nocollapse */
+__publicField(_ModalController, "ɵfac", function ModalController_Factory(t) {
+  return new (t || _ModalController)();
+});
+/** @nocollapse */
+__publicField(_ModalController, "ɵprov", ɵɵdefineInjectable({
+  token: _ModalController,
+  factory: _ModalController.ɵfac
+}));
+var ModalController = _ModalController;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ModalController, [{
     type: Injectable
@@ -10576,21 +10530,22 @@ var ModalController = class _ModalController extends OverlayBaseController {
     return [];
   }, null);
 })();
-var PickerController = class _PickerController extends OverlayBaseController {
+var _PickerController = class _PickerController extends OverlayBaseController {
   constructor() {
     super(pickerController2);
   }
-  /** @nocollapse */
-  static ɵfac = function PickerController_Factory(t) {
-    return new (t || _PickerController)();
-  };
-  /** @nocollapse */
-  static ɵprov = ɵɵdefineInjectable({
-    token: _PickerController,
-    factory: _PickerController.ɵfac,
-    providedIn: "root"
-  });
 };
+/** @nocollapse */
+__publicField(_PickerController, "ɵfac", function PickerController_Factory(t) {
+  return new (t || _PickerController)();
+});
+/** @nocollapse */
+__publicField(_PickerController, "ɵprov", ɵɵdefineInjectable({
+  token: _PickerController,
+  factory: _PickerController.ɵfac,
+  providedIn: "root"
+}));
+var PickerController = _PickerController;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(PickerController, [{
     type: Injectable,
@@ -10602,11 +10557,11 @@ var PickerController = class _PickerController extends OverlayBaseController {
   }, null);
 })();
 var PopoverController = class extends OverlayBaseController {
-  angularDelegate = inject(AngularDelegate);
-  injector = inject(Injector);
-  environmentInjector = inject(EnvironmentInjector);
   constructor() {
     super(popoverController2);
+    __publicField(this, "angularDelegate", inject(AngularDelegate));
+    __publicField(this, "injector", inject(Injector));
+    __publicField(this, "environmentInjector", inject(EnvironmentInjector));
   }
   create(opts) {
     return super.create(__spreadProps(__spreadValues({}, opts), {
@@ -10614,21 +10569,22 @@ var PopoverController = class extends OverlayBaseController {
     }));
   }
 };
-var ToastController = class _ToastController extends OverlayBaseController {
+var _ToastController = class _ToastController extends OverlayBaseController {
   constructor() {
     super(toastController2);
   }
-  /** @nocollapse */
-  static ɵfac = function ToastController_Factory(t) {
-    return new (t || _ToastController)();
-  };
-  /** @nocollapse */
-  static ɵprov = ɵɵdefineInjectable({
-    token: _ToastController,
-    factory: _ToastController.ɵfac,
-    providedIn: "root"
-  });
 };
+/** @nocollapse */
+__publicField(_ToastController, "ɵfac", function ToastController_Factory(t) {
+  return new (t || _ToastController)();
+});
+/** @nocollapse */
+__publicField(_ToastController, "ɵprov", ɵɵdefineInjectable({
+  token: _ToastController,
+  factory: _ToastController.ɵfac,
+  providedIn: "root"
+}));
+var ToastController = _ToastController;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ToastController, [{
     type: Injectable,
@@ -10669,8 +10625,8 @@ var DECLARATIONS = [
   // generated proxies
   ...DIRECTIVES,
   // manual proxies
-  IonModal3,
-  IonPopover3,
+  IonModal2,
+  IonPopover2,
   // ngModel accessors
   BooleanValueAccessorDirective,
   NumericValueAccessorDirective,
@@ -10679,15 +10635,15 @@ var DECLARATIONS = [
   // navigation
   IonTabs2,
   IonRouterOutlet2,
-  IonBackButton3,
-  IonNav3,
+  IonBackButton2,
+  IonNav2,
   RouterLinkDelegateDirective2,
   RouterLinkWithHrefDelegateDirective2,
   // validators
   IonMinValidator,
   IonMaxValidator
 ];
-var IonicModule = class _IonicModule {
+var _IonicModule = class _IonicModule {
   static forRoot(config3 = {}) {
     return {
       ngModule: _IonicModule,
@@ -10702,225 +10658,226 @@ var IonicModule = class _IonicModule {
       }, AngularDelegate, provideComponentInputBinding()]
     };
   }
-  /** @nocollapse */
-  static ɵfac = function IonicModule_Factory(t) {
-    return new (t || _IonicModule)();
-  };
-  /** @nocollapse */
-  static ɵmod = ɵɵdefineNgModule({
-    type: _IonicModule,
-    declarations: [
-      IonAccordion,
-      IonAccordionGroup,
-      IonActionSheet,
-      IonAlert,
-      IonApp,
-      IonAvatar,
-      IonBackdrop,
-      IonBadge,
-      IonBreadcrumb,
-      IonBreadcrumbs,
-      IonButton,
-      IonButtons,
-      IonCard,
-      IonCardContent,
-      IonCardHeader,
-      IonCardSubtitle,
-      IonCardTitle,
-      IonCheckbox,
-      IonChip,
-      IonCol,
-      IonContent,
-      IonDatetime,
-      IonDatetimeButton,
-      IonFab,
-      IonFabButton,
-      IonFabList,
-      IonFooter,
-      IonGrid,
-      IonHeader,
-      IonIcon,
-      IonImg,
-      IonInfiniteScroll,
-      IonInfiniteScrollContent,
-      IonInput,
-      IonInputPasswordToggle,
-      IonItem,
-      IonItemDivider,
-      IonItemGroup,
-      IonItemOption,
-      IonItemOptions,
-      IonItemSliding,
-      IonLabel,
-      IonList,
-      IonListHeader,
-      IonLoading,
-      IonMenu,
-      IonMenuButton,
-      IonMenuToggle,
-      IonNavLink,
-      IonNote,
-      IonPicker,
-      IonPickerColumn,
-      IonPickerColumnOption,
-      IonPickerLegacy,
-      IonProgressBar,
-      IonRadio,
-      IonRadioGroup,
-      IonRange,
-      IonRefresher,
-      IonRefresherContent,
-      IonReorder,
-      IonReorderGroup,
-      IonRippleEffect,
-      IonRow,
-      IonSearchbar,
-      IonSegment,
-      IonSegmentButton,
-      IonSelect,
-      IonSelectOption,
-      IonSkeletonText,
-      IonSpinner,
-      IonSplitPane,
-      IonTab,
-      IonTabBar,
-      IonTabButton,
-      IonText,
-      IonTextarea,
-      IonThumbnail,
-      IonTitle,
-      IonToast,
-      IonToggle,
-      IonToolbar,
-      // manual proxies
-      IonModal3,
-      IonPopover3,
-      // ngModel accessors
-      BooleanValueAccessorDirective,
-      NumericValueAccessorDirective,
-      SelectValueAccessorDirective,
-      TextValueAccessorDirective,
-      // navigation
-      IonTabs2,
-      IonRouterOutlet2,
-      IonBackButton3,
-      IonNav3,
-      RouterLinkDelegateDirective2,
-      RouterLinkWithHrefDelegateDirective2,
-      // validators
-      IonMinValidator,
-      IonMaxValidator
-    ],
-    imports: [CommonModule],
-    exports: [
-      IonAccordion,
-      IonAccordionGroup,
-      IonActionSheet,
-      IonAlert,
-      IonApp,
-      IonAvatar,
-      IonBackdrop,
-      IonBadge,
-      IonBreadcrumb,
-      IonBreadcrumbs,
-      IonButton,
-      IonButtons,
-      IonCard,
-      IonCardContent,
-      IonCardHeader,
-      IonCardSubtitle,
-      IonCardTitle,
-      IonCheckbox,
-      IonChip,
-      IonCol,
-      IonContent,
-      IonDatetime,
-      IonDatetimeButton,
-      IonFab,
-      IonFabButton,
-      IonFabList,
-      IonFooter,
-      IonGrid,
-      IonHeader,
-      IonIcon,
-      IonImg,
-      IonInfiniteScroll,
-      IonInfiniteScrollContent,
-      IonInput,
-      IonInputPasswordToggle,
-      IonItem,
-      IonItemDivider,
-      IonItemGroup,
-      IonItemOption,
-      IonItemOptions,
-      IonItemSliding,
-      IonLabel,
-      IonList,
-      IonListHeader,
-      IonLoading,
-      IonMenu,
-      IonMenuButton,
-      IonMenuToggle,
-      IonNavLink,
-      IonNote,
-      IonPicker,
-      IonPickerColumn,
-      IonPickerColumnOption,
-      IonPickerLegacy,
-      IonProgressBar,
-      IonRadio,
-      IonRadioGroup,
-      IonRange,
-      IonRefresher,
-      IonRefresherContent,
-      IonReorder,
-      IonReorderGroup,
-      IonRippleEffect,
-      IonRow,
-      IonSearchbar,
-      IonSegment,
-      IonSegmentButton,
-      IonSelect,
-      IonSelectOption,
-      IonSkeletonText,
-      IonSpinner,
-      IonSplitPane,
-      IonTab,
-      IonTabBar,
-      IonTabButton,
-      IonText,
-      IonTextarea,
-      IonThumbnail,
-      IonTitle,
-      IonToast,
-      IonToggle,
-      IonToolbar,
-      // manual proxies
-      IonModal3,
-      IonPopover3,
-      // ngModel accessors
-      BooleanValueAccessorDirective,
-      NumericValueAccessorDirective,
-      SelectValueAccessorDirective,
-      TextValueAccessorDirective,
-      // navigation
-      IonTabs2,
-      IonRouterOutlet2,
-      IonBackButton3,
-      IonNav3,
-      RouterLinkDelegateDirective2,
-      RouterLinkWithHrefDelegateDirective2,
-      // validators
-      IonMinValidator,
-      IonMaxValidator
-    ]
-  });
-  /** @nocollapse */
-  static ɵinj = ɵɵdefineInjector({
-    providers: [ModalController, PopoverController],
-    imports: [CommonModule]
-  });
 };
+/** @nocollapse */
+__publicField(_IonicModule, "ɵfac", function IonicModule_Factory(t) {
+  return new (t || _IonicModule)();
+});
+/** @nocollapse */
+__publicField(_IonicModule, "ɵmod", ɵɵdefineNgModule({
+  type: _IonicModule,
+  declarations: [
+    IonAccordion,
+    IonAccordionGroup,
+    IonActionSheet,
+    IonAlert,
+    IonApp,
+    IonAvatar,
+    IonBackdrop,
+    IonBadge,
+    IonBreadcrumb,
+    IonBreadcrumbs,
+    IonButton,
+    IonButtons,
+    IonCard,
+    IonCardContent,
+    IonCardHeader,
+    IonCardSubtitle,
+    IonCardTitle,
+    IonCheckbox,
+    IonChip,
+    IonCol,
+    IonContent,
+    IonDatetime,
+    IonDatetimeButton,
+    IonFab,
+    IonFabButton,
+    IonFabList,
+    IonFooter,
+    IonGrid,
+    IonHeader,
+    IonIcon,
+    IonImg,
+    IonInfiniteScroll,
+    IonInfiniteScrollContent,
+    IonInput,
+    IonInputPasswordToggle,
+    IonItem,
+    IonItemDivider,
+    IonItemGroup,
+    IonItemOption,
+    IonItemOptions,
+    IonItemSliding,
+    IonLabel,
+    IonList,
+    IonListHeader,
+    IonLoading,
+    IonMenu,
+    IonMenuButton,
+    IonMenuToggle,
+    IonNavLink,
+    IonNote,
+    IonPicker,
+    IonPickerColumn,
+    IonPickerColumnOption,
+    IonPickerLegacy,
+    IonProgressBar,
+    IonRadio,
+    IonRadioGroup,
+    IonRange,
+    IonRefresher,
+    IonRefresherContent,
+    IonReorder,
+    IonReorderGroup,
+    IonRippleEffect,
+    IonRow,
+    IonSearchbar,
+    IonSegment,
+    IonSegmentButton,
+    IonSelect,
+    IonSelectOption,
+    IonSkeletonText,
+    IonSpinner,
+    IonSplitPane,
+    IonTab,
+    IonTabBar,
+    IonTabButton,
+    IonText,
+    IonTextarea,
+    IonThumbnail,
+    IonTitle,
+    IonToast,
+    IonToggle,
+    IonToolbar,
+    // manual proxies
+    IonModal2,
+    IonPopover2,
+    // ngModel accessors
+    BooleanValueAccessorDirective,
+    NumericValueAccessorDirective,
+    SelectValueAccessorDirective,
+    TextValueAccessorDirective,
+    // navigation
+    IonTabs2,
+    IonRouterOutlet2,
+    IonBackButton2,
+    IonNav2,
+    RouterLinkDelegateDirective2,
+    RouterLinkWithHrefDelegateDirective2,
+    // validators
+    IonMinValidator,
+    IonMaxValidator
+  ],
+  imports: [CommonModule],
+  exports: [
+    IonAccordion,
+    IonAccordionGroup,
+    IonActionSheet,
+    IonAlert,
+    IonApp,
+    IonAvatar,
+    IonBackdrop,
+    IonBadge,
+    IonBreadcrumb,
+    IonBreadcrumbs,
+    IonButton,
+    IonButtons,
+    IonCard,
+    IonCardContent,
+    IonCardHeader,
+    IonCardSubtitle,
+    IonCardTitle,
+    IonCheckbox,
+    IonChip,
+    IonCol,
+    IonContent,
+    IonDatetime,
+    IonDatetimeButton,
+    IonFab,
+    IonFabButton,
+    IonFabList,
+    IonFooter,
+    IonGrid,
+    IonHeader,
+    IonIcon,
+    IonImg,
+    IonInfiniteScroll,
+    IonInfiniteScrollContent,
+    IonInput,
+    IonInputPasswordToggle,
+    IonItem,
+    IonItemDivider,
+    IonItemGroup,
+    IonItemOption,
+    IonItemOptions,
+    IonItemSliding,
+    IonLabel,
+    IonList,
+    IonListHeader,
+    IonLoading,
+    IonMenu,
+    IonMenuButton,
+    IonMenuToggle,
+    IonNavLink,
+    IonNote,
+    IonPicker,
+    IonPickerColumn,
+    IonPickerColumnOption,
+    IonPickerLegacy,
+    IonProgressBar,
+    IonRadio,
+    IonRadioGroup,
+    IonRange,
+    IonRefresher,
+    IonRefresherContent,
+    IonReorder,
+    IonReorderGroup,
+    IonRippleEffect,
+    IonRow,
+    IonSearchbar,
+    IonSegment,
+    IonSegmentButton,
+    IonSelect,
+    IonSelectOption,
+    IonSkeletonText,
+    IonSpinner,
+    IonSplitPane,
+    IonTab,
+    IonTabBar,
+    IonTabButton,
+    IonText,
+    IonTextarea,
+    IonThumbnail,
+    IonTitle,
+    IonToast,
+    IonToggle,
+    IonToolbar,
+    // manual proxies
+    IonModal2,
+    IonPopover2,
+    // ngModel accessors
+    BooleanValueAccessorDirective,
+    NumericValueAccessorDirective,
+    SelectValueAccessorDirective,
+    TextValueAccessorDirective,
+    // navigation
+    IonTabs2,
+    IonRouterOutlet2,
+    IonBackButton2,
+    IonNav2,
+    RouterLinkDelegateDirective2,
+    RouterLinkWithHrefDelegateDirective2,
+    // validators
+    IonMinValidator,
+    IonMaxValidator
+  ]
+}));
+/** @nocollapse */
+__publicField(_IonicModule, "ɵinj", ɵɵdefineInjector({
+  providers: [ModalController, PopoverController],
+  imports: [CommonModule]
+}));
+var IonicModule = _IonicModule;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(IonicModule, [{
     type: NgModule,
@@ -10949,7 +10906,7 @@ export {
   IonAlert,
   IonApp,
   IonAvatar,
-  IonBackButton3 as IonBackButton,
+  IonBackButton2 as IonBackButton,
   IonBackdrop,
   IonBadge,
   IonBreadcrumb,
@@ -10994,15 +10951,15 @@ export {
   IonMenuButton,
   IonMenuToggle,
   IonMinValidator,
-  IonModal3 as IonModal,
-  IonNav3 as IonNav,
+  IonModal2 as IonModal,
+  IonNav2 as IonNav,
   IonNavLink,
   IonNote,
   IonPicker,
   IonPickerColumn,
   IonPickerColumnOption,
   IonPickerLegacy,
-  IonPopover3 as IonPopover,
+  IonPopover2 as IonPopover,
   IonProgressBar,
   IonRadio,
   IonRadioGroup,

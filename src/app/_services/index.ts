@@ -9,3 +9,4 @@ export * from './withdraw.service';
 export * from './participant.service';
 export * from './comment.service';
 export * from './like.service';
+export * from './category.service';
