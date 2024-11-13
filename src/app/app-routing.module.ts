@@ -9,9 +9,9 @@ import { Role } from './_models';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { TeamMemberComponent } from './team-member/about-us.component';
 import { CampaignComponent } from './campaign/campaign.component';
-import { CreateCampaignComponent } from './create campaign/create-campaign.component'
+import { CreateCampaignComponent } from './create campaign/create-campaign.component';  
 import { CreateEventComponent } from './events/create-event.component';
-import { CampaignDetailsComponent } from './campaign/campaign-details.component'; 
+import { CampaignDetailsComponent } from './campaign/campaign-details.component';
 
 // home
 // beneficiary side

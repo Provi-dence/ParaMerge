@@ -18,33 +18,38 @@
   <section class="blog_area section-padding">
       <div class="container">
           <div class="row">
-              <div class="col-lg-8 mb-5 mb-lg-0" *ngIf="activeApprovedEvents.length > 0; else noEvents" >
-                  <div class="blog_left_sidebar">
-                      <article class="blog_item">
-                          <div class="blog_item_img">
-                              <img class="card-img rounded-0" [src]="getImagePath(event.Event_Image)" alt="{{ event.Event_Name }}" 
-                              (error)="this.src='assets/jb-symbol-logo.png'" alt="">
-
-                              <a href="#" class="blog_item_date">
-                                  <h3>{{ event.Event_Start_Date | date: 'd' }}</h3>
-                                  <p>{{ event.Event_Start_Date | date: 'MMMM' }}</p>
-                              </a>
-                          </div>
-                          <div class="blog_details">
-                              <a class="d-inline-block" href="blog_details.html">
-                                  <h2 class="blog-head" style="color: #2d2d2d;">{{ event.Event_Name }}</h2>
-                              </a>
-                              <p>{{ event.Event_Description }}</p>
-                              <ul class="blog-info-link">
-                                  <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
-                                  <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
-                                  <li><a href="#"><i class="fa fa-map-marker-alt"></i> 41 Volunteers</a></li>
-                              </ul>
-                          </div>
-                      </article>
-                  </div>
-              </div>
-              <!-- Message if no events available -->
+            <div class="col-lg-8 mb-5 mb-lg-0" *ngIf="activeApprovedEvents.length > 0; else noEvents">
+                <div class="blog_left_sidebar">
+                    <!-- Loop through events dynamically -->
+                    <article class="blog_item" *ngFor="let eventItem of activeApprovedEvents" (click)="viewEventDetails(eventItem.Event_ID)">
+                      <div class="blog_item_img">
+                        <img
+                          class="card-img rounded-0"
+                          style="height: 300px; width: 100%; object-fit: cover;"
+                          [src]="getImagePath(eventItem.Event_Image)"
+                          [alt]="eventItem.Event_Name"
+                          (error)="this.src='assets/jb-symbol-logo.png'"
+                        />
+                        <a href="#" class="blog_item_date">
+                          <h3>{{ eventItem.Event_Start_Date | date: 'd' }}</h3>
+                          <p>{{ eventItem.Event_Start_Date | date: 'MMMM' }}</p>
+                        </a>
+                      </div>
+                      <div class="blog_details">
+                        <a class="d-inline-block" (click)="viewEventDetails(eventItem.Event_ID)">
+                          <h2 class="blog-head" style="color: #2d2d2d;">{{ eventItem.Event_Name }}</h2>
+                        </a>
+                        <p>{{ eventItem.Event_Description }}</p>
+                        <ul class="blog-info-link">
+                          <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
+                          <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                          <li><a href="#"><i class="fa fa-map-marker-alt"></i> 41 Volunteers</a></li>
+                        </ul>
+                      </div>
+                    </article>
+                </div>
+            </div>
+              <!-- Message if no events are available -->
               <ng-template #noEvents>
                 <div class="blog_item">No active, approved events available at this time.</div>
               </ng-template>

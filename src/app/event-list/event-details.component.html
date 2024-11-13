@@ -1,17 +1,210 @@
-<br><br><br><br><br>
-<div *ngIf="event" class="event-details-container">
-  <div class="event-image">
-    <img [src]="event.Event_Image ? getImagePath(event.Event_Image) : 'assets/default-image.png'" alt="{{ event.Event_Name }}" />
-  </div>
-  
-  <div class="event-info">
-    <h2>{{ event.Event_Name }}</h2>
-    <p class="event-price">${{ event.Price }}</p>
-    <p>{{ event.Event_Description }}</p>
-    <div class="button-group">
-      <button class="join-button" (click)="openTermsAndConditionsModal()">Join Volunteer</button>
-      <button class="share-button">Share</button>
-    </div>
+<!--? Hero Start -->
+<div class="slider-area2">
+  <div class="slider-height2 d-flex align-items-center">
+        <div class="container">
+           <div class="row">
+              <div class="col-xl-12">
+                    <div class="hero-cap hero-cap2 pt-20 text-center">
+                       <h2>Event Details</h2>
+                    </div>
+              </div>
+           </div>
+        </div>
   </div>
 </div>
-<br><br><br><br><br>
+
+<!--? Blog Area Start -->
+<section class="blog_area single-post-area section-padding">
+  <div class="container">
+     <div class="row">
+        <div class="col-lg-8 posts-list">
+           <div class="single-post">
+              <div class="feature-img">
+                <img [src]="event.Event_Image ? getImagePath(event.Event_Image) : 'assets/default-image.png'" alt="{{ event.Event_Name }}" />
+              </div>
+              <div class="blog_details">
+                 <h2 style="color: #2d2d2d;">
+                  {{ event.Event_Name }}
+                 </h2>
+                 <ul class="blog-info-link mt-3 mb-4">
+                    <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
+                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                 </ul>
+                 <p class="excert">
+                  {{ event.Event_Description }}
+                 </p>
+                 <ul class="blog-info-link mt-3 mb-4">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <button class="btn" (click)="openTermsAndConditionsModal()">Join Volunteer</button>
+                    </div>
+                    <div class="col-md-6">
+                      <button class="btn">Share</button>
+                    </div>
+                    
+                  </div>
+                  
+                 </ul>
+              </div>
+           </div>
+           <div class="navigation-top">
+              <div class="d-sm-flex justify-content-between text-center">
+                 <p class="like-info"><span class="align-middle"><i class="fa fa-heart"></i></span> Lily and 4
+                    people like this</p>
+                 <div class="col-sm-4 text-center my-2 my-sm-0">
+                    <!-- <p class="comment-count"><span class="align-middle"><i class="fa fa-comment"></i></span> 06 Comments</p> -->
+                 </div>
+                 <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+                    <li><a href="#"><i class="fab fa-behance"></i></a></li>
+                 </ul>
+              </div>
+              <div class="navigation-area">
+                 <div class="row">
+                    <div
+                       class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
+                       <div class="thumb">
+                          <a href="#">
+                             <img class="img-fluid" src="assets/img/post/preview.png" alt="">
+                          </a>
+                       </div>
+                       <div class="arrow">
+                          <a href="#">
+                             <span class="lnr text-white ti-arrow-left"></span>
+                          </a>
+                       </div>
+                       <div class="detials">
+                          <p>Prev Post</p>
+                          <a href="#">
+                             <h4 style="color: #2d2d2d;">Space The Final Frontier</h4>
+                          </a>
+                       </div>
+                    </div>
+                    <div
+                       class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
+                       <div class="detials">
+                          <p>Next Post</p>
+                          <a href="#">
+                             <h4 style="color: #2d2d2d;">Telescopes 101</h4>
+                          </a>
+                       </div>
+                       <div class="arrow">
+                          <a href="#">
+                             <span class="lnr text-white ti-arrow-right"></span>
+                          </a>
+                       </div>
+                       <div class="thumb">
+                          <a href="#">
+                             <img class="img-fluid" src="assets/img/post/next.png" alt="">
+                          </a>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+            </div>
+           <div class="comment-form">
+              <h4>Leave a Reply</h4>
+              <form class="form-contact comment_form" action="#" id="commentForm">
+                 <div class="row">
+                    <div class="col-12">
+                       <div class="form-group">
+                          <textarea class="form-control w-100" name="comment" id="comment" cols="30" rows="9"
+                             placeholder="Write Comment"></textarea>
+                       </div>
+                    </div>
+                    <div class="col-sm-6">
+                       <div class="form-group">
+                          <input class="form-control" name="name" id="name" type="text" placeholder="Name">
+                       </div>
+                    </div>
+                    <div class="col-sm-6">
+                       <div class="form-group">
+                          <input class="form-control" name="email" id="email" type="email" placeholder="Email">
+                       </div>
+                    </div>
+                    <div class="col-12">
+                       <div class="form-group">
+                          <input class="form-control" name="website" id="website" type="text" placeholder="Website">
+                       </div>
+                    </div>
+                 </div>
+                 <div class="form-group">
+                    <button type="submit" class="button button-contactForm btn_1 boxed-btn">Post Comment</button>
+                 </div>
+              </form>
+           </div>
+        </div>
+        <div class="col-lg-4">
+           <div class="blog_right_sidebar">
+              <aside class="single_sidebar_widget search_widget">
+                 <form action="#">
+                    <div class="form-group">
+                       <div class="input-group mb-3">
+                          <input type="text" class="form-control" placeholder='Search Keyword'
+                             onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Keyword'">
+                          <div class="input-group-append">
+                             <button class="btns" type="button"><i class="ti-search"></i></button>
+                          </div>
+                       </div>
+                    </div>
+                    <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
+                       type="submit">Search</button>
+                 </form>
+              </aside>
+              <aside class="single_sidebar_widget popular_post_widget">
+                 <h3 class="widget_title" style="color: #2d2d2d;">Recent Post</h3>
+                 <div class="media post_item">
+                    <img src="assets/img/post/post_1.png" alt="post">
+                    <div class="media-body">
+                       <a href="blog_details.html">
+                          <h3 style="color: #2d2d2d;">From life was you fish...</h3>
+                       </a>
+                       <p>January 12, 2019</p>
+                    </div>
+                 </div>
+                 <div class="media post_item">
+                    <img src="assets/img/post/post_2.png" alt="post">
+                    <div class="media-body">
+                       <a href="blog_details.html">
+                          <h3 style="color: #2d2d2d;">The Amazing Hubble</h3>
+                       </a>
+                       <p>02 Hours ago</p>
+                    </div>
+                 </div>
+                 <div class="media post_item">
+                    <img src="assets/img/post/post_3.png" alt="post">
+                    <div class="media-body">
+                       <a href="blog_details.html">
+                          <h3 style="color: #2d2d2d;">Astronomy Or Astrology</h3>
+                       </a>
+                       <p>03 Hours ago</p>
+                    </div>
+                 </div>
+                 <div class="media post_item">
+                    <img src="assets/img/post/post_4.png" alt="post">
+                    <div class="media-body">
+                       <a href="blog_details.html">
+                          <h3 style="color: #2d2d2d;">Asteroids telescope</h3>
+                       </a>
+                       <p>01 Hours ago</p>
+                    </div>
+                 </div>
+              </aside>
+              <aside class="single_sidebar_widget newsletter_widget">
+                 <h4 class="widget_title" style="color: #2d2d2d;">Newsletter</h4>
+                 <form action="#">
+                    <div class="form-group">
+                       <input type="email" class="form-control" onfocus="this.placeholder = ''"
+                          onblur="this.placeholder = 'Enter email'" placeholder='Enter email' required>
+                    </div>
+                    <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn" type="submit">Subscribe</button>
+                 </form>
+              </aside>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>
+<!-- Blog Area End -->
